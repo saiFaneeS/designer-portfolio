@@ -37,7 +37,7 @@ const About = () => {
 
   return (
     <div
-      className={`min-h-screen overflow-x-hidden overflow-y-auto relative flex flex-col justify-center gap-8 px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 py-24 pt-40 max-sm:pt-28 max-sm:py-16 ${
+      className={`min-h-screen overflow-x-hidden overflow-y-auto relative flex flex-col justify-center gap-8 container py-24 pt-40 max-sm:pt-28 max-sm:py-16 ${
         isActive ? "slide-out-top" : "slide-in-bottom"
       } ${pageChanged ? "hidden" : ""}`}
     >

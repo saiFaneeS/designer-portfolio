@@ -23,29 +23,37 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`fixed top-0 bg-emerald-50 backdrop-blur-2xl text-neutral-950 w-full flex gap-4 items-center justify-between px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 pt-24 max-md:pt-20 pb-3 max-sm:pt-6 z-20`}
+        className={`container backdrop-blur-sm fixed top-0 bg-background text-pencil w-full flex gap-4 items-center justify-between z-20 py-3 border-b border-b-pencil/10 border-b/50`}
       >
         <Link
           href={"/"}
-          className="text-lg font-semibold flex gap-3 items-center shrink-0"
+          className="text-base font-medium flex gap-3 items-center shrink-0"
         >
           <Image
-            src={"/saif2.jpg"}
+            src={"/pfp.png"}
             height={500}
             width={500}
-            className="w-8 aspect-square object-cover grayscale rounded-full"
+            className="w-8 aspect-square object-cover rounded-full"
           />
-          SAIF ANEES
+          Saif Anees
         </Link>
         {/* <div className="bg-neutral-900 w-full h-4 rounded-full max-md:hidden"></div> */}
-        <div className="text-lg font-semibold flex gap-4 items-center justify-center">
+        <ul className="flex gap-6 items-center max-sm:hidden">
+          <Link href={"#"}>Works</Link>
+          <Link
+            href={"#"}
+            className="bg-pencil text-white px-4 py-2 rounded-md"
+          >
+            Message Me
+          </Link>
+        </ul>
+        <div className="sm:hidden text-lg font-semibold flex gap-4 items-center justify-center">
           {/* <span>{currentTime}</span> */}
           <div
             className="cursor-pointer flex leading-none gap-2 hover:bg-emerald-500/10 border border-emerald-500/0 hover:border-emerald-800/10 hover:bg-opacity-50 p-1 rounded transition-all"
             onClick={() => setIsActive(!isActive)}
           >
-            <Menu size={24} strokeWidth={1.7}/>
-            <p className="max-sm:hidden">MENU</p>
+            <Menu size={24} strokeWidth={1.7} />
           </div>
         </div>
       </div>

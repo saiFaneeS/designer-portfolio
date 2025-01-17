@@ -10,8 +10,8 @@ module.exports = {
   prefix: "",
   theme: {
     container: {
-      center: true,
-      padding: "2rem",
+      // center: true,
+      padding: "4%",
       screens: {
         "2xl": "1400px",
       },
@@ -41,10 +41,17 @@ module.exports = {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
+        background: {
+          DEFAULT: "#f3ebe3",
+          brighter: "#f8f4f0",
+          darker: "#b6ac9e",
+        },
         foreground: "hsl(var(--foreground))",
+        pencil: {
+          DEFAULT: "#282019",
+        },
         primary: {
-          DEFAULT: "hsl(var(--primary))",
+          DEFAULT: "#282019",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
@@ -79,7 +86,7 @@ module.exports = {
       },
       keyframes: {
         scroll: {
-          "0%": { transform: "translateX(10%)" },
+          "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-110%)" },
         },
         "snap-loop": {

@@ -7,7 +7,7 @@ import React from "react";
 
 const Layout = ({ children }) => {
   return (
-    <div className="relative bg-emerald-50">
+    <div className="relative bg-main text-pencil">
       <Head>
         <title>Saif Anees | Portfolio</title>
         <link rel="icon" type="image/x-icon" href="/pfp.png" />
