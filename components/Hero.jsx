@@ -23,40 +23,130 @@ export default function Hero() {
 
   return (
     <div
-      className={`h-screen overflow-x-hidden bg-pencil text-background max-sm:h-[88vh] flex flex-col justify-between gap-5 max-sm:gap-4 pt-40 absolute w-full lg:overflow-hidden lg:h-screen ${
+      className={`h-screen overflow-x-hidden bg-pencil text-background max-sm:h-[88vh] flex flex-col justify-between gap-5 max-sm:gap-4 pt-20 absolute w-full lg:overflow-hidden lg:h-screen ${
         isActive ? "slide-out-top" : "slide-in-bottom"
       } ${pageChanged ? "hidden" : ""}`}
     >
-      <div className="container text-4xl w-full max-sm:text-4xl pr-4 font-semibold leading-none">
+      <div className="container text-4xl w-full max-sm:text-4xl font-medium leading-none h-full flex flex-col items-center justify-center">
         <div className="">
           <h1
-            className={`leading-none font-semibold flex break-words justify-start items-center text-left text-slide-in-bottom`}
+            className={`leading-none text-3xl flex break-words justify-start items-center text-left text-slide-in-bottom`}
           >
-            All
+            An All In One
             {/* <div className="min-w-4 max-w-20 flex-1 mx-2 sm:mx-3 h-2 max-sm:h-1 inline-block bg-background"></div> */}
-            -IN-
             {/* <div className="min-w-4 max-w-20 flex-1 mx-2 sm:mx-3 h-2 max-sm:h-1 inline-block bg-background"></div> */}
-            ONE
           </h1>
         </div>
-        <div className="overflow-hidden -mr-4">
+        <div className="overflow-hidden">
           <h1 className="leading-none text-slide-in-bottom max-sm:break-words text-emerald-500">
-            DESIGNER
+            Visual Storyteller
           </h1>
+        </div>
+        <p className="text-base text-background/80 font-normal text-center max-w-xl leading-relaxed mt-8">
+          I'm Saif, a designer and developer passionate about creativity.
+        </p>
+        <div className="flex mt-10 max-w-lg flex-nowrap items-center justify-center gap-4 text-sm animate-scroll whitespace-nowrap">
+          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
+            Branding
+          </span>
+          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
+            Art
+          </span>
+          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
+            Animations
+          </span>
+          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
+            Web & Apps
+          </span>
+          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
+            Motion Graphics
+          </span>
+          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
+            Branding
+          </span>
+          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
+            Art
+          </span>
+          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
+            Animations
+          </span>
+          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
+            Web & Apps
+          </span>
+          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
+            Motion Graphics
+          </span>
+          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
+            Branding
+          </span>
+          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
+            Art
+          </span>
+          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
+            Animations
+          </span>
+          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
+            Web & Apps
+          </span>
+          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
+            Motion Graphics
+          </span>
+          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
+            Branding
+          </span>
+          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
+            Art
+          </span>
+          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
+            Animations
+          </span>
+          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
+            Web & Apps
+          </span>
+          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
+            Motion Graphics
+          </span>
+          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
+            Branding
+          </span>
+          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
+            Art
+          </span>
+          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
+            Animations
+          </span>
+          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
+            Web & Apps
+          </span>
+          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
+            Motion Graphics
+          </span>
+          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
+            Branding
+          </span>
+          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
+            Art
+          </span>
+          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
+            Animations
+          </span>
+          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
+            Web & Apps
+          </span>
+          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
+            Motion Graphics
+          </span>
+          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
+            Branding
+          </span>
         </div>
       </div>
 
-      <div className="container flex w-full gap-6">
+      {/* <div className="container flex w-full gap-6">
         <TrustIndicators />
-      </div>
+      </div> */}
 
       <Slider />
-
-      {/* <div className="flex flex-nowrap items-center justify-center gap-2 text-sm sm:hidden animate-scroll whitespace-nowrap">
-        <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
-          Apps
-        </span>
-      </div> */}
     </div>
   );
 }
