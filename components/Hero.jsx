@@ -43,7 +43,7 @@ export default function Hero() {
           </h1>
         </div>
         <p className="text-base text-background/80 font-normal text-center max-w-xl leading-relaxed mt-8">
-          I'm Saif, a designer and developer passionate about creativity.
+          I&apos;m Saif, a designer and developer passionate about creativity.
         </p>
         <div className="flex mt-10 max-w-lg flex-nowrap items-center justify-center gap-4 text-sm animate-scroll whitespace-nowrap">
           <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
