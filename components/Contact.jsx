@@ -54,7 +54,7 @@ const ContactPage = () => {
         >
           <div className="flex flex-col items-start justify-center">
             <div className="mb-12">
-              <h1 className="text-xl font-medium mb-4 text-pencil">
+              <h1 className="text-xl font-medium mb-4 text-pencil font-clash">
                 Drop a Message!
               </h1>
               <p className="text-pencil/80 tracking-wide">
@@ -180,7 +180,7 @@ const ContactPage = () => {
 
             <motion.button
               type="submit"
-              className="w-full px-6 py-3 bg-emerald-500 hover:bg-emerald-500/90 text-white font-medium rounded-sm shadow-lg flex items-center justify-center gap-2 transition-all group"
+              className="w-full px-6 py-3 bg-emerald-500 hover:bg-emerald-500/90 text-white font-medium rounded-sm shadow-lg flex items-center justify-center gap-2 transition-all group font-clash"
               whileTap={{ scale: 0.98 }}
             >
               <MailIcon

@@ -82,8 +82,8 @@ const Projects = () => {
   ];
 
   return (
-    <div className="works-section container py-12">
-      <h2 className="flex items-center gap-3 text-xl font-medium mb-8">
+    <div className="works-section container py-12 font-clash">
+      <h2 className="flex items-center gap-3 text-xl font-medium mb-8 ">
         <PackageCheck className="h-7 w-7" /> Commission Works
       </h2>
       <div className="grid grid-cols-2 max-sm:grid-cols-1 gap-6">

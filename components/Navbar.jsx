@@ -56,7 +56,7 @@ const Navbar = () => {
       >
         <Link
           href={"/"}
-          className="text-base font-medium flex gap-3 items-center shrink-0"
+          className="text-base font-medium flex gap-3 items-center shrink-0 font-yellow-tail"
         >
           <Image
             src={"/pfp.png"}
@@ -67,7 +67,7 @@ const Navbar = () => {
           Saif Anees
         </Link>
         {/* <div className="bg-neutral-900 w-full h-4 rounded-full max-md:hidden"></div> */}
-        <ul className="flex gap-6 items-center text-sm font-medium tracking-wide">
+        <ul className="flex gap-6 items-center text-sm font-medium tracking-wide font-clash">
           <ScrollLink
             to="works-section"
             onClick={() => scrollToSection("works-section")}
@@ -80,7 +80,7 @@ const Navbar = () => {
             href={"#"}
             to="contact-section"
             onClick={() => scrollToSection("contact-section")}
-            className="bg-pencil text-white px-4 py-2 rounded-md"
+            className="bg-pencil text-background-brighter px-4 py-2 rounded-full"
           >
             Message Me
           </ScrollLink>
