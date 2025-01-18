@@ -58,12 +58,12 @@ const Navbar = () => {
           href={"/"}
           className="text-base font-medium flex gap-3 items-center shrink-0 font-yellow-tail"
         >
-          <Image
+          {/* <Image
             src={"/pfp.png"}
             height={500}
             width={500}
             className="w-8 aspect-square object-cover rounded-full"
-          />
+          /> */}
           Saif Anees
         </Link>
         {/* <div className="bg-neutral-900 w-full h-4 rounded-full max-md:hidden"></div> */}

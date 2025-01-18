@@ -10,20 +10,22 @@ const Slider = () => {
   const images = [{ id: 1 }, { id: 2 }];
 
   return (
-    <div className="relative">
-      {paused ? (
-        <Play
-          onClick={() => setPaused(!paused)}
-          className="bg-background/10 p-1.5 h-8 w-8 absolute -top-12 right-4"
-        />
-      ) : (
-        <Pause
-          onClick={() => setPaused(!paused)}
-          className="bg-background/10 p-1.5 h-8 w-8 absolute -top-12 right-4"
-        />
-      )}{" "}
+    <div className="relative w-full">
+      <div className="absolute -top-12  z-20 w-screen flex justify-center items-center">
+        {paused ? (
+          <Play
+            onClick={() => setPaused(!paused)}
+            className="bg-background/10 p-1.5 h-8 w-8 hover:scale-105 cursor-pointer hover:bg-background/15 rounded backdrop-blur-sm"
+          />
+        ) : (
+          <Pause
+            onClick={() => setPaused(!paused)}
+            className="bg-background/10 p-1.5 h-8 w-8 hover:scale-105 cursor-pointer hover:bg-background/15 rounded backdrop-blur-sm"
+          />
+        )}{" "}
+      </div>
       <div
-        className={`relative flex items-center max-sm:py-4 py-8 gap-16 md:gap-20 border-y border-y-background/20 bg-background/[5%] hover:bg-background/[7%] ${
+        className={`relative flex items-center max-sm:py-4 py-8 gap-16 md:gap-20 border-y border-y-background/20 backdrop-blur-3xl bg-background/[5%] hover:bg-background/[7%] ${
           paused && "bg-background/[7%]"
         } transition-all group`}
       >

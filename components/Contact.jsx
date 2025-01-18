@@ -24,7 +24,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="contact-section md:container items-center border-y border-y-pencil/10 bg-background-brighter dark:from-slate-950 dark:to-slate-900">
+    <div className="contact-section md:container items-center border-y border-y-pencil/10 bg-background-brighter dark:from-slate-950 dark:to-slate-900 relative">
       <div className="py-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -43,7 +43,7 @@ const ContactPage = () => {
             </div>
 
             {/* Social Links */}
-            <motion.a className="flex flex-col gap-6 max-sm:gap-4 mb-12 w-full max-sm:pl-4 max-md:pl-8">
+            <motion.a className="flex flex-col gap-6 max-sm:gap-4 mb-12 w-full max-md:pl-[5%]">
               <Link
                 href={"#"}
                 target="_blank"
