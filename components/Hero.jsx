@@ -27,10 +27,10 @@ export default function Hero() {
         isActive ? "slide-out-top" : "slide-in-bottom"
       } ${pageChanged ? "hidden" : ""}`}
     >
-      <div className="container text-4xl w-full font-medium leading-none h-full flex flex-col items-center justify-center">
+      <div className="container lg:text-5xl text-4xl w-full font-medium leading-none h-full flex flex-col items-center justify-center">
         <div className="">
           <h1
-            className={`leading-none text-2xl -mb-5 font-clash font-medium flex break-words justify-start items-center text-left text-slide-in-bottom`}
+            className={`leading-none lg:text-3xl text-2xl -mb-7 max-lg:-mb-5 font-clash font-medium flex break-words justify-start items-center text-left text-slide-in-bottom`}
           >
             An All In One
           </h1>
