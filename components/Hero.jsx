@@ -33,8 +33,6 @@ export default function Hero() {
             className={`leading-none text-2xl -mb-5 font-medium flex break-words justify-start items-center text-left text-slide-in-bottom`}
           >
             An All In One
-            {/* <div className="min-w-4 max-w-20 flex-1 mx-2 sm:mx-3 h-2 max-sm:h-1 inline-block bg-background"></div> */}
-            {/* <div className="min-w-4 max-w-20 flex-1 mx-2 sm:mx-3 h-2 max-sm:h-1 inline-block bg-background"></div> */}
           </h1>
         </div>
         <div className="overflow-hidden">
