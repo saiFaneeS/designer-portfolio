@@ -15,7 +15,7 @@ const testimonials = [
     logo: "/flower-lotus.png",
   },
   {
-    text: "“Completed the work within the agreed-upon timeline, showing professionalism and reliability in meeting deadlines. He was receptive to feedback and collaborated effectively to refine the designs according to my preferences.”",
+    text: "“Completed the work within the agreed upon time, showing professionalism and reliability in meeting deadlines. He was receptive to feedback and collaborated effectively to refine the designs according to my preferences.”",
     author: "Igal S.",
     logo: "/idan.png",
   },
@@ -51,7 +51,7 @@ export const TrustIndicators = () => {
         </span>
 
         <span className="text-sm text-white-100/60 flex gap-2 items-center">
-        -
+          -
           {testimonials[currentIndex]?.author === "Tami Ross" && (
             <Image
               src={testimonials[currentIndex]?.logo}
