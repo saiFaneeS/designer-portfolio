@@ -6,11 +6,11 @@ import Image from "next/image";
 const testimonials = [
   {
     text: "“This was a great experience working with true talent that can read between the lines and be creative as well as listen to incorporate required details.”",
-    author: "Tami Ross, Ohghad CEO",
+    author: "Tami Ross",
     logo: "/ohghad.png",
   },
   {
-    text: "“The work looks amazing. It reminds me of the quality and functionality of Goodreads.”",
+    text: "“It looks amazing. It reminds me of the quality of goodreads.”",
     author: "Violet Clough",
     logo: "/flower-lotus.png",
   },
@@ -50,13 +50,14 @@ export const TrustIndicators = () => {
           {testimonials[currentIndex]?.text}
         </span>
 
-        <span className="text-sm text-white-100/60 flex gap-2 items-center grayscale">
-          {testimonials[currentIndex]?.author === "Tami Ross, Ohghad CEO" && (
+        <span className="text-sm text-white-100/60 flex gap-2 items-center">
+        -
+          {testimonials[currentIndex]?.author === "Tami Ross" && (
             <Image
               src={testimonials[currentIndex]?.logo}
               height={100}
               width={100}
-              className="h-5 w-5 object-contain rounded-full contrast-150 brightness-75"
+              className="h-5 w-5 object-contain rounded-full "
             />
           )}
           {testimonials[currentIndex]?.author === "Igal S." && (
