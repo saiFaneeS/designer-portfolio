@@ -4,10 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
+import { Link as ScrollLink, scroller } from "react-scroll";
 
 const Navbar = () => {
   const { isActive, setIsActive, pageChanged, setPageChanged } = useNavbar();
   const [currentTime, setCurrentTime] = useState("");
+  const [lastScrollPosition, setLastScrollPosition] = useState(0);
 
   const router = useRouter();
   const path = router.pathname;
@@ -19,6 +21,33 @@ const Navbar = () => {
     const formattedTime = `${hours}:${minutes < 10 ? "0" : ""}${minutes}`;
     setCurrentTime(formattedTime);
   }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPosition = window.pageYOffset;
+      const docHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      const progress = (currentScrollPosition / docHeight) * 100;
+
+      // setScrollUp(currentScrollPosition <= lastScrollPosition);
+      setLastScrollPosition(currentScrollPosition);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollPosition]);
+
+  const scrollToSection = (sectionId) => {
+    scroller.scrollTo(sectionId, {
+      duration: 800,
+      delay: 0,
+      smooth: "easeInOutQuart",
+      offset: -50,
+    });
+  };
 
   return (
     <>
@@ -38,24 +67,32 @@ const Navbar = () => {
           Saif Anees
         </Link>
         {/* <div className="bg-neutral-900 w-full h-4 rounded-full max-md:hidden"></div> */}
-        <ul className="flex gap-6 items-center max-sm:hidden">
-          <Link href={"#"}>Works</Link>
-          <Link
+        <ul className="flex gap-6 items-center text-sm font-medium tracking-wide">
+          <ScrollLink
+            to="works-section"
+            onClick={() => scrollToSection("works-section")}
             href={"#"}
+            className="max-sm:hidden"
+          >
+            Works
+          </ScrollLink>
+          <ScrollLink
+            href={"#"}
+            to="contact-section"
+            onClick={() => scrollToSection("contact-section")}
             className="bg-pencil text-white px-4 py-2 rounded-md"
           >
             Message Me
-          </Link>
+          </ScrollLink>
         </ul>
-        <div className="sm:hidden text-lg font-semibold flex gap-4 items-center justify-center">
-          {/* <span>{currentTime}</span> */}
+        {/* <div className="sm:hidden text-lg font-semibold flex gap-4 items-center justify-center">
           <div
             className="cursor-pointer flex leading-none gap-2 hover:bg-emerald-500/10 border border-emerald-500/0 hover:border-emerald-800/10 hover:bg-opacity-50 p-1 rounded transition-all"
             onClick={() => setIsActive(!isActive)}
           >
             <Menu size={24} strokeWidth={1.7} />
           </div>
-        </div>
+        </div> */}
       </div>
       <div
         className={`h-screen w-full fixed left-0 border-b border-b-black flex flex-col justify-center px-[25%] py-4 z-10 transition-all delay-75 duration-1000 ${

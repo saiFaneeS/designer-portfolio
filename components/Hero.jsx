@@ -27,10 +27,10 @@ export default function Hero() {
         isActive ? "slide-out-top" : "slide-in-bottom"
       } ${pageChanged ? "hidden" : ""}`}
     >
-      <div className="container text-4xl w-full max-sm:text-4xl font-medium leading-none h-full flex flex-col items-center justify-center">
+      <div className="container text-4xl max-sm:text-3xl w-full font-medium leading-none h-full flex flex-col items-center justify-center">
         <div className="">
           <h1
-            className={`leading-none text-3xl flex break-words justify-start items-center text-left text-slide-in-bottom`}
+            className={`leading-none text-3xl max-sm:text-2xl flex break-words justify-start items-center text-left text-slide-in-bottom`}
           >
             An All In One
             {/* <div className="min-w-4 max-w-20 flex-1 mx-2 sm:mx-3 h-2 max-sm:h-1 inline-block bg-background"></div> */}
@@ -38,11 +38,11 @@ export default function Hero() {
           </h1>
         </div>
         <div className="overflow-hidden">
-          <h1 className="leading-none text-slide-in-bottom max-sm:break-words text-emerald-500">
+          <h1 className="leading-none max-sm:text-center max-sm:mt-1 text-slide-in-bottom max-sm:break-words text-emerald-500">
             Visual Storyteller
           </h1>
         </div>
-        <p className="text-base text-background/80 font-normal text-center max-w-xl leading-relaxed mt-8">
+        <p className="text-base text-background/80 font-normal text-center max-w-xl px-6 leading-relaxed mt-8">
           I&apos;m Saif, a designer and developer passionate about creativity.
         </p>
         <div className="flex mt-10 max-w-lg flex-nowrap items-center justify-center gap-4 text-sm animate-scroll whitespace-nowrap">
@@ -141,10 +141,6 @@ export default function Hero() {
           </span>
         </div>
       </div>
-
-      {/* <div className="container flex w-full gap-6">
-        <TrustIndicators />
-      </div> */}
 
       <Slider />
     </div>

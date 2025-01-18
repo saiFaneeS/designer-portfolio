@@ -33,24 +33,24 @@ export const TrustIndicators = () => {
   }, []);
 
   return (
-    <div className="flex items-center max-sm:items-start justify-center max-sm:flex-col gap-2 text-white-100/90 sm:max-w-5xl">
-      <div className="flex items-center gap-1">
+    <div className="flex items-center max-sm:items-start justify-center max-sm:flex-col gap-2 text-white-100/90 w-80">
+      {/* <div className="flex items-center gap-1">
         {[...Array(5)].map((_, i) => (
           <Star key={i} size={14} className="fill-yellow-500 text-yellow-500" />
         ))}
-      </div>
+      </div> */}
       <motion.div
         key={currentIndex}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
-        className="text-base md:text-sm font-medium flex gap-2 max-sm:items-start items-center max-lg:flex-wrap max-sm:flex-col"
+        className="text-base md:text-sm font-medium flex gap-2 max-sm:items-start items-center max-sm:flex-col flex-wrap"
       >
-        <span className="line-clamp-1 max-sm:line-clamp-3">
+        <span className="text-wrap line-clamp-2">
           {testimonials[currentIndex]?.text}
         </span>
 
-        <span className="text-sm text-white-100/60 flex gap-2 items-center grayscale text-nowrap">
+        <span className="text-sm text-white-100/60 flex gap-2 items-center grayscale">
           {testimonials[currentIndex]?.author === "Tami Ross, Ohghad CEO" && (
             <Image
               src={testimonials[currentIndex]?.logo}

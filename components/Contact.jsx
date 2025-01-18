@@ -11,6 +11,7 @@ import {
   MessageSquare,
   Send,
 } from "lucide-react";
+import Link from "next/link";
 
 const ContactPage = () => {
   // const { toast } = useToast();
@@ -22,68 +23,100 @@ const ContactPage = () => {
     e.target.reset();
   };
 
-  const socialLinks = [
-    {
-      name: "Instagram",
-      icon: <Instagram className="w-5 h-5" />,
-      href: "https://facebook.com/yourusername",
-      color: "red",
-    },
-    {
-      name: "WhatsApp",
-      icon: <MessageCircle className="w-5 h-5" />,
-      href: "https://wa.me/yournumber",
-      color: "green",
-    },
-    {
-      name: "Email",
-      icon: <Mail className="w-5 h-5" />,
-      href: "mailto:your@email.com",
-      color: "blue",
-    },
-  ];
+  // const socialLinks = [
+  //   {
+  //     name: "Instagram",
+  //     icon: <Instagram className="w-5 h-5" />,
+  //     href: "https://facebook.com/yourusername",
+  //     color: "red",
+  //   },
+  //   {
+  //     name: "WhatsApp",
+  //     icon: <MessageCircle className="w-5 h-5" />,
+  //     href: "https://wa.me/yournumber",
+  //     color: "green",
+  //   },
+  //   {
+  //     name: "Email",
+  //     icon: <Mail className="w-5 h-5" />,
+  //     href: "mailto:your@email.com",
+  //     color: "blue",
+  //   },
+  // ];
 
   return (
-    <div className="container flex flex-col items-center border-y border-y-pencil/10 bg-background-brighter dark:from-slate-950 dark:to-slate-900">
+    <div className="contact-section container items-center border-y border-y-pencil/10 bg-background-brighter dark:from-slate-950 dark:to-slate-900">
       <div className="py-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="grid grid-cols-1 max-md:grid-cols-1"
+          className="grid grid-cols-2 max-md:grid-cols-1"
         >
-          <div className="flex flex-col items-center justify-center">
-            <div className="text-center mb-12">
+          <div className="flex flex-col items-start justify-center">
+            <div className="mb-12">
               <h1 className="text-xl font-medium mb-4 text-pencil">
                 Drop a Message!
               </h1>
               <p className="text-pencil/80 tracking-wide">
-                Drop me a message and I&apos;ll get back to you as soon as possible!
+                Drop me a message and I&apos;ll get back to you as soon as
+                possible!
               </p>
             </div>
 
             {/* Social Links */}
-            <div className="flex flex-wrap gap-6 max-sm:gap-4 mb-12">
-              {socialLinks.map((link) => (
-                <motion.a
-                  key={link.name}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center max-sm:w-full rounded group"
+            <motion.a className="flex flex-col gap-6 max-sm:gap-4 mb-12">
+              <Link
+                href={"#"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center max-sm:w-full rounded group"
+              >
+                <span
+                  className={`p-3 px-4 h-12 flex items-center justify-start aspect-square gap-3 rounded-l text-pencil transition-all bg-red-500/90 group-hover:opacity-80`}
                 >
-                  <span
-                    className={`p-3 px-4 h-12 flex items-center justify-start aspect-square gap-3 rounded-l text-pencil transition-all bg-${link?.color}-500/90 group-hover:opacity-80`}
-                  >
-                    {link.icon}
-                  </span>
-                  <p
-                    className={`p-3 px-8 lg:px-20 h-12 flex items-center justify-start w-full gap-3 rounded-r text-pencil transition-all bg-${link.color}-500/10 group-hover:opacity-80`}
-                  >
-                    {link.name}
-                  </p>
-                </motion.a>
-              ))}
-            </div>
+                  <Instagram />{" "}
+                </span>
+                <p
+                  className={`p-3 px-8 lg:px-20 h-12 flex items-center justify-start w-full gap-3 rounded-r text-pencil transition-all bg-red-500/10 group-hover:opacity-80`}
+                >
+                  Message on Insta
+                </p>
+              </Link>
+              <Link
+                href={"#"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center max-sm:w-full rounded group"
+              >
+                <span
+                  className={`p-3 px-4 h-12 flex items-center justify-start aspect-square gap-3 rounded-l text-pencil transition-all bg-green-500/90 group-hover:opacity-80`}
+                >
+                  <MessageCircle />{" "}
+                </span>
+                <p
+                  className={`p-3 px-8 lg:px-20 h-12 flex items-center justify-start w-full gap-3 rounded-r text-pencil transition-all bg-green-500/10 group-hover:opacity-80`}
+                >
+                  Message on WhatsApp
+                </p>
+              </Link>
+              <Link
+                href={"#"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center max-sm:w-full rounded group"
+              >
+                <span
+                  className={`p-3 px-4 h-12 flex items-center justify-start aspect-square gap-3 rounded-l text-pencil transition-all bg-blue-500/90 group-hover:opacity-80`}
+                >
+                  <Mail />{" "}
+                </span>
+                <p
+                  className={`p-3 px-8 lg:px-20 h-12 flex items-center justify-start w-full gap-3 rounded-r text-pencil transition-all bg-blue-500/10 group-hover:opacity-80`}
+                >
+                  Send an Email{" "}
+                </p>
+              </Link>
+            </motion.a>
           </div>
 
           {/* Contact Form */}

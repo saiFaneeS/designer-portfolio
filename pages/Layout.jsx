@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { Mail } from "lucide-react";
 import Head from "next/head";
@@ -14,6 +15,7 @@ const Layout = ({ children }) => {
       </Head>
       <Navbar />
       <div>{children}</div>
+      <Footer />
     </div>
   );
 };

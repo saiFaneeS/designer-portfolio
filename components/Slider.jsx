@@ -2,6 +2,7 @@ import { ArrowDown, ArrowRight, Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { TrustIndicators } from "./TrustIndicators";
 
 const Slider = () => {
   const panel = [{ id: 1 }, { id: 2 }, { id: 3 }];
@@ -14,7 +15,7 @@ const Slider = () => {
         return (
           <div
             key={el.id}
-            className="flex gap-20 sm:animate-scroll whitespace-nowrap group-hover:paused"
+            className="flex gap-20 animate-scroll whitespace-nowrap group-hover:paused"
           >
             <div className="flex gap-4">
               <div className="h-24 max-sm:h-20 aspect-[2.8] max-sm:w-40 rounded-md flex items-center justify-center gap-4 bg-background/20 overflow-hidden">
@@ -50,20 +51,24 @@ const Slider = () => {
                 })}
               </div>
               <div className="flex flex-col items-start justify-center">
-                <h4 className="text-base font-medium leading-none mb-4">
+                {/* <h4 className="text-base font-medium leading-none">
                   Welcome !
-                </h4>
-                <Link
+                </h4> */}
+                {/* <Link
                   href={"/works"}
                   className="px-2 pl-3 py-1 flex gap-2 items-center hover:underline text-xs text-nowrap border border-background/40 bg-background/10 rounded-full text-background"
                 >
                   Works
                   <ArrowDown size={14} strokeWidth={1.5} />
-                </Link>
+                </Link> */}
               </div>
             </div>
 
-            <div className="flex flex-wrap items-center justify-center gap-2 text-sm min-w-80 max-w-80 max-sm:hidden">
+            <div className="">
+              <TrustIndicators />
+            </div>
+
+            {/* <div className="flex flex-wrap items-center justify-center gap-2 text-sm min-w-80 max-w-80 max-sm:hidden">
               <span className="px-3 py-1 text-xs font-medium text-background bg-background/10 rounded-full">
                 Design
               </span>
@@ -83,7 +88,7 @@ const Slider = () => {
               <span className="px-3 py-1 text-xs font-medium text-background bg-emerald-600/40 rounded-full">
                 & More
               </span>
-            </div>
+            </div> */}
 
             <div className="relative flex justify-center items-center z-20 max-sm:invisible">
               <svg
@@ -102,7 +107,7 @@ const Slider = () => {
                   textLength="565"
                   dominantBaseline="middle"
                 >
-                  <textPath href="#circlePath" >
+                  <textPath href="#circlePath">
                     {" GET IN TOUCH ・ GET IN TOUCH ・ "}
                   </textPath>
                 </text>
