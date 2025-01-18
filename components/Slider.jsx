@@ -35,7 +35,7 @@ const Slider = () => {
                 paused && "paused max-sm:paused"
               }`}
             >
-              <div className="bg-background/5 p-2 rounded-lg">
+              <div className="bg-background/5 p-3 rounded-md">
                 <TrustIndicators />
               </div>
               <div className="flex gap-4">
