@@ -108,7 +108,7 @@ module.exports = {
       },
       animation: {
         scroll: "scroll 25s linear infinite",
-        "scroll-faster": "scroll 20s linear infinite",
+        "scroll-faster": "scroll 15s linear infinite",
         "snap-loop": "snap-loop 6s ease-in-out infinite", // Adjust duration
         rotate: "spin 10s linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",

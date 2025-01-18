@@ -23,19 +23,21 @@ const Slider = () => {
         />
       )}{" "}
       <div
-        className={`relative flex items-center max-sm:py-4 py-8 gap-16 md:gap-20 border-y border-y-background/20 bg-background/[3%] hover:bg-background/[5%] ${
-          paused && "bg-background/[5%]"
+        className={`relative flex items-center max-sm:py-4 py-8 gap-16 md:gap-20 border-y border-y-background/20 bg-background/[5%] hover:bg-background/[7%] ${
+          paused && "bg-background/[7%]"
         } transition-all group`}
       >
-        {/* Slider Wrapper */}
         {panel.map((el) => {
           return (
             <div
               key={el.id}
-              className={`flex gap-16 md:gap-20 animate-scroll whitespace-nowrap sm:group-hover:paused ${
-                paused && "paused"
+              className={`flex gap-16 md:gap-20 animate-scroll max-sm:animate-scroll-faster whitespace-nowrap sm:group-hover:paused ${
+                paused && "paused max-sm:paused"
               }`}
             >
+              <div className="bg-background/5 p-2 rounded-lg">
+                <TrustIndicators />
+              </div>
               <div className="flex gap-4">
                 <div className="h-24 aspect-[2.8] rounded-md flex items-center justify-center gap-4 bg-background/10 border border-background/20 overflow-hidden">
                   {images.map((el) => {
@@ -81,10 +83,6 @@ const Slider = () => {
                   <ArrowDown size={14} strokeWidth={1.5} />
                 </Link> */}
                 </div>
-              </div>
-
-              <div className="bg-background/5 p-2 rounded-lg">
-                <TrustIndicators />
               </div>
 
               {/* <div className="flex flex-wrap items-center justify-center gap-2 text-sm min-w-80 max-w-80 max-sm:hidden">
