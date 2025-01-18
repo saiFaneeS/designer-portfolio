@@ -158,6 +158,14 @@ body {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Yellowtail-Regular";
+  src: url("/font/Yellowtail-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
 .container {
   overflow: hidden;
 }

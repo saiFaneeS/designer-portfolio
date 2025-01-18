@@ -29,6 +29,7 @@ module.exports = {
         "6xl": "clamp(4rem, 7.48vw + 3rem, 8.5rem)",
       },
       fontFamily: {
+        "yellow-tail": ["Yellowtail-Regular", "sans-serif"],
         clash: ["ClashGrotesk-Variable", "sans-serif"],
         clashExtralight: ["ClashGrotesk-Extralight", "sans-serif"],
         clashLight: ["ClashGrotesk-Light", "sans-serif"],

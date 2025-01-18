@@ -9,7 +9,7 @@ const Slider = () => {
   const images = [{ id: 1 }, { id: 2 }];
 
   return (
-    <div className="max-sm:container relative flex overflow-hidden items-center max-sm:py-4 py-8 gap-28 border-y border-y-background/20 bg-background/[3%] hover:bg-background/[4%] transition-all group">
+    <div className="relative flex overflow-hidden items-center max-sm:py-6 py-8 gap-28 border-y border-y-background/20 bg-background/[3%] hover:bg-background/[4%] transition-all group">
       {/* Slider Wrapper */}
       {panel.map((el) => {
         return (
@@ -18,11 +18,11 @@ const Slider = () => {
             className="flex gap-20 animate-scroll whitespace-nowrap group-hover:paused"
           >
             <div className="flex gap-4">
-              <div className="h-24 max-sm:h-20 aspect-[2.8] max-sm:w-40 rounded-md flex items-center justify-center gap-4 bg-background/20 overflow-hidden">
+              <div className="h-24 aspect-[2.8] rounded-md flex items-center justify-center gap-4 bg-background/10 border border-background/20 overflow-hidden">
                 {images.map((el) => {
                   return (
                     <>
-                      <div className="animate-snap-scroll snap-center snap-x snap-mandatory whitespace-nowrap h-20 max-sm:h-16 aspect-video animate-snap-loop">
+                      <div className="animate-snap-scroll snap-center snap-x snap-mandatory whitespace-nowrap h-20 aspect-video animate-snap-loop">
                         <Image
                           src={"/ohghad-web.png"}
                           height={200}
@@ -30,7 +30,7 @@ const Slider = () => {
                           className="h-full w-full object-cover rounded-md shadow-xl"
                         />
                       </div>
-                      <div className="animate-snap-scroll snap-center snap-x snap-mandatory whitespace-nowrap h-20 max-sm:h-16 aspect-video animate-snap-loop">
+                      <div className="animate-snap-scroll snap-center snap-x snap-mandatory whitespace-nowrap h-20 aspect-video animate-snap-loop">
                         <Image
                           src={"/msre.png"}
                           height={200}
@@ -38,7 +38,7 @@ const Slider = () => {
                           className="h-full w-full object-cover rounded-md shadow-xl"
                         />
                       </div>
-                      <div className="animate-snap-scroll snap-center snap-x snap-mandatory whitespace-nowrap h-20 max-sm:h-16 aspect-video animate-snap-loop">
+                      <div className="animate-snap-scroll snap-center snap-x snap-mandatory whitespace-nowrap h-20 aspect-video animate-snap-loop">
                         <Image
                           src={"/mslm.webp"}
                           height={200}
@@ -64,7 +64,7 @@ const Slider = () => {
               </div>
             </div>
 
-            <div className="">
+            <div className="bg-background/5 p-2 rounded-lg">
               <TrustIndicators />
             </div>
 
@@ -90,7 +90,7 @@ const Slider = () => {
               </span>
             </div> */}
 
-            <div className="relative flex justify-center items-center z-20 max-sm:invisible">
+            <div className="relative flex justify-center items-center z-20">
               <svg
                 className="w-[90px] h-[90px] animate-rotate rounded-full"
                 viewBox="0 0 200 200"
