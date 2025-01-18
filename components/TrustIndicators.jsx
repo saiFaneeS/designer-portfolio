@@ -44,7 +44,7 @@ export const TrustIndicators = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
-        className="text-base md:text-sm font-medium flex gap-2 max-sm:items-start items-center max-sm:flex-col flex-wrap"
+        className="text-sm font-medium flex gap-2 max-sm:items-start items-center max-sm:flex-col flex-wrap"
       >
         <span className="text-wrap line-clamp-2">
           {testimonials[currentIndex]?.text}

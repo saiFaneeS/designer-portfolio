@@ -4,20 +4,20 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="container py-8 bg-background-darker">
-      <div className="flex justify-between items-center gap-8">
-        <p className="text-lg font-medium">Saif Anees</p>
-        <ul className="flex gap-4 items-center">
-          <Link href={"/"} className="text-pencil p-1 rounded-sm">
+    <div className="container py-6 bg-pencil text-background">
+      <div className="flex flex-col justify-between items-center gap-6">
+        <p className="text-lg font-medium font-yellow-tail">Saif Anees</p>
+        {/* <ul className="flex gap-4 items-center">
+          <Link href={"/"} className="p-1 rounded-sm">
             <Instagram size={22} strokeWidth={1.8} />
           </Link>
-          <Link href={"/"} className="text-pencil p-1 rounded-sm">
+          <Link href={"/"} className="p-1 rounded-sm">
             <MessageCircle size={22} strokeWidth={1.8} />
           </Link>
-          <Link href={"/"} className="text-pencil p-1 rounded-sm">
+          <Link href={"/"} className="p-1 rounded-sm">
             <Mail size={22} strokeWidth={1.8} />
           </Link>
-        </ul>
+        </ul> */}
       </div>
     </div>
   );

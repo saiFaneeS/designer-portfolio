@@ -32,7 +32,7 @@ const Projects = () => {
       title: "Branding",
       works: [
         {
-          image: "/brand1.webp",
+          image: "/brand2.png",
           client: "Client B",
           budget: "$700",
           time: "1 Month",
@@ -66,7 +66,7 @@ const Projects = () => {
       title: "Digital Art",
       works: [
         {
-          image: "/art2.webp",
+          image: "/art1.webp",
           client: "Client G",
           budget: "$400",
           time: "1 Month",

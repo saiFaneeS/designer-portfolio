@@ -54,17 +54,17 @@ const ContactPage = () => {
         >
           <div className="flex flex-col items-start justify-center">
             <div className="mb-12">
-              <h1 className="text-xl font-medium mb-4 text-pencil font-clash">
+              <h1 className="text-xl font-medium mb-2 text-pencil font-clash">
                 Drop a Message!
               </h1>
-              <p className="text-pencil/80 tracking-wide">
+              <p className="text-pencil/80">
                 Drop me a message and I&apos;ll get back to you as soon as
                 possible!
               </p>
             </div>
 
             {/* Social Links */}
-            <motion.a className="flex flex-col gap-6 max-sm:gap-4 mb-12">
+            <motion.a className="flex flex-col gap-6 max-sm:gap-4 mb-12 w-full">
               <Link
                 href={"#"}
                 target="_blank"
@@ -72,14 +72,14 @@ const ContactPage = () => {
                 className="flex items-center max-sm:w-full rounded group"
               >
                 <span
-                  className={`p-3 px-4 h-12 flex items-center justify-start aspect-square gap-3 rounded-l text-pencil transition-all bg-red-500/90 group-hover:opacity-80`}
+                  className={`px-2 h-11 flex items-center justify-center aspect-square gap-3 rounded-l text-pencil transition-all bg-red-500/90 group-hover:opacity-80`}
                 >
                   <Instagram />{" "}
                 </span>
                 <p
-                  className={`p-3 px-8 lg:px-20 h-12 flex items-center justify-start w-full gap-3 rounded-r text-pencil transition-all bg-red-500/10 group-hover:opacity-80`}
+                  className={`px-6 h-11 flex items-center justify-start w-full gap-3 max-sm:rounded-r text-pencil font-clash transition-all bg-red-500/10 group-hover:opacity-80`}
                 >
-                  Message on Insta
+                  Message me on Instagram
                 </p>
               </Link>
               <Link
@@ -89,14 +89,14 @@ const ContactPage = () => {
                 className="flex items-center max-sm:w-full rounded group"
               >
                 <span
-                  className={`p-3 px-4 h-12 flex items-center justify-start aspect-square gap-3 rounded-l text-pencil transition-all bg-green-500/90 group-hover:opacity-80`}
+                  className={`px-2 h-11 flex items-center justify-center aspect-square gap-3 rounded-l text-pencil transition-all bg-green-500/90 group-hover:opacity-80`}
                 >
                   <MessageCircle />{" "}
                 </span>
                 <p
-                  className={`p-3 px-8 lg:px-20 h-12 flex items-center justify-start w-full gap-3 rounded-r text-pencil transition-all bg-green-500/10 group-hover:opacity-80`}
+                  className={`px-6 h-11 flex items-center justify-start w-full gap-3 max-sm:rounded-r text-pencil font-clash transition-all bg-green-500/10 group-hover:opacity-80`}
                 >
-                  Message on WhatsApp
+                  Message me on WhatsApp
                 </p>
               </Link>
               <Link
@@ -106,12 +106,12 @@ const ContactPage = () => {
                 className="flex items-center max-sm:w-full rounded group"
               >
                 <span
-                  className={`p-3 px-4 h-12 flex items-center justify-start aspect-square gap-3 rounded-l text-pencil transition-all bg-blue-500/90 group-hover:opacity-80`}
+                  className={`p-2 h-11 flex items-center justify-center aspect-square gap-3 rounded-l text-pencil transition-all bg-blue-500/90 group-hover:opacity-80`}
                 >
                   <Mail />{" "}
                 </span>
                 <p
-                  className={`p-3 px-8 lg:px-20 h-12 flex items-center justify-start w-full gap-3 rounded-r text-pencil transition-all bg-blue-500/10 group-hover:opacity-80`}
+                  className={`px-6 h-11 flex items-center justify-start w-full gap-3 max-sm:rounded-r text-pencil font-clash transition-all bg-blue-500/10 group-hover:opacity-80`}
                 >
                   Send an Email{" "}
                 </p>
