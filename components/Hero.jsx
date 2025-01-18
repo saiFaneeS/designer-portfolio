@@ -36,7 +36,7 @@ export default function Hero() {
           </h1>
         </div>
         <div className="overflow-hidden">
-          <h1 className="font-yellow-tail pb-4 tracking-wide px-2 leading-none max-sm:text-center max-sm:mt-1 text-slide-in-bottom max-sm:break-words text-emerald-500">
+          <h1 className="font-yellow-tail pb-4 tracking-wide px-2 text-nowrap leading-none max-sm:text-center max-sm:mt-1 text-slide-in-bottom max-sm:break-words text-emerald-500">
             Visual Storyteller
           </h1>
         </div>
