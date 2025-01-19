@@ -35,19 +35,19 @@ export default function Hero() {
       <div className="fixed top-0 lg:text-5xl text-4xl w-full font-medium leading-none pb-24 h-full flex flex-col items-center justify-center">
         <div className="mb-10 text-sm">
           <div className="flex flex-nowrap items-center justify-center gap-2 whitespace-nowrap">
-            <span className="px-3 py-1 text-xs font-medium text-pencil bg-green-200/90 border-l-2 border-l-green-500">
+            <span className="px-3 py-1 text-xs font-medium text-pencil bg-green-200/75 border-l-2 border-l-green-500">
               Branding
             </span>
-            <span className="px-3 py-1 text-xs font-medium text-pencil bg-yellow-200/90 border-l-2 border-l-yellow-500">
+            <span className="px-3 py-1 text-xs font-medium text-pencil bg-yellow-200/75 border-l-2 border-l-yellow-500">
               Art
             </span>
-            <span className="px-3 py-1 text-xs font-medium text-pencil bg-red-200/90 border-l-2 border-l-red-500">
+            <span className="px-3 py-1 text-xs font-medium text-pencil bg-red-200/75 border-l-2 border-l-red-500">
               Animations
             </span>
-            <span className="max-sm:hidden px-3 py-1 text-xs font-medium text-pencil bg-violet-200/90 border-l-2 border-l-violet-500">
+            <span className="max-sm:hidden px-3 py-1 text-xs font-medium text-pencil bg-violet-200/75 border-l-2 border-l-violet-500">
               Motion Graphics
             </span>
-            <span className="px-3 py-1 text-xs font-medium text-pencil bg-blue-200/90 border-l-2 border-l-blue-500">
+            <span className="px-3 py-1 text-xs font-medium text-pencil bg-blue-200/75 border-l-2 border-l-blue-500">
               Web/Apps
             </span>
           </div>

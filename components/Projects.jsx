@@ -94,7 +94,7 @@ const Projects = () => {
       <h2 className="flex items-center gap-2 max-lg:gap-2 text-xl font-medium mb-6 font-yellow-tail">
         <PackageCheck className="h-7 w-7" strokeWidth={1.8} /> Commission Works
       </h2>
-      <div className="grid grid-cols-4 max-2xl:grid-cols-2 max-sm:grid-cols-1 gap-8 gap-y-12">
+      <div className="grid grid-cols-4 max-2xl:grid-cols-2 max-sm:grid-cols-1 gap-8 gap-y-12 max-md:gap-8">
         {categories.map((category) => (
           <div key={category.title}>
             <Carousel
@@ -108,8 +108,8 @@ const Projects = () => {
                   {category.title}
                 </h2>
                 <div className="flex gap-2 items-center">
-                  <CarouselPrevious className="static bg-pencil/10 text-pencil/80 -mb-7 bg-opacity-50 border-none hover:bg-emerald-500/10" />
-                  <CarouselNext className="static bg-pencil/10 text-pencil/80 -mb-7 bg-opacity-50 border-none hover:bg-emerald-500/10" />
+                  <CarouselPrevious className="static bg-pencil/10 text-pencil/80 -mb-7 bg-opacity-50 border-none hover:bg-emerald-500/10 max-md:size-7" />
+                  <CarouselNext className="static bg-pencil/10 text-pencil/80 -mb-7 bg-opacity-50 border-none hover:bg-emerald-500/10 max-md:size-7" />
                 </div>
               </div>
 
