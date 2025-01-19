@@ -24,7 +24,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="contact-section md:container items-center border-y border-y-pencil/10 bg-background-brighter dark:from-slate-950 dark:to-slate-900 relative">
+    <div className="contact-section md:px-[5%] items-center border-y border-y-pencil/10 bg-background-brighter dark:from-slate-950 dark:to-slate-900 relative">
       <div className="py-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -32,7 +32,7 @@ const ContactPage = () => {
           className="grid grid-cols-2 max-md:grid-cols-1"
         >
           <div className="flex flex-col items-start justify-center">
-            <div className="mb-12 max-md:container">
+            <div className="mb-12 max-md:px-[5%]">
               <h1 className="text-xl font-medium mb-2 text-pencil font-clash">
                 Drop a Message!
               </h1>
@@ -110,7 +110,7 @@ const ContactPage = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="max-md:container">
+          <div className="max-md:px-[5%]">
             <motion.form
               onSubmit={handleSubmit}
               className="space-y-6 text-pencil p-8 max-md:p-6 max-sm:p-4 shadow-lg bg-background border border-pencil/20"

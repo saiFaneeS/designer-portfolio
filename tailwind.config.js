@@ -9,13 +9,6 @@ module.exports = {
   ],
   prefix: "",
   theme: {
-    container: {
-      // center: true,
-      padding: "5%",
-      screens: {
-        "2xl": "1400px",
-      },
-    },
     extend: {
       fontSize: {
         sm: "clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem)",

@@ -23,11 +23,11 @@ export default function Hero() {
 
   return (
     <div
-      className={`h-screen relative top-0 overflow-x-hidden bg-pencil text-background max-sm:h-[88vh] flex flex-col justify-between gap-5 max-sm:gap-4 w-full lg:overflow-hidden lg:h-screen ${
+      className={`lg:h-screen relative top-0 overflow-x-hidden bg-pencil text-background max-sm:h-[88vh] flex flex-col justify-between items-center gap-5 max-sm:gap-4 w-full lg:overflow-hidden ${
         isActive ? "slide-out-top" : "slide-in-bottom"
       } ${pageChanged ? "hidden" : ""}`}
     >
-      <div className="container fixed top-0 lg:text-5xl text-4xl w-full font-medium leading-none pb-24 h-full flex flex-col items-center justify-center">
+      <div className="fixed top-0 lg:text-5xl text-4xl w-full font-medium leading-none pb-24 h-full flex flex-col items-center justify-center">
         <div className="">
           <h1
             className={`leading-none lg:text-3xl text-2xl -mb-7 max-lg:-mb-5 font-clash font-medium flex break-words justify-start items-center text-left text-slide-in-bottom`}
@@ -140,7 +140,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-0">
+      <div className="w-full absolute bottom-0">
         <Slider />
       </div>
     </div>

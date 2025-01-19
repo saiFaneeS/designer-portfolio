@@ -11,7 +11,7 @@ const Slider = () => {
 
   return (
     <div className="relative w-full">
-      <div className="absolute -top-12  z-20 w-screen flex justify-center items-center">
+      <div className="absolute -top-12 z-20 w-full flex justify-center items-center">
         {paused ? (
           <Play
             onClick={() => setPaused(!paused)}
