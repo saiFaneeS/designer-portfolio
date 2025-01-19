@@ -40,7 +40,7 @@ export default function Hero() {
             Visual Storyteller
           </h1>
         </div>
-        <p className="text-base text-background/80 text-center max-w-xl px-6 leading-relaxed">
+        <p className="text-base text-background/90 text-center max-w-xl px-6 leading-normal">
           I&apos;m Saif, a designer and developer passionate about creativity.
         </p>
         <div className="flex mt-10 max-w-lg flex-nowrap items-center justify-center gap-4 text-sm animate-scroll whitespace-nowrap">
