@@ -23,7 +23,7 @@ export default function Hero() {
 
   return (
     <div
-      className={`lg:h-screen relative top-0 overflow-x-hidden bg-pencil text-background max-sm:h-[88vh] flex flex-col justify-between items-center gap-5 max-sm:gap-4 w-full lg:overflow-hidden ${
+      className={`lg:h-screen relative top-0 overflow-x-hidden bg-pencil text-background transition-all max-sm:h-[88vh] flex flex-col justify-between items-center gap-5 max-sm:gap-4 w-full lg:overflow-hidden ${
         isActive ? "slide-out-top" : "slide-in-bottom"
       } ${pageChanged ? "hidden" : ""}`}
     >
@@ -43,100 +43,25 @@ export default function Hero() {
         <p className="text-base text-background/90 text-center max-w-xl px-6 leading-normal">
           I&apos;m Saif, a designer and developer passionate about creativity.
         </p>
-        <div className="flex mt-10 max-w-lg flex-nowrap items-center justify-center gap-4 text-sm animate-scroll whitespace-nowrap">
-          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
-            Branding
-          </span>
-          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
-            Art
-          </span>
-          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
-            Animations
-          </span>
-          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
-            Web & Apps
-          </span>
-          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
-            Motion Graphics
-          </span>
-          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
-            Branding
-          </span>
-          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
-            Art
-          </span>
-          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
-            Animations
-          </span>
-          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
-            Web & Apps
-          </span>
-          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
-            Motion Graphics
-          </span>
-          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
-            Branding
-          </span>
-          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
-            Art
-          </span>
-          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
-            Animations
-          </span>
-          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
-            Web & Apps
-          </span>
-          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
-            Motion Graphics
-          </span>
-          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
-            Branding
-          </span>
-          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
-            Art
-          </span>
-          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
-            Animations
-          </span>
-          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
-            Web & Apps
-          </span>
-          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
-            Motion Graphics
-          </span>
-          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
-            Branding
-          </span>
-          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
-            Art
-          </span>
-          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
-            Animations
-          </span>
-          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
-            Web & Apps
-          </span>
-          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
-            Motion Graphics
-          </span>
-          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
-            Branding
-          </span>
-          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
-            Art
-          </span>
-          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
-            Animations
-          </span>
-          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
-            Web & Apps
-          </span>
-          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
-            Motion Graphics
-          </span>
-          <span className="px-3 py-1 text-xs font-medium text-background bg-background/5 rounded-full">
-            Branding
-          </span>
+
+        <div className="mt-10 p-1 rounded-full text-sm bg-emerald-500/40 w-fit overflow-y-hidden">
+          <div className="flex flex-nowrap items-center justify-center gap-2 whitespace-nowrap">
+            <span className="px-3 py-1 text-xs font-medium text-background/90 bg-background/5 rounded-full">
+              Branding
+            </span>
+            <span className="px-3 py-1 text-xs font-medium text-background/90 bg-background/5 rounded-full">
+              Art
+            </span>
+            <span className="px-3 py-1 text-xs font-medium text-background/90 bg-background/5 rounded-full">
+              Animations
+            </span>
+            <span className="px-3 py-1 text-xs font-medium text-background/90 bg-background/5 rounded-full">
+              Web & Apps
+            </span>
+            <span className="px-3 py-1 text-xs font-medium text-background/90 bg-background/5 rounded-full">
+              Motion Graphics
+            </span>
+          </div>
         </div>
       </div>
 
