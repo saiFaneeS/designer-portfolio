@@ -4,9 +4,9 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="py-6 bg-pencil text-background">
+    <div className="py-4 bg-pencil text-background">
       <div className="flex flex-col justify-between items-center gap-6">
-        <p className="text-lg font-medium font-yellow-tail">Saif Anees</p>
+        <p className="text-base tracking-wide font-medium font-yellow-tail">Saif Anees</p>
         {/* <ul className="flex gap-4 items-center">
           <Link href={"/"} className="p-1 rounded-sm">
             <Instagram size={22} strokeWidth={1.8} />
