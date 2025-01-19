@@ -50,7 +50,7 @@ const Projects = () => {
       ],
     },
     {
-      title: "Motion Graphics / Animations",
+      title: "Animations / Motion Graphics",
       works: [
         {
           image: "/img1.png",
@@ -91,29 +91,31 @@ const Projects = () => {
 
   return (
     <div className="works-section px-[5%] py-12 font-clash bg-background relative z-0">
-      <h2 className="flex items-center gap-3 text-xl font-medium mb-8 ">
-        <PackageCheck className="h-7 w-7" /> Commission Works
+      <h2 className="flex items-center gap-2 max-lg:gap-2 text-xl font-medium mb-6 font-yellow-tail">
+        <PackageCheck className="h-7 w-7" strokeWidth={1.8} /> Commission Works
       </h2>
-      <div className="grid grid-cols-2 max-sm:grid-cols-1 gap-6">
+      <div className="grid grid-cols-4 max-2xl:grid-cols-2 max-sm:grid-cols-1 gap-8 gap-y-12">
         {categories.map((category) => (
           <div key={category.title}>
             <Carousel
               opts={{
                 align: "start",
               }}
-              className="w-full border p-4 rounded-lg border-pencil/20"
+              className="w-full border p-4 max-md:p-2 rounded-lg border-pencil/10"
             >
               <div className="flex gap-4 justify-between mb-2">
-                <h2 className="text-lg font-medium">{category.title}</h2>
+                <h2 className="text-base xl:text-lg font-medium line-clamp-1">
+                  {category.title}
+                </h2>
                 <div className="flex gap-2 items-center">
-                  <CarouselPrevious className="static bg-pencil/20 -mb-7" />
-                  <CarouselNext className="static bg-pencil/20 -mb-7" />
+                  <CarouselPrevious className="static bg-pencil/10 text-pencil/80 -mb-7 bg-opacity-50 border-none hover:bg-emerald-500/10" />
+                  <CarouselNext className="static bg-pencil/10 text-pencil/80 -mb-7 bg-opacity-50 border-none hover:bg-emerald-500/10" />
                 </div>
               </div>
 
               <CarouselContent>
                 {category.works.map((work, index) => (
-                  <CarouselItem key={index} className="aspect-video">
+                  <CarouselItem key={index} className="aspect-[16/7]">
                     <div className="relative h-full w-full rounded-md overflow-hidden">
                       <Image
                         src={work.image}
@@ -124,14 +126,16 @@ const Projects = () => {
                       />
                       <div className="h-full w-full bg-gradient-to-t from-black/20 to-transparent z-10 absolute bottom-0 left-0"></div>
                     </div>
-                    <div className="mt-4 mb-1 font-medium">
+                    <div className="mt-2 md:mt-3 mb-1 font-medium">
                       <h4>
                         <span>{work.client}</span>
                         {" - "}
                         <span>{work.time}</span>
                       </h4>
                     </div>
-                    <p className="font-roboto text-sm text-pencil/80">{work.desc} </p>
+                    <p className="font-roboto text-sm text-pencil/80 line-clamp-2">
+                      {work.desc}{" "}
+                    </p>
                   </CarouselItem>
                 ))}
               </CarouselContent>

@@ -44,11 +44,11 @@ export default function Hero() {
             <span className="px-3 py-1 text-xs font-medium text-pencil bg-red-200/90 border-l-2 border-l-red-500">
               Animations
             </span>
-            <span className="px-3 py-1 text-xs font-medium text-pencil bg-blue-200/90 border-l-2 border-l-blue-500">
-              Web/Apps
-            </span>
             <span className="max-sm:hidden px-3 py-1 text-xs font-medium text-pencil bg-violet-200/90 border-l-2 border-l-violet-500">
               Motion Graphics
+            </span>
+            <span className="px-3 py-1 text-xs font-medium text-pencil bg-blue-200/90 border-l-2 border-l-blue-500">
+              Web/Apps
             </span>
           </div>
         </div>

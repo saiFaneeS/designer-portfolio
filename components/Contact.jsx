@@ -32,7 +32,7 @@ const ContactPage = () => {
         >
           <div className="flex flex-col items-start justify-center">
             <div className="mb-12 max-md:mb-8 max-md:px-[5%]">
-              <h1 className="text-xl font-medium mb-2 text-pencil font-clash">
+              <h1 className="text-xl font-medium mb-2 text-pencil font-yellow-tail">
                 Drop a Message!
               </h1>
               <p className="text-pencil/80">
