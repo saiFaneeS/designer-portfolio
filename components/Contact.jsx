@@ -10,6 +10,7 @@ import {
   MessageCircle,
   MessageSquare,
   Send,
+  Truck,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -110,7 +111,7 @@ const ContactPage = () => {
           {/* Contact Form */}
           <div className="max-md:px-[5%] w-full">
             <div className="relative h-full w-full">
-              <div className="space-y-6 text-pencil p-8 max-md:p-6 max-sm:p-4 shadow-lg bg-background border border-pencil/20 absolute h-full w-full z-0 left-3 bottom-3 rotate-1"></div>
+              <div className="space-y-6 text-pencil p-8 max-md:p-6 max-sm:p-4 shadow-lg bg-background-darker border border-pencil/20 absolute h-full w-full z-0 left-3 bottom-3 rotate-1"></div>
               <motion.form
                 onSubmit={handleSubmit}
                 className="space-y-6 text-pencil p-8 max-md:p-6 max-sm:p-4 shadow-xl bg-background border border-pencil/20 z-20 relative"
@@ -174,7 +175,7 @@ const ContactPage = () => {
                   className="w-full px-6 py-3 bg-emerald-500 hover:bg-emerald-500/90 text-white font-medium rounded-sm shadow-lg flex items-center justify-center gap-2 transition-all group font-clash"
                   whileTap={{ scale: 0.98 }}
                 >
-                  <MailIcon
+                  <Truck
                     className="w-5 h-5 group-hover:-rotate-6"
                     strokeWidth={1.8}
                   />

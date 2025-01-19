@@ -12,19 +12,21 @@ import { PackageCheck } from "lucide-react";
 const Projects = () => {
   const categories = [
     {
-      title: "Web/App Design",
+      title: "Web/App Designs",
       works: [
         {
           image: "/msre.png",
-          client: "Client A",
-          budget: "$900",
-          time: "2 Months",
+          client: "MS Real Estate LLC",
+          budget: "$600",
+          time: "1 Months",
+          desc: "Modernised re-design of pages and migration from of the wordpress to full-stack.",
         },
         {
           image: "/projects/ohghad1.jpeg",
-          client: "Client A",
+          client: "Ohghad Non-profit",
           budget: "$900",
-          time: "2 Months",
+          time: "1 Months",
+          desc: "Design a platform for fundraising for the people of Ghana.",
         },
       ],
     },
@@ -36,12 +38,14 @@ const Projects = () => {
           client: "Client B",
           budget: "$700",
           time: "1 Month",
+          desc: "Lorem ipsum dolor set amet. Lorem ipsum dolor set emet. dolor ip.",
         },
         {
           image: "/brand2.png",
           client: "Client C",
           budget: "$800",
           time: "1.5 Months",
+          desc: "Lorem ipsum dolor set amet. Lorem ipsum dolor set emet. dolor ip.",
         },
       ],
     },
@@ -53,12 +57,14 @@ const Projects = () => {
           client: "Client F",
           budget: "$500",
           time: "3 Weeks",
+          desc: "Lorem ipsum dolor set amet. Lorem ipsum dolor set emet. dolor ip.",
         },
         {
           image: "/img1.png",
           client: "Client F",
           budget: "$500",
           time: "3 Weeks",
+          desc: "Lorem ipsum dolor set amet. Lorem ipsum dolor set emet. dolor ip.",
         },
       ],
     },
@@ -70,12 +76,14 @@ const Projects = () => {
           client: "Client G",
           budget: "$400",
           time: "1 Month",
+          desc: "Lorem ipsum dolor set amet. Lorem ipsum dolor set emet. dolor ip.",
         },
         {
           image: "/art1.webp",
           client: "Client G",
           budget: "$400",
           time: "1 Month",
+          desc: "Lorem ipsum dolor set amet. Lorem ipsum dolor set emet. dolor ip.",
         },
       ],
     },
@@ -93,7 +101,7 @@ const Projects = () => {
               opts={{
                 align: "start",
               }}
-              className="w-full border p-3 rounded-lg border-pencil/20"
+              className="w-full border p-4 rounded-lg border-pencil/20"
             >
               <div className="flex gap-4 justify-between mb-2">
                 <h2 className="text-lg font-medium">{category.title}</h2>
@@ -105,10 +113,7 @@ const Projects = () => {
 
               <CarouselContent>
                 {category.works.map((work, index) => (
-                  <CarouselItem
-                    key={index}
-                    className="md:basis-1/2 lg:basis-1/2 aspect-video"
-                  >
+                  <CarouselItem key={index} className="aspect-video">
                     <div className="relative h-full w-full rounded-md overflow-hidden">
                       <Image
                         src={work.image}
@@ -119,6 +124,14 @@ const Projects = () => {
                       />
                       <div className="h-full w-full bg-gradient-to-t from-black/20 to-transparent z-10 absolute bottom-0 left-0"></div>
                     </div>
+                    <div className="mt-4 mb-1 font-medium">
+                      <h4>
+                        <span>{work.client}</span>
+                        {" - "}
+                        <span>{work.time}</span>
+                      </h4>
+                    </div>
+                    <p className="font-roboto text-sm text-pencil/80">{work.desc} </p>
                   </CarouselItem>
                 ))}
               </CarouselContent>

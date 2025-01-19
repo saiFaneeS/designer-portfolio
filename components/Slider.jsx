@@ -1,4 +1,11 @@
-import { ArrowDown, ArrowRight, Mail, Pause, Play } from "lucide-react";
+import {
+  ArrowDown,
+  ArrowRight,
+  Mail,
+  MailOpen,
+  Pause,
+  Play,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -100,7 +107,7 @@ const Slider = () => {
                     />
                   </defs>
                   <text
-                    className="text-[20px] font-medium fill-background"
+                    className="text-[15px] font-clash fill-white"
                     textLength="565"
                     dominantBaseline="middle"
                   >
@@ -112,9 +119,15 @@ const Slider = () => {
 
                 <Link
                   href="mailto:saifanees11@gmail.com"
-                  className="absolute z-30 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-green-400 hover:bg-amber-300 text-pencil rounded-full p-4"
+                  className="absolute z-30 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-green-400 hover:bg-amber-300 text-pencil rounded-full aspect-square h-14 flex items-center justify-center"
                 >
-                  <Mail className="h-7 w-7" strokeWidth={1.2} />
+                  <div className="flex items-center justify-center h-full w-full group">
+                    <Mail className="h-6 w-full" strokeWidth={1.2} />
+                    {/* <MailOpen
+                      className="h-6 w-full transition-opacity duration-200 opacity-0 hover:opacity-100 group-hover:scale-100"
+                      strokeWidth={1.2}
+                    /> */}
+                  </div>
                 </Link>
               </div>
             </div>

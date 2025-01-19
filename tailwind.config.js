@@ -40,11 +40,12 @@ module.exports = {
         background: {
           DEFAULT: "#f3ebe3",
           brighter: "#f8f4f0",
-          darker: "#b6ac9e",
+          darker: "#d4ccc0",
         },
         foreground: "hsl(var(--foreground))",
         pencil: {
           DEFAULT: "#282019",
+          darker: "#110c09",
         },
         primary: {
           DEFAULT: "#282019",
@@ -86,10 +87,10 @@ module.exports = {
           "100%": { transform: "translateX(-110%)" },
         },
         "snap-loop": {
-          "0%, 12.5%": { transform: "translateX(50%)" }, // Image 1 stays
-          "33.33%, 45.83%": { transform: "translateX(-57%)" }, // Image 2 stays
-          "66.66%, 79.16%": { transform: "translateX(-164%)" }, // Image 3 stays
-          "100%": { transform: "translateX(50%)" }, // Loop back to Image 1
+          "0%, 17.5%": { transform: "translateX(50%)" },
+          "33.33%, 50.83%": { transform: "translateX(-57%)" },
+          "66.66%, 84.16%": { transform: "translateX(-164%)" },
+          "100%": { transform: "translateX(50%)" },
         },
         "accordion-down": {
           from: { height: "0" },
@@ -103,8 +104,8 @@ module.exports = {
       animation: {
         scroll: "scroll 25s linear infinite",
         "scroll-faster": "scroll 15s linear infinite",
-        "snap-loop": "snap-loop 6s ease-in-out infinite", // Adjust duration
-        rotate: "spin 10s linear infinite",
+        "snap-loop": "snap-loop 6s infinite", // Adjust duration
+        rotate: "spin 15s linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
