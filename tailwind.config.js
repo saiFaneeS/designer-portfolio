@@ -24,6 +24,7 @@ module.exports = {
       fontFamily: {
         "yellow-tail": ["Yellowtail-Regular", "sans-serif"],
         roboto: ["Roboto-Regular", "sans-serif"],
+        robotoMedium: ["Roboto-Medium", "sans-serif"],
         clash: ["ClashGrotesk-Variable", "sans-serif"],
         clashExtralight: ["ClashGrotesk-Extralight", "sans-serif"],
         clashLight: ["ClashGrotesk-Light", "sans-serif"],
