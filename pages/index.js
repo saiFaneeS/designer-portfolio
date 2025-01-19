@@ -8,7 +8,6 @@ export default function Home() {
     <Layout>
       <Hero />
       <Projects />
-      {/* testimonials */}
       <Contact />
     </Layout>
   );

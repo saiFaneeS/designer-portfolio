@@ -85,14 +85,6 @@ const Navbar = () => {
             Message Me
           </ScrollLink>
         </ul>
-        {/* <div className="sm:hidden text-lg font-semibold flex gap-4 items-center justify-center">
-          <div
-            className="cursor-pointer flex leading-none gap-2 hover:bg-emerald-500/10 border border-emerald-500/0 hover:border-emerald-800/10 hover:bg-opacity-50 p-1 rounded transition-all"
-            onClick={() => setIsActive(!isActive)}
-          >
-            <Menu size={24} strokeWidth={1.7} />
-          </div>
-        </div> */}
       </div>
       <div
         className={`h-screen w-full fixed left-0 border-b border-b-black flex flex-col justify-center px-[25%] py-4 z-10 transition-all delay-75 duration-1000 ${

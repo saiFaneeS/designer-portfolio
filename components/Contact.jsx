@@ -14,8 +14,6 @@ import {
 import Link from "next/link";
 
 const ContactPage = () => {
-  // const { toast } = useToast();
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e);
@@ -32,7 +30,7 @@ const ContactPage = () => {
           className="grid grid-cols-2 max-md:grid-cols-1"
         >
           <div className="flex flex-col items-start justify-center">
-            <div className="mb-12 max-md:px-[5%]">
+            <div className="mb-12 max-md:mb-8 max-md:px-[5%]">
               <h1 className="text-xl font-medium mb-2 text-pencil font-clash">
                 Drop a Message!
               </h1>
@@ -43,7 +41,7 @@ const ContactPage = () => {
             </div>
 
             {/* Social Links */}
-            <motion.a className="flex flex-col gap-6 max-sm:gap-4 mb-12 w-full max-md:pl-[5%]">
+            <motion.a className="flex flex-col gap-4 mb-8 w-full max-md:pl-[5%]">
               <Link
                 href={"#"}
                 target="_blank"
@@ -110,77 +108,80 @@ const ContactPage = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="max-md:px-[5%]">
-            <motion.form
-              onSubmit={handleSubmit}
-              className="space-y-6 text-pencil p-8 max-md:p-6 max-sm:p-4 shadow-lg bg-background border border-pencil/20"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
-            >
-              <div className="flex items-center max-sm:items-start gap-2 text-nowrap max-sm:flex-col border-b border-pencil/50">
-                <label
-                  htmlFor="name"
-                  className="text-base font-medium text-pencil/80 dark:text-slate-300"
-                >
-                  My name is
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  className="w-full px-1 py-2 bg-background outline-none transition-all text-base font-medium"
-                  placeholder="Your name"
-                />
-              </div>
-
-              <div className="flex items-center max-sm:items-start gap-2 text-nowrap max-sm:flex-col border-b border-pencil/50">
-                <label
-                  htmlFor="email"
-                  className="text-base font-medium text-pencil/80 dark:text-slate-300"
-                >
-                  Here is my email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  className="w-full px-1 py-2 bg-background outline-none transition-all text-base font-medium"
-                  placeholder="your@email.com"
-                />
-              </div>
-
-              <div className="flex items-start gap-2 text-nowrap max-sm:flex-col border-b border-pencil/50">
-                <label
-                  htmlFor="message"
-                  className="text-base font-medium text-pencil/80 dark:text-slate-300"
-                >
-                  And message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows={6}
-                  className="w-full px-1 py-2 bg-background outline-none transition-all text-sm leading-none font-medium resize-none"
-                  placeholder=". . ."
-                />
-              </div>
-
-              <motion.button
-                type="submit"
-                className="w-full px-6 py-3 bg-emerald-500 hover:bg-emerald-500/90 text-white font-medium rounded-sm shadow-lg flex items-center justify-center gap-2 transition-all group font-clash"
-                whileTap={{ scale: 0.98 }}
+          <div className="max-md:px-[5%] w-full">
+            <div className="relative h-full w-full">
+              <div className="space-y-6 text-pencil p-8 max-md:p-6 max-sm:p-4 shadow-lg bg-background border border-pencil/20 absolute h-full w-full z-0 left-3 bottom-3 rotate-1"></div>
+              <motion.form
+                onSubmit={handleSubmit}
+                className="space-y-6 text-pencil p-8 max-md:p-6 max-sm:p-4 shadow-xl bg-background border border-pencil/20 z-20 relative"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.2 }}
               >
-                <MailIcon
-                  className="w-5 h-5 group-hover:-rotate-6"
-                  strokeWidth={1.8}
-                />
-                Post Letter
-              </motion.button>
-            </motion.form>
+                <div className="flex items-center max-sm:items-start gap-2 text-nowrap max-sm:flex-col border-b border-pencil/50">
+                  <label
+                    htmlFor="name"
+                    className="text-base font-medium text-pencil/80 dark:text-slate-300"
+                  >
+                    My name is
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    className="w-full px-1 py-2 bg-background outline-none transition-all text-base font-medium"
+                    placeholder="Your name"
+                  />
+                </div>
+
+                <div className="flex items-center max-sm:items-start gap-2 text-nowrap max-sm:flex-col border-b border-pencil/50">
+                  <label
+                    htmlFor="email"
+                    className="text-base font-medium text-pencil/80 dark:text-slate-300"
+                  >
+                    Here is my email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    className="w-full px-1 py-2 bg-background outline-none transition-all text-base font-medium"
+                    placeholder="your@email.com"
+                  />
+                </div>
+
+                <div className="flex items-start gap-2 text-nowrap max-sm:flex-col border-b border-pencil/50">
+                  <label
+                    htmlFor="message"
+                    className="text-base font-medium text-pencil/80 dark:text-slate-300"
+                  >
+                    And message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    required
+                    rows={6}
+                    className="w-full px-1 py-2 bg-background outline-none transition-all text-sm leading-none font-medium resize-none"
+                    placeholder=". . ."
+                  />
+                </div>
+
+                <motion.button
+                  type="submit"
+                  className="w-full px-6 py-3 bg-emerald-500 hover:bg-emerald-500/90 text-white font-medium rounded-sm shadow-lg flex items-center justify-center gap-2 transition-all group font-clash"
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <MailIcon
+                    className="w-5 h-5 group-hover:-rotate-6"
+                    strokeWidth={1.8}
+                  />
+                  Post Letter
+                </motion.button>
+              </motion.form>
+            </div>
           </div>
         </motion.div>
       </div>

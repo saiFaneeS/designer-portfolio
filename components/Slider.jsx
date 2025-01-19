@@ -87,28 +87,6 @@ const Slider = () => {
                 </div>
               </div>
 
-              {/* <div className="flex flex-wrap items-center justify-center gap-2 text-sm min-w-80 max-w-80 max-sm:hidden">
-              <span className="px-3 py-1 text-xs font-medium text-background bg-background/10 rounded-full">
-                Design
-              </span>
-              <span className="px-3 py-1 text-xs font-medium text-background bg-background/10 rounded-full">
-                Art
-              </span>
-              <span className="px-3 py-1 text-xs font-medium text-background bg-background/10 rounded-full">
-                Video
-              </span>
-              <span className="px-3 py-1 text-xs font-medium text-background bg-background/10 rounded-full">
-                Web
-              </span>
-              <span className="px-3 py-1 text-xs font-medium text-background bg-background/10 rounded-full">
-                Animations
-              </span>
-
-              <span className="px-3 py-1 text-xs font-medium text-background bg-emerald-600/40 rounded-full">
-                & More
-              </span>
-            </div> */}
-
               <div className="relative flex justify-center items-center z-20">
                 <svg
                   className="w-[90px] h-[90px] animate-rotate rounded-full"
