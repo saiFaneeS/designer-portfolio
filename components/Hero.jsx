@@ -51,7 +51,7 @@ export default function Hero() {
 
   return (
     <div
-      className={`h-screen relative top-0 overflow-x-hidden bg-gradient-to-t from-pencil-darker to-pencil text-background transition-all flex flex-col justify-between items-center gap-5 max-sm:gap-4 w-full lg:overflow-hidden`}
+      className={`h-screen max-sm:h-[90vh] relative top-0 overflow-x-hidden bg-gradient-to-t from-pencil-darker to-pencil text-background transition-all flex flex-col justify-between items-center gap-5 max-sm:gap-4 w-full lg:overflow-hidden`}
     >
       <div className="fixed px-[5%] grid grid-cols-2 max-sm:grid-cols-1 top-0 lg:text-5xl text-4xl w-full font-medium leading-none pb-24 h-full items-center justify-center">
         <div>
