@@ -45,8 +45,8 @@ export default function Hero() {
 
   // Animation variants for loading
   const fanVariants = {
-    hidden: { rotate: "-180deg" }, 
-    visible: { rotate: "0deg" }, 
+    hidden: { rotate: "-180deg" },
+    visible: { rotate: "0deg" },
   };
 
   return (

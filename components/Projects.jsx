@@ -94,7 +94,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="works-section px-[5%] py-12 font-clash bg-background relative z-0">
+    <div className="works-section px-[5%] py-12 bg-background relative z-0">
       <h2 className="flex items-center gap-2 max-lg:gap-2 text-xl font-medium mb-6 font-yellow-tail">
         <PackageCheck className="h-7 w-7" strokeWidth={1.8} /> Commission Works
       </h2>
@@ -108,7 +108,7 @@ const Projects = () => {
               className={`w-full border p-4 max-md:p-2 rounded-lg border-pencil/10 bg-${category.color}-500/10`}
             >
               <div className="flex gap-4 justify-between mb-2">
-                <h2 className="text-base xl:text-lg font-medium line-clamp-1">
+                <h2 className="text-base xl:text-lg font-medium line-clamp-1 font-robotoMedium">
                   {category.title}
                 </h2>
                 <div className="flex gap-2 items-center">
