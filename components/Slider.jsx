@@ -123,10 +123,6 @@ const Slider = () => {
                 >
                   <div className="flex items-center justify-center h-full w-full group">
                     <Mail className="h-6 w-full" strokeWidth={1.2} />
-                    {/* <MailOpen
-                      className="h-6 w-full transition-opacity duration-200 opacity-0 hover:opacity-100 group-hover:scale-100"
-                      strokeWidth={1.2}
-                    /> */}
                   </div>
                 </Link>
               </div>

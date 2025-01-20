@@ -13,6 +13,7 @@ const Projects = () => {
   const categories = [
     {
       title: "Web/App Designs",
+      color: "blue",
       works: [
         {
           image: "/msre.png",
@@ -32,6 +33,7 @@ const Projects = () => {
     },
     {
       title: "Branding",
+      color: "green",
       works: [
         {
           image: "/brand2.png",
@@ -51,6 +53,7 @@ const Projects = () => {
     },
     {
       title: "Animations / Motion Graphics",
+      color: "violet",
       works: [
         {
           image: "/img1.png",
@@ -70,6 +73,7 @@ const Projects = () => {
     },
     {
       title: "Digital Art",
+      color: "amber",
       works: [
         {
           image: "/art1.webp",
@@ -101,7 +105,7 @@ const Projects = () => {
               opts={{
                 align: "start",
               }}
-              className="w-full border p-4 max-md:p-2 rounded-lg border-pencil/10"
+              className={`w-full border p-4 max-md:p-2 rounded-lg border-pencil/10 bg-${category.color}-500/10`}
             >
               <div className="flex gap-4 justify-between mb-2">
                 <h2 className="text-base xl:text-lg font-medium line-clamp-1">
@@ -126,16 +130,18 @@ const Projects = () => {
                       />
                       <div className="h-full w-full bg-gradient-to-t from-black/20 to-transparent z-10 absolute bottom-0 left-0"></div>
                     </div>
-                    <div className="mt-2 md:mt-3 mb-1 font-medium">
-                      <h4>
-                        <span>{work.client}</span>
-                        {" - "}
-                        <span>{work.time}</span>
-                      </h4>
+                    <div className="bg-pencil/10 p-2 rounded-sm mt-3">
+                      <div className="mb-1 font-medium">
+                        <h4>
+                          <span>{work.client}</span>
+                          {" - "}
+                          <span>{work.time}</span>
+                        </h4>
+                      </div>
+                      <p className="font-roboto text-sm text-pencil/80 line-clamp-2">
+                        {work.desc}{" "}
+                      </p>
                     </div>
-                    <p className="font-roboto text-sm text-pencil/80 line-clamp-2">
-                      {work.desc}{" "}
-                    </p>
                   </CarouselItem>
                 ))}
               </CarouselContent>

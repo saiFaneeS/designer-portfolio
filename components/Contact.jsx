@@ -1,25 +1,14 @@
-"use client";
-
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  Instagram,
-  Mail,
-  Mailbox,
-  MailIcon,
-  MessageCircle,
-  MessageSquare,
-  Send,
-  Truck,
-} from "lucide-react";
+import { Instagram, Mail, Truck } from "lucide-react";
 import Link from "next/link";
 
 const ContactPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const formData = new FormData(e);
+    // const formData = new FormData(e);
 
-    e.target.reset();
+    // e.target.reset();
   };
 
   return (
@@ -42,9 +31,9 @@ const ContactPage = () => {
             </div>
 
             {/* Social Links */}
-            <motion.a className="flex flex-col gap-4 mb-8 w-full max-md:pl-[5%]">
+            <motion.div className="flex flex-col gap-4 mb-8 w-full max-md:pl-[5%]">
               <Link
-                href={"#"}
+                href={"/"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center max-sm:w-full rounded group"
@@ -61,7 +50,7 @@ const ContactPage = () => {
                 </p>
               </Link>
               <Link
-                href={"#"}
+                href={"/"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center max-sm:w-full rounded group"
@@ -89,7 +78,7 @@ const ContactPage = () => {
                 </p>
               </Link>
               <Link
-                href={"#"}
+                href={"/"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center max-sm:w-full rounded group"
@@ -105,7 +94,7 @@ const ContactPage = () => {
                   Send an Email{" "}
                 </p>
               </Link>
-            </motion.a>
+            </motion.div>
           </div>
 
           {/* Contact Form */}
@@ -170,17 +159,16 @@ const ContactPage = () => {
                   />
                 </div>
 
-                <motion.button
+                <button
                   type="submit"
-                  className="w-full px-6 py-3 bg-emerald-500 hover:bg-emerald-500/90 text-white font-medium rounded-sm shadow-lg flex items-center justify-center gap-2 transition-all group font-clash"
-                  whileTap={{ scale: 0.98 }}
+                  className="w-full px-6 py-3 bg-emerald-600/90 hover:bg-emerald-600/80 text-white font-medium rounded-sm shadow-lg flex items-center justify-center gap-2 transition-all group font-clash"
                 >
                   <Truck
                     className="w-5 h-5 group-hover:-rotate-6"
                     strokeWidth={1.8}
                   />
                   Post Letter
-                </motion.button>
+                </button>
               </motion.form>
             </div>
           </div>
