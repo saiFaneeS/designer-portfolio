@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <body className="font-roboto">
+      <body className="font-clash">
         <Main />
         <NextScript />
       </body>

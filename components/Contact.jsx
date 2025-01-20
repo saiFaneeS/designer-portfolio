@@ -1,6 +1,15 @@
 import React, { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { Instagram, Mail, Mailbox, Truck } from "lucide-react";
+import {
+  Asterisk,
+  AtSign,
+  Instagram,
+  Mail,
+  Mailbox,
+  MailCheck,
+  MessageSquareDiff,
+  Truck,
+} from "lucide-react";
 import Link from "next/link";
 
 const ContactPage = () => {
@@ -12,13 +21,14 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="contact-section md:px-[5%] items-center border-y border-y-pencil/10 bg-background-brighter dark:from-slate-950 dark:to-slate-900 relative">
-      <div className="py-16">
+    <div className="contact-section md:px-[5%] border-y border-y-pencil/10 bg-background-brighter dark:from-slate-950 dark:to-slate-900 relative">
+      <div className="py-28 max-md:py-16">
         <div className="grid grid-cols-2 max-md:grid-cols-1">
           <div className="flex flex-col items-start justify-center">
-            <div className="mb-12 max-md:mb-8 max-md:px-[5%]">
-              <h1 className="text-xl font-medium mb-2 text-pencil font-yellow-tail">
-                Drop a Message!
+            <div className="mb-10 max-md:mb-8 max-md:px-[5%]">
+              <h1 className="flex items-center gap-1 text-2xl font-medium mb-2 text-pencil font-yellow-tail">
+                <Asterisk size={30} strokeWidth={1.9} />
+                Drop a Message.
               </h1>
               <p className="text-pencil/80">
                 Drop me a message and I&apos;ll get back to you as soon as
@@ -82,7 +92,7 @@ const ContactPage = () => {
                 <span
                   className={`p-2 h-11 flex items-center justify-center aspect-square gap-3 rounded-l text-pencil/90 transition-all bg-blue-400/90 group-hover:opacity-80`}
                 >
-                  <Mail />{" "}
+                  <AtSign />{" "}
                 </span>
                 <p
                   className={`px-6 h-11 flex items-center justify-start w-full gap-3 max-sm:rounded-r text-pencil font-clash transition-all bg-blue-500/10 group-hover:opacity-80`}
@@ -102,10 +112,10 @@ const ContactPage = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.2 }}
                 variants={{
-                  hidden: { rotate: "1deg" },
-                  visible: { rotate: "3deg" },
+                  hidden: { rotate: "0deg" },
+                  visible: { rotate: "1deg" },
                 }}
-                className="space-y-6 text-pencil p-8 max-md:p-6 max-sm:p-4 shadow-lg bg-background-darker border border-pencil/20 absolute h-full w-full z-0 left-3 bottom-3 rotate-1"
+                className="space-y-6 text-pencil p-8 max-md:p-6 max-sm:p-4 shadow-lg bg-background-darker border border-pencil/20 absolute h-full w-full z-0 left-2 bottom-2"
               ></motion.div>
               <motion.form
                 onSubmit={handleSubmit}
@@ -115,9 +125,9 @@ const ContactPage = () => {
                 transition={{ duration: 0.2 }}
                 variants={{
                   hidden: { rotate: "0deg" },
-                  visible: { rotate: "1deg" },
+                  visible: { rotate: "0deg" },
                 }}
-                className="space-y-6 text-pencil p-8 max-md:p-6 max-sm:p-4 shadow-xl bg-background border border-pencil/20 z-20 relative"
+                className="space-y-6 text-pencil p-8 max-md:p-6 max-sm:p-4 shadow-lg bg-background border border-pencil/20 z-20 relative"
               >
                 <div className="flex items-center max-sm:items-start gap-2 text-nowrap max-sm:flex-col border-b border-pencil/50">
                   <label
@@ -172,11 +182,12 @@ const ContactPage = () => {
 
                 <button
                   type="submit"
-                  className="w-full px-6 py-3 bg-emerald-600/90 hover:bg-emerald-600/80 text-white font-medium rounded-sm shadow-lg flex items-center justify-center gap-2 transition-all group font-clash"
+                  className="w-fit px-6 py-3 bg-emerald-600/90 hover:bg-emerald-600/80 text-white font-medium rounded-sm shadow-lg flex items-center justify-center gap-2 transition-all group font-clash"
                 >
-                  <Mailbox
-                    className="w-5 h-5 group-hover:-rotate-3"
+                  <MailCheck
+                    className="group-hover:-rotate-3"
                     strokeWidth={1.8}
+                    size={18}
                   />
                   Post Letter
                 </button>

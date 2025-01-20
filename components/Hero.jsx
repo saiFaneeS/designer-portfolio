@@ -42,7 +42,7 @@ export default function Hero() {
         <div>
           <>
             <motion.h1
-              className={`leading-none sm:pl-6 md:pl-8 lg:pl-10 lg:text-3xl text-2xl -mb-7 max-lg:-mb-5 font-clash font-medium flex justify-start max-sm:justify-center items-center text-left`}
+              className={`leading-none sm:pl-4 md:pl-6 lg:pl-8 lg:text-3xl text-2xl -mb-7 max-lg:-mb-5 font-clash font-medium flex justify-start max-sm:justify-center items-center text-left`}
               initial="hidden"
               animate="visible"
               variants={{
@@ -56,7 +56,7 @@ export default function Hero() {
           </>
           <div>
             <motion.h1
-              className="font-yellow-tail pb-4 tracking-wide drop-shadow-md px-2 text-nowrap leading-none max-sm:text-center max-sm:mt-1 max-sm:break-words text-emerald-400"
+              className="font-yellow-tail pb-4 tracking-wide px-2 text-nowrap leading-none max-sm:text-center max-sm:mt-1 max-sm:break-words text-emerald-400"
               initial="hidden"
               animate="visible"
               variants={{
@@ -68,7 +68,7 @@ export default function Hero() {
               Visual Storyteller
             </motion.h1>
           </div>
-          <p className="text-base text-background/90 text-center sm:text-start max-w-xl px-2 md:pl-3 leading-normal">
+          <p className="text-base text-background/90 text-center sm:text-start max-w-xl px-2 md:pl-4 lg:pl-5 leading-normal font-normal">
             I&apos;m Saif, a designer and developer passionate about creativity.
           </p>
         </div>
