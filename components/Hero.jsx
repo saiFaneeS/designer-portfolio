@@ -56,7 +56,7 @@ export default function Hero() {
           </>
           <div>
             <motion.h1
-              className="font-yellow-tail pb-4 tracking-wide px-2 text-nowrap leading-none max-sm:text-center max-sm:mt-1 max-sm:break-words text-emerald-400"
+              className="font-yellow-tail pb-4 tracking-wide drop-shadow-lg px-2 text-nowrap leading-none max-sm:text-center max-sm:mt-1 max-sm:break-words text-emerald-400"
               initial="hidden"
               animate="visible"
               variants={{
@@ -74,7 +74,7 @@ export default function Hero() {
         </div>
         {/* categories-fan */}
         <motion.div
-          className="text-sm flex items-center justify-center max-xl:scale-95 max-lg:scale-90 max-md:scale-75 max-sm:scale-100 max-sm:absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 max-sm:opacity-20 transition-all cursor-default"
+          className="text-sm flex items-center justify-center max-xl:scale-95 max-lg:scale-90 max-md:scale-75 max-sm:scale-100 max-sm:absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 max-sm:opacity-20 max-sm:blur-2xl transition-all cursor-default"
           initial="hidden"
           animate={"visible"}
           variants={fanVariants}

@@ -118,8 +118,8 @@ const Projects = () => {
               className={`w-full border p-4 max-md:p-3 border-pencil/10 bg-${category.color}-500/10 rounded-xl`}
             >
               <div className="flex gap-4 justify-between mb-2">
-                <h2 className="text-base xl:text-lg font-medium line-clamp-1 flex gap-2 items-center">
-                  <category.icon />
+                <h2 className="text-base xl:text-lg font-medium line-clamp-1 flex gap-2 items-center text-nowrap">
+                  <category.icon className="shrink-0"/>
                   {category.title}
                 </h2>
                 <div className="flex gap-2 items-center">
@@ -144,14 +144,14 @@ const Projects = () => {
                         <div className="h-full w-full z-10 absolute bottom-0 left-0"></div>
                       </div>
                       <div className="pl-2 border-l border-dashed border-pencil/20">
-                        <div className="mb-1 border-b border-b-pencil/10 font-medium">
+                        <div className="mb-1 border-b border-b-pencil/10 font-medium leading-normal">
                           <h4>
                             <span>{work.client}</span>
                             {" - "}
                             <span>{work.time}</span>
                           </h4>
                         </div>
-                        <div className="text-sm text-pencil/80">
+                        <div className="text-sm text-pencil/80 line-clamp-3">
                           {work.desc.split(" ").map((line, index) => (
                             <span
                               key={index}
