@@ -105,9 +105,9 @@ const Projects = () => {
               opts={{
                 align: "start",
               }}
-              className={`w-full border p-4 max-md:p-2 rounded-lg border-pencil/10 bg-${category.color}-500/10`}
+              className={`w-full border p-4 max-md:p-3 border-pencil/10 bg-${category.color}-500/10`}
             >
-              <div className="flex gap-4 justify-between mb-2">
+              <div className="flex gap-4 justify-between mb-3">
                 <h2 className="text-base xl:text-lg font-medium line-clamp-1 font-robotoMedium">
                   {category.title}
                 </h2>
@@ -116,11 +116,12 @@ const Projects = () => {
                   <CarouselNext className="static bg-pencil/10 text-pencil/80 -mb-7 bg-opacity-50 border-none hover:bg-emerald-500/10 max-md:size-7" />
                 </div>
               </div>
+              <div className="w-full h-[1px] bg-pencil/20 mb-4"></div>
 
               <CarouselContent>
                 {category.works.map((work, index) => (
-                  <CarouselItem key={index} className="aspect-[16/7]">
-                    <div className="relative h-full w-full rounded-md overflow-hidden">
+                  <CarouselItem key={index} className="aspect-[16/9]">
+                    <div className="relative h-full w-full overflow-hidden bg-background p-3 max-md:p-2 border border-pencil/20 shadow-md">
                       <Image
                         src={work.image}
                         height={1000}
@@ -128,19 +129,26 @@ const Projects = () => {
                         className="h-full w-full object-cover"
                         alt={work.client}
                       />
-                      <div className="h-full w-full bg-gradient-to-t from-black/20 to-transparent z-10 absolute bottom-0 left-0"></div>
+                      <div className="h-full w-full z-10 absolute bottom-0 left-0"></div>
                     </div>
-                    <div className="bg-pencil/10 p-2 rounded-sm mt-3">
-                      <div className="mb-1 font-medium">
+                    <div className="rounded-sm mt-3">
+                      <div className="mb-1 border-b border-b-pencil/10 font-medium">
                         <h4>
                           <span>{work.client}</span>
                           {" - "}
                           <span>{work.time}</span>
                         </h4>
                       </div>
-                      <p className="font-roboto text-sm text-pencil/80 line-clamp-2">
-                        {work.desc}{" "}
-                      </p>
+                      <div className="font-roboto text-sm text-pencil/80">
+                        {work.desc.split("\s").map((line, index) => (
+                          <span
+                            key={index}
+                            className="border-b border-b-pencil/10"
+                          >
+                            {line}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </CarouselItem>
                 ))}

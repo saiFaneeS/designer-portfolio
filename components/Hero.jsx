@@ -6,29 +6,16 @@ import Autoplay from "embla-carousel-autoplay";
 import { TrustIndicators } from "./TrustIndicators";
 import Slider from "./Slider";
 import { motion } from "framer-motion";
+import {
+  Codepen,
+  Hexagon,
+  Package2,
+  PackageOpen,
+  Pentagon,
+} from "lucide-react";
 
 export default function Hero() {
-  const { isActive, pageChanged, setPageChanged } = useNavbar();
-  const [loading, setLoading] = useState(true);
   const [rotation, setRotation] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setPageChanged(false);
-
-    // Simulate loading
-    setTimeout(() => setLoading(false), 1000);
-  }, [setPageChanged]);
-
-  const plugin = React.useRef(
-    Autoplay({ delay: 4000, stopOnInteraction: true })
-  );
-
-  // Animation variants for sliding in from the top
-  const titleVariants = {
-    hidden: { opacity: 0, y: -20 }, // Start off-screen above
-    visible: { opacity: 1, y: 0 }, // End position
-  };
 
   const handleScroll = () => {
     const scrollY = window.scrollY; // Get the current scroll position
@@ -37,15 +24,13 @@ export default function Hero() {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-    setIsVisible(true);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  // Animation variants for loading
   const fanVariants = {
-    hidden: { rotate: "-180deg" },
+    hidden: { rotate: "-60deg" },
     visible: { rotate: "0deg" },
   };
 
@@ -57,10 +42,13 @@ export default function Hero() {
         <div>
           <>
             <motion.h1
-              className={`leading-none sm:pl-6 md:pl-8 lg:pl-12 lg:text-3xl text-2xl -mb-7 max-lg:-mb-5 font-clash font-medium flex justify-start max-sm:justify-center items-center text-left`}
+              className={`leading-none sm:pl-6 md:pl-8 lg:pl-10 lg:text-3xl text-2xl -mb-7 max-lg:-mb-5 font-clash font-medium flex justify-start max-sm:justify-center items-center text-left`}
               initial="hidden"
               animate="visible"
-              variants={titleVariants}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 },
+              }}
               transition={{ duration: 0.5 }}
             >
               An All In One
@@ -68,11 +56,14 @@ export default function Hero() {
           </>
           <div>
             <motion.h1
-              className="font-yellow-tail pb-4 tracking-wide px-2 text-nowrap leading-none max-sm:text-center max-sm:mt-1 max-sm:break-words text-emerald-500"
+              className="font-yellow-tail pb-4 tracking-wide drop-shadow-md px-2 text-nowrap leading-none max-sm:text-center max-sm:mt-1 max-sm:break-words text-emerald-400"
               initial="hidden"
               animate="visible"
-              variants={titleVariants}
-              transition={{ duration: 0.5 }}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.4, delay: 0.1 }}
             >
               Visual Storyteller
             </motion.h1>
@@ -83,32 +74,35 @@ export default function Hero() {
         </div>
         {/* categories-fan */}
         <motion.div
-          className="mb-10 text-sm flex items-center justify-center max-xl:scale-95 max-lg:scale-90 max-md:scale-75 max-sm:scale-100 max-sm:absolute top-2/5 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 max-sm:opacity-20 transition-all cursor-default"
+          className="text-sm flex items-center justify-center max-xl:scale-95 max-lg:scale-90 max-md:scale-75 max-sm:scale-100 max-sm:absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 max-sm:opacity-20 transition-all cursor-default"
           initial="hidden"
-          animate={isVisible ? "visible" : "hidden"}
+          animate={"visible"}
           variants={fanVariants}
           transition={{ duration: 0.5 }}
         >
           <div
-            className="relative flex flex-nowrap items-center justify-center gap-2 text-nowrap"
+            className="relative flex flex-nowrap items-center justify-center gap-2 text-nowrap transition-all"
             style={{ transform: `rotate(${rotation}deg)` }}
           >
-            <span className="absolute left-[22px] rotate-0 px-3 py-1 text-xs font-medium text-pencil bg-green-200/75 border-l-4 border-l-green-500/80 w-28 flex justify-center">
+            <div className="h-8 w-8 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-background/80">
+              <Hexagon size={30} strokeWidth={1.8} />
+            </div>
+            <span className="absolute left-[22px] rotate-0 px-3 py-1 text-xs font-medium text-pencil bg-green-200/75 border-l-4 border-l-green-500/80 w-28 flex justify-center shadow-xl shadow-green-500/15 rounded ">
               Branding
             </span>
-            <span className="absolute bottom-[55px] -left-[17px] -rotate-[60deg] px-3 py-1 text-xs font-medium text-pencil bg-yellow-200/75 border-l-4 border-l-yellow-500/80 w-28 flex justify-center">
+            <span className="absolute bottom-[55px] -left-[17px] -rotate-[60deg] px-3 py-1 text-xs font-medium text-pencil bg-amber-200/75 border-l-4 border-l-amber-500/80 w-28 flex justify-center shadow-xl shadow-yellow-500/15 rounded ">
               Art
             </span>
-            <span className="absolute -right-[17px] bottom-[55px] rotate-[60deg] px-3 py-1 text-xs font-medium text-pencil bg-red-200/75 border-r-4 border-r-red-500/80 w-28 flex justify-center">
+            <span className="absolute -right-[17px] bottom-[55px] rotate-[60deg] px-3 py-1 text-xs font-medium text-pencil bg-red-200/75 border-r-4 border-r-red-500/80 w-28 flex justify-center shadow-xl shadow-red-500/15 rounded ">
               Animations
             </span>
-            <span className="absolute right-[22px] rotate-0 px-3 py-1 text-xs font-medium text-pencil bg-red-200/75 border-r-4 border-r-red-500/80 w-28 flex justify-center">
+            <span className="absolute right-[22px] rotate-0 px-3 py-1 text-xs font-medium text-pencil bg-pink-200/75 border-r-4 border-r-pink-500/80 w-28 flex justify-center shadow-xl shadow-red-500/15 rounded ">
+              Social Media
+            </span>
+            <span className="absolute -right-[17px] top-14 -rotate-[60deg] px-3 py-1 text-xs font-medium text-pencil bg-violet-200/75 border-r-4 border-r-violet-500/80 w-28 flex justify-center shadow-xl shadow-violet-500/15 rounded ">
               Motion Graphics
             </span>
-            <span className="absolute -right-[17px] top-14 -rotate-[60deg] px-3 py-1 text-xs font-medium text-pencil bg-violet-200/75 border-r-4 border-r-violet-500/80 w-28 flex justify-center">
-              Video
-            </span>
-            <span className="absolute -left-[17px] top-14 rotate-[60deg] px-3 py-1 text-xs font-medium text-pencil bg-blue-200/75 border-l-4 border-l-blue-500/80 w-28 flex justify-center">
+            <span className="absolute -left-[17px] top-14 rotate-[60deg] px-3 py-1 text-xs font-medium text-pencil bg-sky-200/75 border-l-4 border-l-sky-500/80 w-28 flex justify-center shadow-xl shadow-pink-500/15 rounded ">
               Web/Apps
             </span>
           </div>
