@@ -33,7 +33,7 @@ const ContactPage = () => {
         />
       </div>
 
-      <div className="py-28 max-md:py-16 relative z-10">
+      <div className="py-24 pb-28 max-md:py-16 relative z-10">
         <div className="grid grid-cols-2 max-md:grid-cols-1">
           <div className="flex flex-col items-start justify-center">
             <div className="mb-10 max-md:mb-8 max-md:px-[5%]">
@@ -121,7 +121,7 @@ const ContactPage = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                transition={{ duration: 0.2 }}
+                transition={{ duration: 0.2, delay: 0.3 }}
                 variants={{
                   hidden: { rotate: "0deg" },
                   visible: { rotate: "1deg" },

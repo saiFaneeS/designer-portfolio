@@ -14,6 +14,7 @@ import {
   PackageCheck,
   SwatchBook,
 } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   // const categories = [
@@ -57,7 +58,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="works-section px-[5%] py-12 bg-background relative z-0">
+    <div className="works-section px-[5%] py-12 pb-24 bg-background relative z-0">
       <div className="h-full w-full absolute top-0 left-0 brightness-110 opacity-20">
         <Image
           src={"/paper.avif"}
@@ -75,31 +76,17 @@ const Projects = () => {
       </h2>
       <div className="grid grid-cols-4 max-2xl:grid-cols-2 max-md:grid-cols-1 gap-8 gap-y-12 max-md:gap-8">
         {categories.map((category, index) => (
-          <div key={category.title}>
-            {/* <Carousel
-              opts={{
-                align: "start",
-              }} 
-              className={`w-full`}
-            > */}
-            {/* <div
-                className={`flex gap-4 justify-between mb-2 w-full p-1 px-2 rounded-md bg-${category.color}-500/20`}
-              >
-                <h2
-                  className={`text-base xl:text-lg font-medium line-clamp-1 flex gap-2 items-center text-nowrap`}
-                >
-                  <category.icon className="shrink-0 max-md:size-5 max-sm:size-4" />
-                  {category.title}
-                </h2>
-                <div className="flex gap-2 items-center">
-                  <CarouselPrevious className="static bg-pencil/10 text-pencil/80 -mb-7 bg-opacity-50 border-none hover:bg-emerald-500/10 max-md:size-7" />
-                  <CarouselNext className="static bg-pencil/10 text-pencil/80 -mb-7 bg-opacity-50 border-none hover:bg-emerald-500/10 max-md:size-7" />
-                </div>
-              </div> */}
-            {/* <div className="w-full h-[1px] bg-pencil/10 mb-4"></div> */}
-
-            {/* <CarouselContent> */}
-            {/* <CarouselItem key={index} className=""> */}
+          <motion.div
+            key={category.title}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.2, delay: 0.3 }}
+            variants={{
+              hidden: { rotate: "0deg" },
+              visible: { rotate: "1deg" },
+            }}
+          >
             <div key={index} className="">
               <div className="bg-background p-3 max-md:p-2 border border-pencil/20 shadow-md flex items-start rounded-lg gap-3 leading-loose">
                 <div className="relative h-full w-full overflow-hidden aspect-[16/12] max-sm:aspect-[16/14] shrink-0 basis-1/2 pr-3 border-r-2 border-dashed border-pencil/20">
@@ -113,7 +100,9 @@ const Projects = () => {
                   <div className="h-full w-full z-10 absolute bottom-0 left-0"></div>
                 </div>
                 <div className="max-sm:text-sm leading-normal">
-                  <h4 className={`mb-1 border-b bg-${category.color}-500/20 border-b-pencil/10 font-medium line-clamp-1`}>
+                  <h4
+                    className={`mb-1 border-b bg-${category.color}-500/20 border-b-pencil/10 font-medium line-clamp-1`}
+                  >
                     <span>{category.type}</span>
                   </h4>
                   <h4 className="mb-1 border-b border-b-pencil/10 font-medium line-clamp-1">
@@ -132,11 +121,7 @@ const Projects = () => {
                 </div>
               </div>
             </div>
-            {/* </CarouselItem> */}
-
-            {/* </CarouselContent>
-            </Carousel> */}
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

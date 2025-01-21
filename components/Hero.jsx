@@ -18,8 +18,8 @@ export default function Hero() {
   const [rotation, setRotation] = useState(0);
 
   const handleScroll = () => {
-    const scrollY = window.scrollY; // Get the current scroll position
-    setRotation(scrollY * 0.2); // Adjust the multiplier to control the rotation speed
+    const scrollY = window.scrollY;
+    setRotation(scrollY * 0.2);
   };
 
   useEffect(() => {
