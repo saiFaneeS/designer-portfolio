@@ -1,3 +1,4 @@
+import { Instagram } from "lucide-react";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { Link as ScrollLink, scroller } from "react-scroll";
@@ -61,7 +62,7 @@ const Navbar = () => {
           /> */}
           Saif Anees
         </Link>
-        <ul className="flex gap-6 items-center text-sm font-medium tracking-wide font-clash">
+        <ul className="flex gap-6 max-sm:gap-4 items-center text-sm font-medium tracking-wide font-clash">
           <ScrollLink
             to="works-section"
             onClick={() => scrollToSection("works-section")}
@@ -78,6 +79,9 @@ const Navbar = () => {
           >
             Message Me
           </ScrollLink>
+          <Link href={"https://www.instagram.com/saifizance/"} target="_blank">
+            <Instagram />
+          </Link>
         </ul>
       </div>
     </nav>

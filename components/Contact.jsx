@@ -259,7 +259,7 @@ const ContactPage = () => {
       <motion.div
         className={`${
           showToast ? "right-3" : "-right-full scale-0"
-        } transition-all font-medium fixed bottom-3 flex gap-2 items-center text-green-900 bg-green-300 rounded-md border border-green-600 p-3 px-4`}
+        } transition-all font-medium fixed bottom-3 flex gap-2 items-center text-green-900 bg-green-300 rounded-md border border-green-600 p-3 px-4 z-20`}
         initial={{ opacity: 0 }}
         animate={{ opacity: showToast ? 1 : 0 }}
         transition={{ duration: 0.5 }}
@@ -270,7 +270,7 @@ const ContactPage = () => {
       <motion.div
         className={`${
           showFailedToast ? "right-3" : "-right-full scale-0"
-        } transition-all font-medium fixed bottom-3 flex gap-2 items-center text-rose-900 bg-rose-300 rounded-md border border-rose-600 p-3 px-4`}
+        } transition-all font-medium fixed bottom-3 flex gap-2 items-center text-rose-900 bg-rose-300 rounded-md border border-rose-600 p-3 px-4 z-20`}
         initial={{ opacity: 0 }}
         animate={{ opacity: showFailedToast ? 1 : 0 }}
         transition={{ duration: 0.5 }}
