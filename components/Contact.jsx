@@ -11,6 +11,7 @@ import {
   Truck,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const ContactPage = () => {
   const handleSubmit = async (e) => {
@@ -21,8 +22,18 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="contact-section md:px-[5%] border-y border-y-pencil/10 bg-background-brighter dark:from-slate-950 dark:to-slate-900 relative">
-      <div className="py-28 max-md:py-16">
+    <div className="contact-section md:px-[5%] bg-background relative">
+      <div className="w-full bg-pencil/20 h-[1px]"></div>
+      <div className="h-full w-full absolute top-0 left-0 brightness-110 opacity-20">
+        <Image
+          src={"/paper.avif"}
+          height={1000}
+          width={1000}
+          className="h-full w-full object-cover"
+        />
+      </div>
+
+      <div className="py-28 max-md:py-16 relative z-10">
         <div className="grid grid-cols-2 max-md:grid-cols-1">
           <div className="flex flex-col items-start justify-center">
             <div className="mb-10 max-md:mb-8 max-md:px-[5%]">
