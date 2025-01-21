@@ -69,7 +69,7 @@ const Projects = () => {
       </div>
       <h2 className="flex items-center gap-2 max-lg:gap-2 text-2xl font-medium mb-6 font-yellow-tail relative z-10">
         <PackageCheck
-          className="size-8 max-md:size-6 max-sm:size-5"
+          className="size-8 max-md:size-6"
           strokeWidth={1.8}
         />{" "}
         Commission Works
@@ -88,7 +88,7 @@ const Projects = () => {
             }}
           >
             <div key={index} className="">
-              <div className="bg-background p-3 max-md:p-2 border border-pencil/20 shadow-md flex items-start rounded-lg gap-3 leading-loose">
+              <div className="bg-background/10 p-3 max-md:p-2 border border-pencil/20 shadow-md flex items-start rounded-lg gap-3 leading-loose">
                 <div className="relative h-full w-full overflow-hidden aspect-[16/12] max-sm:aspect-[16/14] shrink-0 basis-1/2 pr-3 border-r-2 border-dashed border-pencil/20">
                   <Image
                     src={category.image}
