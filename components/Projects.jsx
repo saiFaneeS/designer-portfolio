@@ -1,8 +1,5 @@
 import Image from "next/image";
-import {
-  ArrowDownToDot,
-  PackageCheck,
-} from "lucide-react";
+import { ArrowDownToDot, PackageCheck } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Projects = () => {
@@ -13,25 +10,21 @@ const Projects = () => {
       color: "blue",
       image: "/msre.png",
       client: "MS Real Estate LLC",
-      budget: "$600",
       time: "1 Month",
       desc: "Modernised re-design of pages and migration from of the wordpress to full-stack.",
     },
     {
       type: "Branding",
       color: "green",
-      image: "/brand2.png",
-      client: "Client B",
-      budget: "$700",
-      time: "1 Month",
+      image: "/idan.png",
+      client: "Igal S.",
+      time: "1 Week",
       desc: "Lorem ipsum dolor set amet. Lorem ipsum dolor set emet. dolor ip.",
     },
     {
       type: "Animations / Motion Graphics",
       color: "purple",
       image: "/img1.png",
-      client: "Client F",
-      budget: "$500",
       time: "3 Weeks",
       desc: "Lorem ipsum dolor set amet. Lorem ipsum dolor set emet. dolor ip.",
     },
@@ -39,10 +32,24 @@ const Projects = () => {
       type: "Digital Art",
       color: "red",
       image: "/art1.webp",
-      client: "Client G",
-      budget: "$400",
       time: "1 Month",
       desc: "Lorem ipsum dolor set amet. Lorem ipsum dolor set emet. dolor ip.",
+    },
+    {
+      type: "Web/App Designs",
+      color: "blue",
+      image: "/ohghad-web.png",
+      client: "Ohghad Org",
+      time: "1 Month",
+      desc: "Modernised re-design of pages and migration from of the wordpress to full-stack.",
+    },
+    {
+      type: "Web/App Designs",
+      color: "blue",
+      image: "/mslm.webp",
+      client: "Modern Standards Luxury motors",
+      time: "1.5 Month",
+      desc: "Modernised re-design of pages and migration from of the wordpress to full-stack.",
     },
   ];
 
@@ -74,7 +81,7 @@ const Projects = () => {
             }}
           >
             <div key={index} className="">
-              <div className="bg-background/10 p-3 max-md:p-2 border border-pencil/20 shadow-md flex items-start rounded-lg gap-3 leading-loose">
+              <div className="bg-background/30 p-3 max-md:p-2 border border-pencil/20 shadow-md flex items-start rounded-lg gap-3 leading-loose">
                 <div className="relative h-full w-full overflow-hidden aspect-[16/12] max-sm:aspect-[16/14] shrink-0 basis-1/2 pr-3 border-r-2 border-dashed border-pencil/20">
                   <Image
                     src={category.image}
@@ -91,9 +98,11 @@ const Projects = () => {
                   >
                     <span>{category.type}</span>
                   </h4>
-                  <h4 className="mb-1 border-b border-b-pencil/10 font-medium line-clamp-1">
-                    <span>Client: {category.client}</span>
-                  </h4>
+                  {category?.client && (
+                    <h4 className="mb-1 border-b border-b-pencil/10 font-medium line-clamp-1">
+                      <span>Client: {category.client}</span>
+                    </h4>
+                  )}
                   <h4 className="mb-1 border-b border-b-pencil/10 font-medium">
                     <span>Time: {category.time}</span>
                   </h4>
