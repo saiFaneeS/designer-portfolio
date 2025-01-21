@@ -4,7 +4,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="py-3 bg-pencil text-background px-[5%]">
+    <div className="py-3 bg-pencil-darker text-background px-[5%]">
       <div className="flex justify-center items-center gap-6">
         {/* <div className="h-[1px] w-full bg-background/60"></div> */}
         <p className="text-sm tracking-wide font-medium font-yellow-tail text-nowrap">

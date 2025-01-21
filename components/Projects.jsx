@@ -81,7 +81,7 @@ const Projects = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            transition={{ duration: 0.2, delay: 0.3 }}
+            transition={{ duration: 0.2, delay: 0.5 }}
             variants={{
               hidden: { rotate: "0deg" },
               visible: { rotate: "1deg" },

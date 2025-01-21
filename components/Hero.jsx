@@ -13,6 +13,7 @@ import {
   PackageOpen,
   Pentagon,
 } from "lucide-react";
+import Image from "next/image";
 
 export default function Hero() {
   const [rotation, setRotation] = useState(0);
@@ -45,10 +46,18 @@ export default function Hero() {
 
   return (
     <div
-      className={`h-screen max-sm:h-[90vh] relative top-0 overflow-x-hidden bg-gradient-to-t from-pencil-darker to-pencil text-background transition-all flex flex-col justify-between items-center gap-5 max-sm:gap-4 w-full lg:overflow-hidden`}
+      className={`h-screen max-sm:h-[90vh] relative top-0 overflow-x-hidden bg-pencil-darker text-background transition-all flex flex-col justify-between items-center gap-5 max-sm:gap-4 w-full lg:overflow-hidden`}
     >
+      <div className="h-full w-full fixed -z-0 top-0 left-0 opacity-10">
+        <Image
+          src={"/paper.avif"}
+          height={1000}
+          width={1000}
+          className="h-full w-full object-cover"
+        />
+      </div>
       <div className="fixed px-[5%] grid grid-cols-2 max-sm:grid-cols-1 top-0 lg:text-5xl text-4xl w-full font-medium leading-none pb-24 h-full items-center justify-center">
-        <div className="max-sm:order-1">
+        <div className="max-sm:order-1 mt-8">
           <>
             <motion.h1
               className={`leading-none sm:pl-4 drop-shadow-xl md:pl-6 lg:pl-8 lg:text-3xl text-2xl -mb-7 max-lg:-mb-5 font-clash font-medium flex justify-start max-sm:justify-center items-center text-left`}
@@ -83,7 +92,7 @@ export default function Hero() {
         </div>
         {/* categories-fan */}
         <motion.div
-          className="lg:ml-20 text-sm flex items-center justify-center max-sm:absolute top-[28%] max-sm:brightness-90 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 transition-all cursor-default"
+          className="lg:ml-20 text-sm flex items-center justify-center max-sm:absolute top-[32%] max-sm:brightness-90 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 transition-all cursor-default"
           initial="hidden"
           animate={"visible"}
           variants={fanVariants}
