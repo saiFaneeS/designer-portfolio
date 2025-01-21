@@ -1,17 +1,10 @@
 "use client";
 
-import { useNavbar } from "@/context/Navbar";
 import React, { useEffect, useState } from "react";
-import Autoplay from "embla-carousel-autoplay";
-import { TrustIndicators } from "./TrustIndicators";
 import Slider from "./Slider";
 import { motion } from "framer-motion";
 import {
-  Codepen,
   Hexagon,
-  Package2,
-  PackageOpen,
-  Pentagon,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -48,7 +41,7 @@ export default function Hero() {
     <div
       className={`h-screen max-sm:h-[90vh] relative top-0 overflow-x-hidden bg-pencil-darker text-background transition-all flex flex-col justify-between items-center gap-5 max-sm:gap-4 w-full lg:overflow-hidden`}
     >
-      <div className="h-full w-full fixed -z-0 top-0 left-0 opacity-10">
+      <div className="h-full w-full fixed -z-0 top-0 left-0 opacity-10 brightness-50">
         <Image
           src={"/paper.avif"}
           height={1000}

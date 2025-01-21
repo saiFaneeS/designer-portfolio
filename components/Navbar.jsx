@@ -47,7 +47,7 @@ const Navbar = () => {
       } bg-background z-20`}
     >
       <div
-        className={`px-[5%] backdrop-blur-sm fixed top-0 bg-background/90 text-pencil w-full flex gap-4 items-center justify-between z-20 py-3 border-b border-b-pencil/10 border-b/50`}
+        className={`px-[5%] fixed top-0 bg-background text-pencil w-full flex gap-4 items-center justify-between z-20 py-3 border-b border-b-pencil/10 border-b/50`}
       >
         <Link
           href={"/"}

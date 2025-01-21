@@ -41,7 +41,7 @@ const Slider = () => {
                 <TrustIndicators />
               </div>
               <div className="flex gap-4">
-                <div className="h-24 aspect-[2.8] rounded-md flex items-center justify-center gap-4 bg-background/10 border border-background/20 overflow-hidden">
+                <div className="h-24 aspect-[2.8] rounded-md flex items-center justify-center gap-4 bg-background/10 overflow-hidden">
                   {images.map((el) => {
                     return (
                       <>

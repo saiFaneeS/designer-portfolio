@@ -1,15 +1,5 @@
-import React, { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
-import {
-  Asterisk,
-  AtSign,
-  Instagram,
-  Mail,
-  Mailbox,
-  MailCheck,
-  MessageSquareDiff,
-  Truck,
-} from "lucide-react";
+import { Asterisk, AtSign, Instagram, MailCheck } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -50,7 +40,7 @@ const ContactPage = () => {
             {/* Social Links */}
             <div className="flex flex-col gap-4 mb-8 w-full max-md:pl-[5%]">
               <Link
-                href={"/"}
+                href={"https://www.instagram.com/saifizance/"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center max-sm:w-full rounded group"
@@ -67,7 +57,7 @@ const ContactPage = () => {
                 </p>
               </Link>
               <Link
-                href={"/"}
+                href={"https://wa.me/923283490764"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center max-sm:w-full rounded group"
@@ -95,8 +85,7 @@ const ContactPage = () => {
                 </p>
               </Link>
               <Link
-                href={"/"}
-                target="_blank"
+                href={"mailto:info@saifanees11@gmail.com"}
                 rel="noopener noreferrer"
                 className="flex items-center max-sm:w-full rounded group"
               >

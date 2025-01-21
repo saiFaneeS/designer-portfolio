@@ -1,18 +1,7 @@
 import Image from "next/image";
-import Cards from "./Cards";
 import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import {
-  AppWindow,
-  Clapperboard,
-  DraftingCompass,
+  ArrowDownToDot,
   PackageCheck,
-  SwatchBook,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -68,10 +57,7 @@ const Projects = () => {
         />
       </div>
       <h2 className="flex items-center gap-2 max-lg:gap-2 text-2xl font-medium mb-6 font-yellow-tail relative z-10">
-        <PackageCheck
-          className="size-8 max-md:size-6"
-          strokeWidth={1.8}
-        />{" "}
+        <PackageCheck className="size-8 max-md:size-6" strokeWidth={1.8} />{" "}
         Commission Works
       </h2>
       <div className="grid grid-cols-4 max-2xl:grid-cols-2 max-md:grid-cols-1 gap-8 gap-y-12 max-md:gap-8">
@@ -123,6 +109,16 @@ const Projects = () => {
             </div>
           </motion.div>
         ))}
+      </div>
+
+      <div className="flex items-center justify-center mt-12 relative">
+        <button className="font-yellow-tail flex items-center gap-2 hover:bg-emerald-500/20 px-2 text-base">
+          Show More
+          <ArrowDownToDot
+            className="size-5 text-pencil/90 relative transition-all"
+            strokeWidth={1.8}
+          />
+        </button>
       </div>
     </div>
   );
