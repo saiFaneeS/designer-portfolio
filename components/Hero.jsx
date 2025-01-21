@@ -39,7 +39,7 @@ export default function Hero() {
       className={`h-screen max-sm:h-[90vh] relative top-0 overflow-x-hidden bg-gradient-to-t from-pencil-darker to-pencil text-background transition-all flex flex-col justify-between items-center gap-5 max-sm:gap-4 w-full lg:overflow-hidden`}
     >
       <div className="fixed px-[5%] grid grid-cols-2 max-sm:grid-cols-1 top-0 lg:text-5xl text-4xl w-full font-medium leading-none pb-24 h-full items-center justify-center">
-        <div>
+        <div className="max-sm:order-1">
           <>
             <motion.h1
               className={`leading-none sm:pl-4 md:pl-6 lg:pl-8 lg:text-3xl text-2xl -mb-7 max-lg:-mb-5 font-clash font-medium flex justify-start max-sm:justify-center items-center text-left`}
@@ -74,7 +74,7 @@ export default function Hero() {
         </div>
         {/* categories-fan */}
         <motion.div
-          className="lg:ml-20 text-sm flex items-center justify-center scale-100 max-lg:scale-95 max-md:scale-75 max-sm:scale-100 max-sm:absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 max-sm:opacity-20 max-sm:blur-2xl transition-all cursor-default"
+          className="lg:ml-20 text-sm flex items-center justify-center scale-50 max-sm:-mb-40 max-sm:scale-50 max-md:scale-75 max-lg:scale-95 -z-10 transition-all max-sm:order-0 cursor-default"
           initial="hidden"
           animate={"visible"}
           variants={fanVariants}
