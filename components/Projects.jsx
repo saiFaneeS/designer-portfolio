@@ -1,9 +1,12 @@
 import Image from "next/image";
 import { ArrowDownToDot, PackageCheck } from "lucide-react";
 import { motion } from "framer-motion";
+import React, { useState, useEffect } from "react";
 
 const Projects = () => {
-  // const categories = [
+  const [visibleCount, setVisibleCount] = useState(4);
+  const [isMobile, setIsMobile] = useState(false);
+
   const categories = [
     {
       type: "Web/App Designs",
@@ -53,6 +56,23 @@ const Projects = () => {
     },
   ];
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const handleShowMore = () => {
+    setVisibleCount((prevCount) => prevCount + (isMobile ? 2 : 2));
+  };
+
   return (
     <div className="works-section px-[5%] py-12 pb-24 bg-background relative z-0">
       <div className="h-full w-full absolute top-0 left-0 brightness-110 opacity-20">
@@ -68,7 +88,7 @@ const Projects = () => {
         Commission Works
       </h2>
       <div className="grid grid-cols-4 max-2xl:grid-cols-2 max-md:grid-cols-1 gap-8 gap-y-12 max-md:gap-8">
-        {categories.map((category, index) => (
+        {categories.slice(0, visibleCount).map((category, index) => (
           <motion.div
             key={category.title}
             initial="hidden"
@@ -120,15 +140,20 @@ const Projects = () => {
         ))}
       </div>
 
-      <div className="flex items-center justify-center mt-12 relative">
-        <button className="font-yellow-tail flex items-center gap-2 hover:bg-emerald-500/20 px-2 text-base">
-          Show More
-          <ArrowDownToDot
-            className="size-5 text-pencil/90 relative transition-all"
-            strokeWidth={1.8}
-          />
-        </button>
-      </div>
+      {visibleCount < categories.length && (
+        <div className="flex items-center justify-center mt-12 relative">
+          <button
+            className="font-yellow-tail flex items-center gap-2 hover:bg-emerald-500/20 px-2 text-base"
+            onClick={handleShowMore}
+          >
+            Show More
+            <ArrowDownToDot
+              className="size-5 text-pencil/90 relative transition-all"
+              strokeWidth={1.8}
+            />
+          </button>
+        </div>
+      )}
     </div>
   );
 };

@@ -1,14 +1,68 @@
 import { motion } from "framer-motion";
-import { Asterisk, AtSign, Instagram, MailCheck } from "lucide-react";
+import {
+  Asterisk,
+  AtSign,
+  Check,
+  HeartCrack,
+  Instagram,
+  MailCheck,
+} from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 
 const ContactPage = () => {
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    // const formData = new FormData(e);
+  const [showToast, setShowToast] = useState(false);
+  const [showFailedToast, setShowFailedToast] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-    // e.target.reset();
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const { name, email, message } = formData;
+
+    // Basic validation
+    if (!name || !email || !message) {
+      setShowFailedToast(true);
+      setTimeout(() => setShowFailedToast(false), 3000);
+      return;
+    }
+
+    const formDataToSend = new FormData();
+    formDataToSend.append("name", name);
+    formDataToSend.append("email", email);
+    formDataToSend.append("message", message);
+
+    try {
+      const response = await fetch("https://formspree.io/f/xoqgnjyb", {
+        method: "POST",
+        body: formDataToSend,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        setShowToast(true);
+        setFormData({ name: "", email: "", message: "" }); // Reset form fields
+        setTimeout(() => setShowToast(false), 3000);
+      } else {
+        setShowFailedToast(true);
+        setTimeout(() => setShowFailedToast(false), 3000);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setShowFailedToast(true);
+      setTimeout(() => setShowFailedToast(false), 3000);
+    }
   };
 
   return (
@@ -43,7 +97,7 @@ const ContactPage = () => {
                 href={"https://www.instagram.com/saifizance/"}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center max-sm:w-full rounded group"
+                className="flex items-center max-sm:w-full rounded group hover:translate-x-2 transition-all"
               >
                 <span
                   className={`px-2 h-11 flex items-center justify-center aspect-square gap-3 rounded-l text-pencil/90 transition-all bg-red-400/90 group-hover:opacity-80`}
@@ -60,7 +114,7 @@ const ContactPage = () => {
                 href={"https://wa.me/923283490764"}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center max-sm:w-full rounded group"
+                className="flex items-center max-sm:w-full rounded group hover:translate-x-2 transition-all"
               >
                 <span
                   className={`px-2 h-11 flex items-center justify-center aspect-square gap-3 rounded-l text-pencil/90 transition-all bg-green-400/90 group-hover:opacity-80`}
@@ -87,7 +141,7 @@ const ContactPage = () => {
               <Link
                 href={"mailto:info@saifanees11@gmail.com"}
                 rel="noopener noreferrer"
-                className="flex items-center max-sm:w-full rounded group"
+                className="flex items-center max-sm:w-full rounded group hover:translate-x-2 transition-all"
               >
                 <span
                   className={`p-2 h-11 flex items-center justify-center aspect-square gap-3 rounded-l text-pencil/90 transition-all bg-blue-400/90 group-hover:opacity-80`}
@@ -115,7 +169,7 @@ const ContactPage = () => {
                   hidden: { rotate: "0deg" },
                   visible: { rotate: "1deg" },
                 }}
-                className="space-y-6 text-pencil p-8 max-md:p-6 max-sm:p-4 shadow-lg bg-background-darker border border-pencil/20 absolute h-full w-full z-0 left-2 bottom-2"
+                className="space-y-6 text-pencil p-8 max-md:p-6 max-sm:p-4 shadow-lg bg-background-darker border border-pencil/20 absolute h-full w-full z-0 left-2 bottom-2 rounded"
               ></motion.div>
               <motion.form
                 onSubmit={handleSubmit}
@@ -124,10 +178,10 @@ const ContactPage = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.2 }}
                 variants={{
-                  hidden: { rotate: "0deg" },
-                  visible: { rotate: "0deg" },
+                  hidden: { opacity: 0 },
+                  visible: { opacity: 1 },
                 }}
-                className="space-y-6 text-pencil p-8 max-md:p-6 max-sm:p-4 shadow-lg bg-background border border-pencil/20 z-20 relative"
+                className="space-y-6 text-pencil p-8 max-md:p-6 max-sm:p-4 shadow-lg bg-background border border-pencil/20 z-20 relative rounded-sm"
               >
                 <div className="flex items-center max-sm:items-start gap-2 text-nowrap max-sm:flex-col border-b border-pencil/50">
                   <label
@@ -141,6 +195,8 @@ const ContactPage = () => {
                     id="name"
                     name="name"
                     required
+                    value={formData.name}
+                    onChange={handleChange}
                     className="w-full px-1 py-2 bg-background outline-none transition-all text-base font-medium"
                     placeholder="Your name"
                   />
@@ -158,6 +214,8 @@ const ContactPage = () => {
                     id="email"
                     name="email"
                     required
+                    value={formData.email}
+                    onChange={handleChange}
                     className="w-full px-1 py-2 bg-background outline-none transition-all text-base font-medium"
                     placeholder="your@email.com"
                   />
@@ -175,6 +233,8 @@ const ContactPage = () => {
                     name="message"
                     required
                     rows={6}
+                    value={formData.message}
+                    onChange={handleChange}
                     className="w-full px-1 py-2 bg-background outline-none transition-all text-sm leading-none font-medium resize-none"
                     placeholder=". . ."
                   />
@@ -196,6 +256,27 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
+      <motion.div
+        className={`${
+          showToast ? "right-3" : "-right-full scale-0"
+        } transition-all font-medium fixed bottom-3 flex gap-2 items-center text-green-900 bg-green-300 rounded-md border border-green-600 p-3 px-4`}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: showToast ? 1 : 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <Check /> Message received. We&apos;ll get back to you shortly!
+      </motion.div>
+
+      <motion.div
+        className={`${
+          showFailedToast ? "right-3" : "-right-full scale-0"
+        } transition-all font-medium fixed bottom-3 flex gap-2 items-center text-rose-900 bg-rose-300 rounded-md border border-rose-600 p-3 px-4`}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: showFailedToast ? 1 : 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <HeartCrack /> Oops! Please try again.
+      </motion.div>
     </div>
   );
 };
