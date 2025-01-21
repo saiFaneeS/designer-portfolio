@@ -4,9 +4,13 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="py-4 bg-pencil text-background">
-      <div className="flex flex-col justify-between items-center gap-6">
-        <p className="text-base tracking-wide font-medium font-yellow-tail">Saif Anees</p>
+    <div className="py-3 bg-pencil text-background px-[5%]">
+      <div className="flex justify-center items-center gap-6">
+        {/* <div className="h-[1px] w-full bg-background/60"></div> */}
+        <p className="text-sm tracking-wide font-medium font-yellow-tail text-nowrap">
+          Saif Anees
+        </p>
+        {/* <div className="h-[1px] w-full bg-background/60"></div> */}
         {/* <ul className="flex gap-4 items-center">
           <Link href={"/"} className="p-1 rounded-sm">
             <Instagram size={22} strokeWidth={1.8} />
