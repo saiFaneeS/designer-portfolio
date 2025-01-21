@@ -16,16 +16,25 @@ import {
 
 export default function Hero() {
   const [rotation, setRotation] = useState(0);
+  const [scale, setScale] = useState(1);
 
   const handleScroll = () => {
-    const scrollY = window.scrollY;
+    const scrollY = window?.scrollY;
     setRotation(scrollY * 0.2);
   };
 
   useEffect(() => {
+    const handleResize = () => {
+      setScale(window.innerWidth < 640 ? 0.4 : 1);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -42,7 +51,7 @@ export default function Hero() {
         <div className="max-sm:order-1">
           <>
             <motion.h1
-              className={`leading-none sm:pl-4 md:pl-6 lg:pl-8 lg:text-3xl text-2xl -mb-7 max-lg:-mb-5 font-clash font-medium flex justify-start max-sm:justify-center items-center text-left`}
+              className={`leading-none sm:pl-4 drop-shadow-xl md:pl-6 lg:pl-8 lg:text-3xl text-2xl -mb-7 max-lg:-mb-5 font-clash font-medium flex justify-start max-sm:justify-center items-center text-left`}
               initial="hidden"
               animate="visible"
               variants={{
@@ -74,11 +83,12 @@ export default function Hero() {
         </div>
         {/* categories-fan */}
         <motion.div
-          className="lg:ml-20 text-sm flex items-center justify-center scale-50 max-sm:-mb-40 max-sm:scale-50 max-md:scale-75 max-lg:scale-95 -z-10 transition-all max-sm:order-0 cursor-default"
+          className="lg:ml-20 text-sm flex items-center justify-center max-sm:absolute top-[28%] max-sm:brightness-90 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 transition-all cursor-default"
           initial="hidden"
           animate={"visible"}
           variants={fanVariants}
           transition={{ duration: 0.5 }}
+          style={{ scale }}
         >
           <div
             className="relative flex flex-nowrap items-center justify-center gap-2 text-nowrap transition-all"
@@ -87,22 +97,22 @@ export default function Hero() {
             <div className="h-8 w-8 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-background/80">
               <Hexagon size={30} strokeWidth={1.8} />
             </div>
-            <span className="absolute left-[22px] rotate-0 px-3 py-1 text-xs font-medium text-pencil bg-green-200/75 border-l-4 border-l-green-500/80 w-28 flex justify-center shadow-xl shadow-green-500/15 rounded ">
+            <span className="absolute left-[22px] rotate-0 px-3 py-1 text-xs font-medium max-sm:py-1.5 text-pencil bg-green-200/75 border-l-4 border-l-green-500/80 w-28 flex justify-center shadow-xl shadow-green-500/15 rounded ">
               Branding
             </span>
-            <span className="absolute bottom-[55px] -left-[17px] -rotate-[60deg] px-3 py-1 text-xs font-medium text-pencil bg-amber-200/75 border-l-4 border-l-amber-500/80 w-28 flex justify-center shadow-xl shadow-yellow-500/15 rounded ">
+            <span className="absolute bottom-[55px] -left-[17px] -rotate-[60deg] px-3 py-1 text-xs font-medium max-sm:py-1.5 text-pencil bg-amber-200/75 border-l-4 border-l-amber-500/80 w-28 flex justify-center shadow-xl shadow-yellow-500/15 rounded ">
               Art
             </span>
-            <span className="absolute -right-[17px] bottom-[55px] rotate-[60deg] px-3 py-1 text-xs font-medium text-pencil bg-red-200/75 border-r-4 border-r-red-500/80 w-28 flex justify-center shadow-xl shadow-red-500/15 rounded ">
+            <span className="absolute -right-[17px] bottom-[55px] rotate-[60deg] px-3 py-1 text-xs font-medium max-sm:py-1.5 text-pencil bg-red-200/75 border-r-4 border-r-red-500/80 w-28 flex justify-center shadow-xl shadow-red-500/15 rounded ">
               Animations
             </span>
-            <span className="absolute right-[22px] rotate-0 px-3 py-1 text-xs font-medium text-pencil bg-pink-200/75 border-r-4 border-r-pink-500/80 w-28 flex justify-center shadow-xl shadow-red-500/15 rounded ">
+            <span className="absolute right-[22px] rotate-0 px-3 py-1 text-xs font-medium max-sm:py-1.5 text-pencil bg-pink-200/75 border-r-4 border-r-pink-500/80 w-28 flex justify-center shadow-xl shadow-red-500/15 rounded ">
               Social Media
             </span>
-            <span className="absolute -right-[17px] top-14 -rotate-[60deg] px-3 py-1 text-xs font-medium text-pencil bg-violet-200/75 border-r-4 border-r-violet-500/80 w-28 flex justify-center shadow-xl shadow-violet-500/15 rounded ">
+            <span className="absolute -right-[17px] top-14 -rotate-[60deg] px-3 py-1 text-xs font-medium max-sm:py-1.5 text-pencil bg-violet-200/75 border-r-4 border-r-violet-500/80 w-28 flex justify-center shadow-xl shadow-violet-500/15 rounded ">
               Motion Graphics
             </span>
-            <span className="absolute -left-[17px] top-14 rotate-[60deg] px-3 py-1 text-xs font-medium text-pencil bg-sky-200/75 border-l-4 border-l-sky-500/80 w-28 flex justify-center shadow-xl shadow-pink-500/15 rounded ">
+            <span className="absolute -left-[17px] top-14 rotate-[60deg] px-3 py-1 text-xs font-medium max-sm:py-1.5 text-pencil bg-sky-200/75 border-l-4 border-l-sky-500/80 w-28 flex justify-center shadow-xl shadow-pink-500/15 rounded ">
               Web/Apps
             </span>
           </div>
