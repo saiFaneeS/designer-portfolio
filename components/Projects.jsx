@@ -56,6 +56,13 @@ const Projects = () => {
     },
   ];
 
+  const colorClasses = {
+    blue: "bg-blue-500/20",
+    green: "bg-green-500/20",
+    purple: "bg-purple-500/20",
+    red: "bg-red-500/20",
+  };
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 640);
@@ -124,7 +131,9 @@ const Projects = () => {
                 </div>
                 <div className="max-sm:text-sm leading-normal">
                   <h4
-                    className={`mb-1 border-b bg-${category.color}-500/20 border-b-pencil/10 font-medium line-clamp-1`}
+                    className={`mb-1 border-b ${
+                      colorClasses[category.color]
+                    } border-b-pencil/10 font-medium line-clamp-1`}
                   >
                     <span>{category.type}</span>
                   </h4>
