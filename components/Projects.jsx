@@ -87,8 +87,11 @@ const Projects = () => {
         <PackageCheck className="size-8 max-md:size-6" strokeWidth={1.8} />{" "}
         Commission Works
       </h2>
-      <p className="text-pencil/80 mb-8">
+      <p className="max-sm:hidden text-pencil/80 mb-8">
         Here are some of my recent commissions and projects.
+      </p>
+      <p className="sm:hidden text-pencil/80 mb-8">
+        Some of my recent commissions and projects.
       </p>
       <div className="grid grid-cols-4 max-2xl:grid-cols-2 max-md:grid-cols-1 gap-8 gap-y-12 max-md:gap-8">
         {categories.slice(0, visibleCount).map((category, index) => (
