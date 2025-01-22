@@ -3,9 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Slider from "./Slider";
 import { motion } from "framer-motion";
-import {
-  Hexagon,
-} from "lucide-react";
+import { Hexagon } from "lucide-react";
 import Image from "next/image";
 
 export default function Hero() {
@@ -93,7 +91,7 @@ export default function Hero() {
           style={{ scale }}
         >
           <div
-            className="relative flex flex-nowrap items-center justify-center gap-2 text-nowrap transition-all"
+            className="relative flex flex-nowrap items-center justify-center gap-2 text-nowrap transition-all ease-in-out duration-400"
             style={{ transform: `rotate(${rotation}deg)` }}
           >
             <div className="h-8 w-8 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-background/80">

@@ -69,6 +69,14 @@ const Slider = () => {
                             className="h-full w-full object-cover rounded-md shadow-xl"
                           />
                         </div>
+                        <div className="animate-snap-scroll snap-center snap-x snap-mandatory whitespace-nowrap h-20 aspect-video animate-snap-loop">
+                          <Image
+                            src={"/mslm.webp"}
+                            height={200}
+                            width={200}
+                            className="h-full w-full object-cover rounded-md shadow-xl"
+                          />
+                        </div>
                       </>
                     );
                   })}
