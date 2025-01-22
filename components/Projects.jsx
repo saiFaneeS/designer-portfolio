@@ -96,7 +96,7 @@ const Projects = () => {
       <div className="grid grid-cols-4 max-2xl:grid-cols-2 max-md:grid-cols-1 gap-8 gap-y-12 max-md:gap-8">
         {categories.slice(0, visibleCount).map((category, index) => (
           <motion.div
-            key={category.title}
+            key={category.index}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
