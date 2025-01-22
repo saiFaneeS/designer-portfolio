@@ -1,13 +1,34 @@
-import { Mail, Pause, Play, Trophy } from "lucide-react";
+import {
+  Mail,
+  Pause,
+  Play,
+  Trophy,
+  Star,
+  Heart,
+  Paintbrush,
+  AppWindowMac,
+  Clapperboard,
+  FileImage,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { TrustIndicators } from "./TrustIndicators";
+import { motion } from "framer-motion";
 
 const Slider = () => {
   const [paused, setPaused] = useState(false);
   const panel = [{ id: 1 }, { id: 2 }, { id: 3 }];
-  const images = [{ id: 1 }, { id: 2 }];
+  const icons = [Clapperboard, Paintbrush, AppWindowMac, FileImage];
+  const [iconIndex, setIconIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIconIndex((prev) => (prev + 1) % icons.length);
+    }, 3000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <div className="relative w-full">
@@ -33,33 +54,26 @@ const Slider = () => {
           return (
             <div
               key={el.id}
-              className={`flex gap-16 md:gap-20 animate-scroll max-sm:animate-scroll-faster whitespace-nowrap sm:group-hover:paused ${
+              className={`flex items-center gap-16 md:gap-20 animate-scroll max-sm:animate-scroll-faster whitespace-nowrap sm:group-hover:paused ${
                 paused && "paused max-sm:paused"
               }`}
             >
-              <div>
-                <TrustIndicators />
-              </div>
-              <div className="flex gap-4">
-                <div className="h-24 aspect-square rounded-full flex items-center justify-center gap-4 bg-background/10 overflow-hidden p-2 text-pencil">
-                  <div className="bg-emerald-400/90 h-full aspect-square grid place-items-center rounded-full">
-                    <Trophy className="size-8"/>
-                  </div>
-                </div>
-                <div className="flex flex-col items-start justify-center">
-                  {/* <h4 className="text-base font-medium leading-none">
-                  Welcome !
-                </h4> */}
-                  {/* <Link
-                  href={"/works"}
-                  className="px-2 pl-3 py-1 flex gap-2 items-center hover:underline text-xs text-nowrap border border-background/40 bg-background/10 rounded-full text-background"
+              <TrustIndicators />
+              <div className="h-20 border border-background/20 aspect-square rounded-full flex items-center justify-center gap-4 bg-background/10 overflow-hidden p-2 text-pencil">
+                <motion.div
+                  key={iconIndex}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.8 }}
+                  className="bg-pencil text-emerald-300 h-full aspect-square grid place-items-center rounded-full"
                 >
-                  Works
-                  <ArrowDown size={14} strokeWidth={1.5} />
-                </Link> */}
-                </div>
+                  {React.createElement(icons[iconIndex], {
+                    className: "size-8",
+                    strokeWidth: 1.6,
+                  })}
+                </motion.div>
               </div>
-
+              <TrustIndicators />
               <div className="relative flex justify-center items-center z-20">
                 <svg
                   className="w-[95px] h-[95px] animate-rotate rounded-full"
@@ -85,10 +99,10 @@ const Slider = () => {
 
                 <Link
                   href="mailto:saifanees11@gmail.com"
-                  className="absolute z-30 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-emerald-400/90 hover:bg-amber-300 text-pencil rounded-full aspect-square h-16 flex items-center justify-center"
+                  className="absolute z-30 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-emerald-400 hover:bg-amber-300 text-pencil rounded-full aspect-square h-16 flex items-center justify-center"
                 >
                   <div className="flex items-center justify-center h-full w-full group">
-                    <Mail className="h-7 w-full" strokeWidth={1.4} />
+                    <Mail className="h-7 w-full" strokeWidth={1.6} />
                   </div>
                 </Link>
               </div>
