@@ -83,10 +83,13 @@ const Projects = () => {
           className="h-full w-full object-cover"
         />
       </div>
-      <h2 className="flex items-center gap-2 max-lg:gap-2 text-2xl font-medium mb-6 font-yellow-tail relative z-10">
+      <h2 className="flex items-center gap-2 max-lg:gap-2 text-2xl font-medium mb-2 font-yellow-tail relative z-10">
         <PackageCheck className="size-8 max-md:size-6" strokeWidth={1.8} />{" "}
         Commission Works
       </h2>
+      <p className="text-pencil/80 mb-8">
+        Here are some of my recent commissions and projects.
+      </p>
       <div className="grid grid-cols-4 max-2xl:grid-cols-2 max-md:grid-cols-1 gap-8 gap-y-12 max-md:gap-8">
         {categories.slice(0, visibleCount).map((category, index) => (
           <motion.div
