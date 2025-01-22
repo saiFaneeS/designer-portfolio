@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import {
   Asterisk,
   AtSign,
@@ -10,6 +9,7 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const ContactPage = () => {
   const [showToast, setShowToast] = useState(false);
@@ -66,7 +66,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="contact-section md:px-[5%] bg-background relative border-t border-t-pencil/20">
+    <div className="contact-section overflow-hidden md:px-[5%] bg-background relative border-t border-t-pencil/20">
       <div className="h-full w-full absolute top-0 left-0 opacity-20 contrast-150 brightness-95">
         <Image
           src={"/paper.avif"}
@@ -91,7 +91,17 @@ const ContactPage = () => {
             </div>
 
             {/* Social Links */}
-            <div className="flex flex-col gap-4 mb-8 w-full max-md:pl-[5%]">
+            <motion.div
+              className="flex flex-col gap-4 mb-8 w-full max-md:pl-[5%]"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={{
+                hidden: { x: 300 },
+                visible: { x: 0 },
+              }}
+              transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
+            >
               <Link
                 href={"https://www.instagram.com/saifizance/"}
                 target="_blank"
@@ -153,7 +163,7 @@ const ContactPage = () => {
                   Send an Email{" "}
                 </p>
               </Link>
-            </div>
+            </motion.div>
           </div>
 
           {/* Contact Form */}
@@ -162,13 +172,12 @@ const ContactPage = () => {
               <motion.div
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
-                transition={{ duration: 0.2, delay: 0.5 }}
+                transition={{ duration: 0.3, delay: 0.5 }}
                 variants={{
                   hidden: { rotate: "0deg" },
-                  visible: { rotate: "1deg" },
+                  visible: { rotate: "1.5deg" },
                 }}
-                className="space-y-6 text-pencil p-8 max-md:p-6 max-sm:p-4 shadow-lg bg-background-darker border border-pencil/20 absolute h-full w-full z-0 left-2 bottom-2 rounded"
+                className="space-y-6 text-pencil opacity-80 p-8 max-md:p-6 max-sm:p-4 shadow-lg bg-background-darker border border-pencil/20 absolute h-full w-full z-0 left-2 bottom-2 rounded-md"
               ></motion.div>
               <motion.form
                 onSubmit={handleSubmit}
@@ -180,7 +189,7 @@ const ContactPage = () => {
                   hidden: { opacity: 0 },
                   visible: { opacity: 1 },
                 }}
-                className="space-y-6 text-pencil p-8 max-md:p-6 max-sm:p-4 shadow-lg bg-background border border-pencil/20 z-20 relative rounded-sm"
+                className="space-y-6 text-pencil p-8 max-md:p-6 max-sm:p-4 shadow-lg bg-background border border-pencil/20 z-20 relative rounded-lg"
               >
                 <div className="flex items-center max-sm:items-start gap-2 text-nowrap max-sm:flex-col border-b border-pencil/50">
                   <label
