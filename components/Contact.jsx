@@ -67,7 +67,7 @@ const ContactPage = () => {
 
   return (
     <div className="contact-section md:px-[5%] bg-background relative border-t border-t-pencil/20">
-      <div className="h-full w-full absolute top-0 left-0 brightness-110 opacity-20">
+      <div className="h-full w-full absolute top-0 left-0 opacity-20 contrast-150 brightness-95">
         <Image
           src={"/paper.avif"}
           height={1000}

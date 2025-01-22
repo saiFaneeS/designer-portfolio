@@ -82,7 +82,7 @@ const Projects = () => {
 
   return (
     <div className="works-section px-[5%] py-12 pb-24 bg-background relative z-0">
-      <div className="h-full w-full absolute top-0 left-0 brightness-110 opacity-20">
+      <div className="h-full w-full absolute top-0 left-0 opacity-20 contrast-150 brightness-95">
         <Image
           src={"/paper.avif"}
           height={1000}
