@@ -79,7 +79,7 @@ const Navbar = () => {
           >
             Message Me
           </ScrollLink>
-          <Link href={"https://www.instagram.com/saifizance/"} target="_blank">
+          <Link href={"https://www.instagram.com/saifizance"} target="_blank">
             <Instagram />
           </Link>
         </ul>
