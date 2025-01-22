@@ -51,7 +51,7 @@ export default function Hero() {
         <div className="max-sm:order-1 mt-8">
           <>
             <motion.h1
-              className={`leading-none pl-4 sm:pl-4 drop-shadow-xl md:pl-6 lg:pl-8 lg:text-3xl text-2xl -mb-7 max-lg:-mb-5 max-sm:-mb-0 font-clash font-medium flex justify-start max-sm:justify-cente items-center text-left`}
+              className={`leading-none pl-2 sm:pl-4 drop-shadow-xl md:pl-6 lg:pl-8 lg:text-3xl text-2xl -mb-7 max-lg:-mb-5 max-sm:-mb-0 font-clash font-medium flex justify-start max-sm:justify-cente items-center text-left`}
               initial="hidden"
               animate="visible"
               variants={{
