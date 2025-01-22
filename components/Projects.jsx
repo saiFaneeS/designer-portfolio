@@ -14,7 +14,7 @@ const Projects = () => {
       image: "/msre.png",
       client: "MS Real Estate LLC",
       time: "1 Month",
-      desc: "Modernised re-design of pages and migration from of the wordpress to full-stack.",
+      desc: "Redesigned a cleaner UI and migrated from WordPress to a full-stack solution for better UX and performance.",
     },
     {
       type: "Branding",
@@ -22,29 +22,29 @@ const Projects = () => {
       image: "/idan.png",
       client: "Igal S.",
       time: "1 Week",
-      desc: "Lorem ipsum dolor set amet. Lorem ipsum dolor set emet. dolor ip.",
+      desc: "Personal brand logo for a young BJJ athlete, capturing their identity & spirit.",
     },
-    {
-      type: "Animations / Motion Graphics",
-      color: "purple",
-      image: "/img1.png",
-      time: "3 Weeks",
-      desc: "Lorem ipsum dolor set amet. Lorem ipsum dolor set emet. dolor ip.",
-    },
+    // {
+    //   type: "Animations / Motion Graphics",
+    //   color: "purple",
+    //   image: "/img1.png",
+    //   time: "3 Weeks",
+    //   desc: "Lorem ipsum dolor set amet. Lorem ipsum dolor set emet. dolor ip.",
+    // },
     {
       type: "Digital Art",
       color: "red",
-      image: "/art1.webp",
-      time: "1 Month",
-      desc: "Lorem ipsum dolor set amet. Lorem ipsum dolor set emet. dolor ip.",
+      image: "/art.png",
+      time: "2 Days",
+      desc: "Digital art sketched and painted in Krita. Showcasing big fluffy clouds as a focal point hovering over beautiful fields.",
     },
     {
       type: "Web/App Designs",
-      color: "blue",
+      color: "purple",
       image: "/ohghad-web.png",
       client: "Ohghad Org",
       time: "1 Month",
-      desc: "Modernised re-design of pages and migration from of the wordpress to full-stack.",
+      desc: "Designed and developed a secure fundraising platform for the people of Ghana.",
     },
     {
       type: "Web/App Designs",
@@ -52,7 +52,7 @@ const Projects = () => {
       image: "/mslm.webp",
       client: "Modern Standards Luxury motors",
       time: "1.5 Month",
-      desc: "Modernised re-design of pages and migration from of the wordpress to full-stack.",
+      desc: "A simple design for a fast limousine booking experience for luxury rides in Dubai.",
     },
   ];
 
@@ -114,7 +114,7 @@ const Projects = () => {
                     height={1000}
                     width={1000}
                     alt={category.client}
-                    className="h-full w-full object-cover rounded-md"
+                    className="h-full w-full object-cover rounded-md object-bottom"
                   />
                   <div className="h-full w-full z-10 absolute bottom-0 left-0"></div>
                 </div>
