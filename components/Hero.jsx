@@ -39,7 +39,7 @@ export default function Hero() {
     <div
       className={`h-screen max-sm:h-[90vh] overflow-y-hidden relative top-0 overflow-x-hidden bg-pencil-darker text-background transition-all flex flex-col justify-between items-center gap-5 max-sm:gap-4 w-full lg:overflow-hidden`}
     >
-      <div className="h-full w-full fixed -z-0 top-0 left-0 opacity-10 brightness-50">
+      <div className="h-full w-full fixed -z-0 top-0 left-0 opacity-10 brightness-50 contrast-200 rotate-180">
         <Image
           src={"/paper.avif"}
           height={1000}

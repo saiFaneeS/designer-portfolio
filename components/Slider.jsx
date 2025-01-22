@@ -66,7 +66,7 @@ const Slider = () => {
                     initial={{ opacity: 0, x: 50, scale: 0.8 }}
                     animate={{ opacity: 1, x: 0, scale: 1 }}
                     exit={{ opacity: 0, x: -50, scale: 0.8 }}
-                    transition={{ duration: 0.3, ease: "easeOut" }}
+                    transition={{ duration: 0.2, ease: "easeOut" }}
                     className="bg-pencil text-emerald-300 h-full aspect-square grid place-items-center rounded-full"
                   >
                     {React.createElement(icons[iconIndex], {
