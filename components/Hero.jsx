@@ -17,7 +17,7 @@ export default function Hero() {
 
   useEffect(() => {
     const handleResize = () => {
-      setScale(window.innerWidth < 640 ? 0.4 : 1);
+      setScale(window.innerWidth < 640 ? 1.2 : 1);
     };
 
     window.addEventListener("resize", handleResize);
@@ -37,7 +37,7 @@ export default function Hero() {
 
   return (
     <div
-      className={`h-screen max-sm:h-[90vh] relative top-0 overflow-x-hidden bg-pencil-darker text-background transition-all flex flex-col justify-between items-center gap-5 max-sm:gap-4 w-full lg:overflow-hidden`}
+      className={`h-screen max-sm:h-[90vh] overflow-y-hidden relative top-0 overflow-x-hidden bg-pencil-darker text-background transition-all flex flex-col justify-between items-center gap-5 max-sm:gap-4 w-full lg:overflow-hidden`}
     >
       <div className="h-full w-full fixed -z-0 top-0 left-0 opacity-10 brightness-50">
         <Image
@@ -51,7 +51,7 @@ export default function Hero() {
         <div className="max-sm:order-1 mt-8">
           <>
             <motion.h1
-              className={`leading-none sm:pl-4 drop-shadow-xl md:pl-6 lg:pl-8 lg:text-3xl text-2xl -mb-7 max-lg:-mb-5 font-clash font-medium flex justify-start max-sm:justify-center items-center text-left`}
+              className={`leading-none pl-4 sm:pl-4 drop-shadow-xl md:pl-6 lg:pl-8 lg:text-3xl text-2xl -mb-7 max-lg:-mb-5 font-clash font-medium flex justify-start max-sm:justify-cente items-center text-left`}
               initial="hidden"
               animate="visible"
               variants={{
@@ -65,7 +65,7 @@ export default function Hero() {
           </>
           <div>
             <motion.h1
-              className="font-yellow-tail pb-4 tracking-wide drop-shadow-lg px-2 text-nowrap leading-none max-sm:text-center max-sm:mt-1 max-sm:break-words text-emerald-400"
+              className="font-yellow-tail pb-4 tracking-wide drop-shadow-lg sm:px-2 text-nowrap leading-none max-sm:text-cente max-sm:mt-1 max-sm:break-words text-emerald-400"
               initial="hidden"
               animate="visible"
               variants={{
@@ -77,13 +77,13 @@ export default function Hero() {
               Visual Storyteller
             </motion.h1>
           </div>
-          <p className="text-base text-background/90 text-center sm:text-start max-w-xl px-2 md:pl-4 lg:pl-5 leading-normal font-normal">
+          <p className="text-base text-background/90 text-cente sm:text-start max-w-xl px-2 md:pl-4 lg:pl-5 leading-normal font-normal">
             I&apos;m Saif, a designer and developer passionate about creativity.
           </p>
         </div>
         {/* categories-fan */}
         <motion.div
-          className="lg:ml-20 text-sm flex items-center justify-center max-sm:absolute top-[32%] max-sm:brightness-90 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 transition-all cursor-default"
+          className="lg:ml-20 text-sm flex items-center justify-center max-sm:absolute top-[36%] max-sm:brightness-75 right-0 -translate-x-1/2 -translate-y-1/2 -z-10 transition-all cursor-default"
           initial="hidden"
           animate={"visible"}
           variants={fanVariants}

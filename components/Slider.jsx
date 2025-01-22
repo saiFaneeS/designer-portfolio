@@ -14,7 +14,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { TrustIndicators } from "./TrustIndicators";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Slider = () => {
   const [paused, setPaused] = useState(false);
@@ -60,18 +60,21 @@ const Slider = () => {
             >
               <TrustIndicators />
               <div className="h-20 border border-background/20 aspect-square rounded-full flex items-center justify-center gap-4 bg-background/10 overflow-hidden p-2 text-pencil">
-                <motion.div
-                  key={iconIndex}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
-                  className="bg-pencil text-emerald-300 h-full aspect-square grid place-items-center rounded-full"
-                >
-                  {React.createElement(icons[iconIndex], {
-                    className: "size-8",
-                    strokeWidth: 1.6,
-                  })}
-                </motion.div>
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={iconIndex}
+                    initial={{ opacity: 0, x: 50, scale: 0.8 }}
+                    animate={{ opacity: 1, x: 0, scale: 1 }}
+                    exit={{ opacity: 0, x: -50, scale: 0.8 }}
+                    transition={{ duration: 0.3, ease: "easeOut" }}
+                    className="bg-pencil text-emerald-300 h-full aspect-square grid place-items-center rounded-full"
+                  >
+                    {React.createElement(icons[iconIndex], {
+                      className: "size-8",
+                      strokeWidth: 1.6,
+                    })}
+                  </motion.div>
+                </AnimatePresence>
               </div>
               <TrustIndicators />
               <div className="relative flex justify-center items-center z-20">

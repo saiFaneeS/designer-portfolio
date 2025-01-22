@@ -102,7 +102,7 @@ export const TrustIndicators = () => {
             {testimonials[currentIndex]?.author}
           </span>
           <span>
-            <Quote className="size-4" />
+            <Quote className="size-4 text-emerald-300" />
           </span>
         </span>
       </motion.div>
