@@ -18,18 +18,18 @@ const Scroller = ({ scrollText }) => {
   return (
     <div className="relative z-10 bg-emerald-400 py-1 font-semibold text-lg text-nowrap whitespace-nowrap overflow-x-hidden">
       <div
-        className="flex items-center gap-20 max-sm:gap-8 transition-all ease-in-out duration-400"
+        className="flex items-center gap-10 max-sm:gap-6 tracking-wide transition-all ease-in-out duration-400"
         style={{ transform: `translateX(-${scrollLength}px)` }}
       >
-        <span>・{scrollText}</span>
-        <span>・{scrollText}</span>
-        <span>・{scrollText}</span>
-        <span>・{scrollText}</span>
-        <span>・{scrollText}</span>
-        <span>・{scrollText}</span>
-        <span>・{scrollText}</span>
-        <span>・{scrollText}</span>
-        <span>・{scrollText}</span>
+        <span>・</span> <span>{scrollText}</span>
+        <span>・</span> <span>{scrollText}</span>
+        <span>・</span> <span>{scrollText}</span>
+        <span>・</span> <span>{scrollText}</span>
+        <span>・</span> <span>{scrollText}</span>
+        <span>・</span> <span>{scrollText}</span>
+        <span>・</span> <span>{scrollText}</span>
+        <span>・</span> <span>{scrollText}</span>
+        <span>・</span> <span>{scrollText}</span>
       </div>
     </div>
   );
