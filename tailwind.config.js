@@ -87,9 +87,9 @@ module.exports = {
           "100%": { transform: "translateX(-110%)" },
         },
         "snap-loop": {
-          "0%": { transform: "translateX(50%)" },
-          // "33.33%, 50.83%": { transform: "translateX(-57%)" },
-          // "66.66%, 84.16%": { transform: "translateX(-164%)" },
+          "0%, 17.5%": { transform: "translateX(50%)" },
+          "33.33%, 50.83%": { transform: "translateX(-57%)" },
+          "66.66%, 84.16%": { transform: "translateX(-164%)" },
           "100%": { transform: "translateX(50%)" },
         },
         "accordion-down": {

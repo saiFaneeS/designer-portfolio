@@ -19,7 +19,7 @@ const Projects = () => {
     {
       type: "Branding",
       color: "green",
-      image: "/idan.png",
+      image: "/idan-cover2.jpeg",
       client: "Igal S.",
       time: "1 Week",
       desc: "Personal brand logo for a young BJJ athlete, capturing their identity & spirit.",
@@ -41,7 +41,7 @@ const Projects = () => {
     {
       type: "Web/App Designs",
       color: "purple",
-      image: "/ohghad-web.png",
+      image: "/projects/ohghad.jpeg",
       client: "Ohghad Org",
       time: "1 Month",
       desc: "Designed and developed a secure fundraising platform for the people of Ghana.",
@@ -114,7 +114,11 @@ const Projects = () => {
                     height={1000}
                     width={1000}
                     alt={category.client}
-                    className="h-full w-full object-cover rounded-md object-bottom"
+                    className={`h-full w-full object-cover rounded-md ${
+                      category.image === "/idan-cover2.jpeg"
+                        ? "object-center"
+                        : "object-bottom"
+                    }`}
                   />
                   <div className="h-full w-full z-10 absolute bottom-0 left-0"></div>
                 </div>

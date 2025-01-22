@@ -1,4 +1,4 @@
-import { Mail, Pause, Play } from "lucide-react";
+import { Mail, Pause, Play, Trophy } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -15,17 +15,17 @@ const Slider = () => {
         {paused ? (
           <Play
             onClick={() => setPaused(!paused)}
-            className="bg-background/10 p-1.5 h-8 w-8 hover:scale-105 cursor-pointer hover:bg-background/15 rounded backdrop-blur-sm"
+            className="bg-background/20 p-1.5 h-8 w-8 hover:scale-105 cursor-pointer rounded backdrop-blur-3xl"
           />
         ) : (
           <Pause
             onClick={() => setPaused(!paused)}
-            className="bg-background/10 p-1.5 h-8 w-8 hover:scale-105 cursor-pointer hover:bg-background/15 rounded backdrop-blur-sm"
+            className="bg-background/20 p-1.5 h-8 w-8 hover:scale-105 cursor-pointer rounded backdrop-blur-3xl"
           />
         )}{" "}
       </div>
       <div
-        className={`relative flex items-center max-sm:py-4 py-8 gap-16 md:gap-20 border-y border-y-background/20 backdrop-blur-3xl bg-background/[5%] hover:bg-background/[7%] ${
+        className={`relative flex items-center max-sm:py-4 py-8 gap-16 md:gap-20 border-t-4 border-t-background/20 backdrop-blur-3xl bg-background/[5%] hover:bg-background/[7%] ${
           paused && "bg-background/[7%]"
         } transition-all group`}
       >
@@ -37,49 +37,14 @@ const Slider = () => {
                 paused && "paused max-sm:paused"
               }`}
             >
-              <div className="bg-background/5 p-3 rounded-md">
+              <div>
                 <TrustIndicators />
               </div>
               <div className="flex gap-4">
-                <div className="h-24 aspect-[2.8] rounded-md flex items-center justify-center gap-4 bg-background/10 overflow-hidden">
-                  {images.map((el) => {
-                    return (
-                      <>
-                        <div className="animate-snap-scroll snap-center snap-x snap-mandatory whitespace-nowrap h-20 aspect-video animate-snap-loop">
-                          <Image
-                            src={"/ohghad-web.png"}
-                            height={200}
-                            width={200}
-                            className="h-full w-full object-cover rounded-md shadow-xl"
-                          />
-                        </div>
-                        <div className="animate-snap-scroll snap-center snap-x snap-mandatory whitespace-nowrap h-20 aspect-video animate-snap-loop">
-                          <Image
-                            src={"/msre.png"}
-                            height={200}
-                            width={200}
-                            className="h-full w-full object-cover rounded-md shadow-xl"
-                          />
-                        </div>
-                        <div className="animate-snap-scroll snap-center snap-x snap-mandatory whitespace-nowrap h-20 aspect-video animate-snap-loop">
-                          <Image
-                            src={"/mslm.webp"}
-                            height={200}
-                            width={200}
-                            className="h-full w-full object-cover rounded-md shadow-xl"
-                          />
-                        </div>
-                        <div className="animate-snap-scroll snap-center snap-x snap-mandatory whitespace-nowrap h-20 aspect-video animate-snap-loop">
-                          <Image
-                            src={"/mslm.webp"}
-                            height={200}
-                            width={200}
-                            className="h-full w-full object-cover rounded-md shadow-xl"
-                          />
-                        </div>
-                      </>
-                    );
-                  })}
+                <div className="h-24 aspect-square rounded-full flex items-center justify-center gap-4 bg-background/10 overflow-hidden p-2 text-pencil">
+                  <div className="bg-emerald-400/90 h-full aspect-square grid place-items-center rounded-full">
+                    <Trophy className="size-8"/>
+                  </div>
                 </div>
                 <div className="flex flex-col items-start justify-center">
                   {/* <h4 className="text-base font-medium leading-none">
@@ -97,7 +62,7 @@ const Slider = () => {
 
               <div className="relative flex justify-center items-center z-20">
                 <svg
-                  className="w-[90px] h-[90px] animate-rotate rounded-full"
+                  className="w-[95px] h-[95px] animate-rotate rounded-full"
                   viewBox="0 0 200 200"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -108,22 +73,22 @@ const Slider = () => {
                     />
                   </defs>
                   <text
-                    className="text-[15px] font-clash fill-white"
+                    className="text-[18px] font-clash fill-white"
                     textLength="565"
                     dominantBaseline="middle"
                   >
                     <textPath href="#circlePath">
-                      {" GET IN TOUCH ・ GET IN TOUCH ・ "}
+                      MESSAGE ME ・ MESSAGE ME ・ {"-"}
                     </textPath>
                   </text>
                 </svg>
 
                 <Link
                   href="mailto:saifanees11@gmail.com"
-                  className="absolute z-30 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-green-400 hover:bg-amber-300 text-pencil rounded-full aspect-square h-14 flex items-center justify-center"
+                  className="absolute z-30 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-emerald-400/90 hover:bg-amber-300 text-pencil rounded-full aspect-square h-16 flex items-center justify-center"
                 >
                   <div className="flex items-center justify-center h-full w-full group">
-                    <Mail className="h-6 w-full" strokeWidth={1.2} />
+                    <Mail className="h-7 w-full" strokeWidth={1.4} />
                   </div>
                 </Link>
               </div>

@@ -45,7 +45,7 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 w-full transition-transform duration-500 ${
         isVisible ? "translate-y-full" : "-translate-y-20"
-      } bg-background z-20`}
+      } bg-background z-30`}
     >
       <div
         className={`px-[5%] fixed top-0 bg-background text-pencil w-full flex gap-4 items-center justify-between z-20 py-3 border-b border-b-pencil/10 border-b/50`}
