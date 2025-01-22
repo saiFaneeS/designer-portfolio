@@ -47,11 +47,11 @@ export default function Hero() {
           className="h-full w-full object-cover"
         />
       </div>
-      <div className="fixed px-[5%] grid grid-cols-2 max-sm:grid-cols-1 top-0 lg:text-5xl text-4xl w-full font-medium leading-none pb-24 h-full items-center justify-center">
+      <div className="fixed px-[5%] grid grid-cols-2 max-sm:grid-cols-1 top-0 lg:text-5xl text-4xl w-full font-medium leading-none pb-24 h-full items-center justify-center transition-all">
         <div className="max-sm:order-1 mt-8">
           <>
             <motion.h1
-              className={`leading-none pl-4 sm:pl-4 drop-shadow-xl md:pl-6 lg:pl-8 lg:text-3xl text-2xl -mb-7 max-lg:-mb-5 font-clash font-medium flex justify-start max-sm:justify-cente items-center text-left`}
+              className={`leading-none pl-4 sm:pl-4 drop-shadow-xl md:pl-6 lg:pl-8 lg:text-3xl text-2xl -mb-7 max-lg:-mb-5 max-sm:-mb-0 font-clash font-medium flex justify-start max-sm:justify-cente items-center text-left`}
               initial="hidden"
               animate="visible"
               variants={{
@@ -60,7 +60,7 @@ export default function Hero() {
               }}
               transition={{ duration: 0.5 }}
             >
-              An All In One
+              All In One
             </motion.h1>
           </>
           <div>
@@ -74,7 +74,7 @@ export default function Hero() {
               }}
               transition={{ duration: 0.4, delay: 0.1 }}
             >
-              Visual Storyteller
+              Visual Storyteller.
             </motion.h1>
           </div>
           <p className="text-base text-background/90 text-cente sm:text-start max-w-xl px-2 md:pl-4 lg:pl-5 leading-normal font-normal">
