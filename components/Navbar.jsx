@@ -62,12 +62,12 @@ const Navbar = () => {
           /> */}
           Saif Anees
         </Link>
-        <ul className="flex gap-6 max-sm:gap-4 items-center text-sm font-medium tracking-wide font-clash">
+        <ul className="flex gap-5 max-sm:gap-4 items-center text-sm font-medium tracking-wide font-clash">
           <ScrollLink
             to="works-section"
             onClick={() => scrollToSection("works-section")}
             href={"#"}
-            className="max-sm:hidden"
+            className="max-sm:hidden mr-2"
           >
             Works
           </ScrollLink>
@@ -75,12 +75,16 @@ const Navbar = () => {
             href={"#"}
             to="contact-section"
             onClick={() => scrollToSection("contact-section")}
-            className="bg-pencil text-background-brighter px-4 py-2 rounded-full"
+            className="max-sm:hidden mr-2"
           >
             Message Me
           </ScrollLink>
-          <Link href={"https://www.instagram.com/saifizance"} target="_blank">
-            <Instagram />
+          <Link
+            href={"https://www.instagram.com/saifizance"}
+            target="_blank"
+            className="bg-pencil/95 text-background-brighter/95 flex items-center gap-2 px-2.5 pr-3 py-2 rounded-xl hover:bg-pencil/80 hover:text-background/90 transition-all"
+          >
+            <Instagram size={20} /> Instagram
           </Link>
         </ul>
       </div>

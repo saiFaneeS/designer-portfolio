@@ -9,20 +9,20 @@ const Projects = () => {
 
   const categories = [
     {
-      type: "Web/App Designs",
-      color: "blue",
-      image: "/msre.png",
-      client: "MS Real Estate LLC",
-      time: "1 Month",
-      desc: "Redesigned a cleaner UI and migrated from WordPress to a full-stack solution for better UX and performance.",
-    },
-    {
       type: "Branding",
       color: "green",
       image: "/idan-cover2.jpeg",
       client: "Igal S.",
       time: "1 Week",
       desc: "Personal brand logo for a young BJJ athlete, capturing their identity & spirit.",
+    },
+    {
+      type: "Website Design",
+      color: "blue",
+      image: "/msre.png",
+      client: "MS Real Estate LLC",
+      time: "1 Month",
+      desc: "Redesigned a cleaner UI and migrated from WordPress to a full-stack solution for better UX and performance.",
     },
     // {
     //   type: "Animations / Motion Graphics",
@@ -39,7 +39,7 @@ const Projects = () => {
       desc: "Digital art sketched and painted in Krita. Showcasing big fluffy clouds as a focal point hovering over beautiful fields.",
     },
     {
-      type: "Web/App Designs",
+      type: "Website Design",
       color: "purple",
       image: "/projects/ohghad.jpeg",
       client: "Ohghad Org",
@@ -47,7 +47,7 @@ const Projects = () => {
       desc: "Designed and developed a secure fundraising platform for the people of Ghana.",
     },
     {
-      type: "Web/App Designs",
+      type: "Website Design",
       color: "blue",
       image: "/mslm.webp",
       client: "Modern Standards Luxury motors",

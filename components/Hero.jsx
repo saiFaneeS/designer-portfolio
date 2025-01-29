@@ -17,7 +17,7 @@ export default function Hero() {
 
   useEffect(() => {
     const handleResize = () => {
-      setScale(window.innerWidth < 640 ? 1.2 : 1);
+      setScale(window.innerWidth < 640 ? 1.1 : 1);
     };
 
     window.addEventListener("resize", handleResize);
@@ -51,7 +51,7 @@ export default function Hero() {
         <div className="max-sm:order-1 mt-8">
           <>
             <motion.h1
-              className={`leading-none pl-2 sm:pl-4 drop-shadow-xl md:pl-6 lg:pl-8 lg:text-3xl text-2xl -mb-7 max-lg:-mb-5 max-sm:-mb-0 font-clash font-medium flex justify-start max-sm:justify-cente items-center text-left`}
+              className={`font-yellow-tail leading-none drop-shadow-xl pl-1 lg:text-3xl text-2xl font-medium flex justify-start max-sm:justify-cente items-center text-left`}
               initial="hidden"
               animate="visible"
               variants={{
@@ -65,7 +65,7 @@ export default function Hero() {
           </>
           <div>
             <motion.h1
-              className="font-yellow-tail pb-4 tracking-wide drop-shadow-lg sm:px-2 text-nowrap leading-none max-sm:text-cente max-sm:mt-1 max-sm:break-words text-emerald-400"
+              className="pt-2 pb-4 uppercase font-semibold text-4xl max-lg:text-3xl max-md:text-2xl max-sm:text-3xl drop-shadow-lg md:text-nowrap leading-none max-sm:text-cente max-sm:break-words text-emerald-400"
               initial="hidden"
               animate="visible"
               variants={{
@@ -74,10 +74,10 @@ export default function Hero() {
               }}
               transition={{ duration: 0.4, delay: 0.1 }}
             >
-              Visual Storyteller.
+              Visual Storyteller
             </motion.h1>
           </div>
-          <p className="text-base text-background/90 text-cente sm:text-start max-w-xl px-2 md:pl-4 lg:pl-5 leading-normal font-normal">
+          <p className="text-base text-background/90 text-cente sm:text-start max-w-xl leading-normal font-normal">
             I&apos;m Saif, a designer and developer passionate about creativity.
           </p>
         </div>
@@ -98,22 +98,22 @@ export default function Hero() {
               <Hexagon size={30} strokeWidth={1.8} />
             </div>
             <span className="absolute left-[22px] rotate-0 px-3 py-1 text-xs font-medium max-sm:py-1.5 text-pencil bg-green-200/75 border-l-4 border-l-green-500/80 w-28 flex justify-center shadow-xl shadow-green-500/15 rounded ">
-              Branding
+              Thumbnails
             </span>
             <span className="absolute bottom-[55px] -left-[17px] -rotate-[60deg] px-3 py-1 text-xs font-medium max-sm:py-1.5 text-pencil bg-amber-200/75 border-l-4 border-l-amber-500/80 w-28 flex justify-center shadow-xl shadow-yellow-500/15 rounded ">
-              Art
+              Brand Design
             </span>
             <span className="absolute -right-[17px] bottom-[55px] rotate-[60deg] px-3 py-1 text-xs font-medium max-sm:py-1.5 text-pencil bg-red-200/75 border-r-4 border-r-red-500/80 w-28 flex justify-center shadow-xl shadow-red-500/15 rounded ">
-              Animations
+              Book Covers
             </span>
             <span className="absolute right-[22px] rotate-0 px-3 py-1 text-xs font-medium max-sm:py-1.5 text-pencil bg-pink-200/75 border-r-4 border-r-pink-500/80 w-28 flex justify-center shadow-xl shadow-red-500/15 rounded ">
-              Social Media
+              Illustration
             </span>
             <span className="absolute -right-[17px] top-14 -rotate-[60deg] px-3 py-1 text-xs font-medium max-sm:py-1.5 text-pencil bg-violet-200/75 border-r-4 border-r-violet-500/80 w-28 flex justify-center shadow-xl shadow-violet-500/15 rounded ">
-              Motion Graphics
+              2D Animations
             </span>
             <span className="absolute -left-[17px] top-14 rotate-[60deg] px-3 py-1 text-xs font-medium max-sm:py-1.5 text-pencil bg-sky-200/75 border-l-4 border-l-sky-500/80 w-28 flex justify-center shadow-xl shadow-pink-500/15 rounded ">
-              Web/Apps
+              UI Design
             </span>
           </div>
         </motion.div>
