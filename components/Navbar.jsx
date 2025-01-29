@@ -52,7 +52,7 @@ const Navbar = () => {
       >
         <Link
           href={"/"}
-          className="text-base font-medium flex gap-3 items-center shrink-0 font-yellow-tail"
+          className="text-lg font-medium flex gap-3 items-center shrink-0 font-yellow-tail"
         >
           {/* <Image
             src={"/pfp.png"}
@@ -67,7 +67,7 @@ const Navbar = () => {
             to="works-section"
             onClick={() => scrollToSection("works-section")}
             href={"#"}
-            className="max-sm:hidden mr-2"
+            className="max-sm:hidden mr-2 hover:text-pencil/80"
           >
             Works
           </ScrollLink>
@@ -75,7 +75,7 @@ const Navbar = () => {
             href={"#"}
             to="contact-section"
             onClick={() => scrollToSection("contact-section")}
-            className="max-sm:hidden mr-2"
+            className="max-sm:hidden mr-2 hover:text-pencil/80"
           >
             Message Me
           </ScrollLink>

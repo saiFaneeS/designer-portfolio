@@ -77,7 +77,11 @@ const Projects = () => {
   }, []);
 
   const handleShowMore = () => {
-    setVisibleCount((prevCount) => prevCount + (isMobile ? 2 : 2));
+    if (visibleCount < categories.length) {
+      setVisibleCount(categories.length); // Show all cards
+    } else {
+      setVisibleCount(4); // Show only 4 cards
+    }
   };
 
   return (
@@ -114,7 +118,7 @@ const Projects = () => {
             }}
           >
             <div key={index} className="">
-              <div className="bg-background/30 p-3 max-md:p-2 border border-pencil/20 shadow-md flex items-start rounded-lg gap-3 leading-loose">
+              <div className="bg-background-brighter/40 p-3 max-md:p-2 border border-pencil/20 shadow-md flex items-start rounded-lg gap-3 leading-loose">
                 <div className="relative h-full w-full overflow-hidden aspect-[16/12] max-sm:aspect-[16/14] shrink-0 basis-1/2 pr-3 border-r-2 border-dashed border-pencil/20">
                   <Image
                     src={category.image}
@@ -159,13 +163,26 @@ const Projects = () => {
         ))}
       </div>
 
-      {visibleCount < categories.length && (
-        <div className="flex items-center justify-center mt-12 relative">
+      {visibleCount < categories.length ? (
+        <div className="flex items-center justify-center mt-16 relative">
           <button
-            className="font-yellow-tail flex items-center gap-2 hover:bg-emerald-500/20 px-2 text-base"
+            className="font-yellow-tail flex items-center gap-2 hover:bg-emerald-500/20 px-2 text-lg"
             onClick={handleShowMore}
           >
             Show More
+            <ArrowDownToDot
+              className="size-5 text-pencil/90 relative transition-all"
+              strokeWidth={1.8}
+            />
+          </button>
+        </div>
+      ) : (
+        <div className="flex items-center justify-center mt-16 relative">
+          <button
+            className="font-yellow-tail flex items-center gap-2 hover:bg-rose-500/20 px-2 text-lg"
+            onClick={handleShowMore}
+          >
+            Show Less
             <ArrowDownToDot
               className="size-5 text-pencil/90 relative transition-all"
               strokeWidth={1.8}

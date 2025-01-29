@@ -9,6 +9,7 @@ import {
   AppWindowMac,
   Clapperboard,
   FileImage,
+  BookCopy,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -19,7 +20,7 @@ import { AnimatePresence, motion } from "framer-motion";
 const Slider = () => {
   const [paused, setPaused] = useState(false);
   const panel = [{ id: 1 }, { id: 2 }, { id: 3 }];
-  const icons = [Clapperboard, Paintbrush, AppWindowMac, FileImage];
+  const icons = [BookCopy, Paintbrush, AppWindowMac, FileImage];
   const [iconIndex, setIconIndex] = useState(0);
 
   useEffect(() => {

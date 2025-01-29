@@ -50,9 +50,9 @@ export const TrustIndicators = () => {
       /> */}
       <motion.div
         key={currentIndex}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -20 }}
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: -20 }}
         className=" text-sm font-medium flex gap-2 max-sm:items-start items-center max-sm:flex-col flex-wrap relative z-0"
       >
         <span className="text-wrap line-clamp-2">
