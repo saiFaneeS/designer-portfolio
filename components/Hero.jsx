@@ -65,7 +65,7 @@ export default function Hero() {
           </>
           <div>
             <motion.h1
-              className="pt-2 pb-4 uppercase font-semibold text-4xl max-lg:text-3xl max-md:text-2xl max-sm:text-3xl drop-shadow-lg md:text-nowrap leading-none max-sm:text-cente max-sm:break-words text-emerald-400"
+              className="pt-2 pb-4 uppercase font-semibold text-4xl max-lg:text-3xl drop-shadow-lg lg:text-nowrap leading-none text-emerald-400"
               initial="hidden"
               animate="visible"
               variants={{
