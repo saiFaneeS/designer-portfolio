@@ -11,16 +11,16 @@ const testimonials = [
     cover: "/projects/ohghad.jpeg",
   },
   {
-    text: "“It looks amazing. Reminds me the quality of goodreads.”",
-    author: "Violet Clough",
-    logo: "/flower-lotus.png",
-    cover: "/vc.png",
-  },
-  {
     text: "“Completed the work within the agreed upon time, showing professionalism and reliability in meeting deadlines. He was receptive to feedback and collaborated effectively to refine the designs according to my preferences.”",
     author: "Igal S.",
     logo: "/idan.png",
     cover: "/idan-cover.jpeg",
+  },
+  {
+    text: "“It looks amazing. reminds me the quality of goodreads...”",
+    author: "Violet Clough",
+    logo: "/flower-lotus.png",
+    cover: "/vc.png",
   },
 ];
 
@@ -36,7 +36,7 @@ export const TrustIndicators = () => {
   }, []);
 
   return (
-    <div className="relative flex items-center max-sm:items-start justify-center max-sm:flex-col gap-2 text-white-100/90 w-80 bg-background/5 p-3 rounded-md overflow-hidden">
+    <div className="relative flex items-center max-sm:items-start justify-center gap-2 w-80 sm:w-96 h-24 bg-background/5 p-3 rounded-md overflow-hidden">
       {/* <div className="flex items-center gap-1">
         {[...Array(5)].map((_, i) => (
           <Star key={i} size={14} className="fill-yellow-500 text-yellow-500" />
@@ -53,7 +53,7 @@ export const TrustIndicators = () => {
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: -20 }}
-        className=" text-sm font-medium flex gap-2 max-sm:items-start items-center max-sm:flex-col flex-wrap relative z-0"
+        className="text-sm font-medium flex gap-2 max-sm:items-start items-center max-sm:flex-col flex-wrap relative z-0"
       >
         <span className="text-wrap line-clamp-2">
           {testimonials[currentIndex]?.text}

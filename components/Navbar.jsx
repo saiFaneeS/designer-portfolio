@@ -62,7 +62,7 @@ const Navbar = () => {
           /> */}
           Saif Anees
         </Link>
-        <ul className="flex gap-5 max-sm:gap-4 items-center text-sm font-medium tracking-wide font-clash">
+        <ul className="flex gap-8 max-sm:gap-4 items-center text-sm font-medium tracking-wide font-clash">
           <ScrollLink
             to="works-section"
             onClick={() => scrollToSection("works-section")}

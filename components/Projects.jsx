@@ -133,11 +133,11 @@ const Projects = () => {
                   />
                   <div className="h-full w-full z-10 absolute bottom-0 left-0"></div>
                 </div>
-                <div className="max-sm:text-sm leading-normal">
+                <div className="max-sm:text-sm leading-normal flex flex-col gap-1 max-sm:gap-0">
                   <h4
                     className={`mb-1 border-b ${
                       colorClasses[category.color]
-                    } border-b-pencil/10 font-medium line-clamp-1`}
+                    } border-b-pencil/10 font-medium line-clamp-1 w-fit px-2`}
                   >
                     <span>{category.type}</span>
                   </h4>
@@ -149,7 +149,7 @@ const Projects = () => {
                   <h4 className="mb-1 border-b border-b-pencil/10 font-medium">
                     <span>Time: {category.time}</span>
                   </h4>
-                  <p className="text-sm max-sm:text-xs text-pencil/80 line-clamp-3 leading-relaxed max-sm:leading-normal">
+                  <p className="text-sm max-sm:text-xs text-pencil/80 line-clamp-3 leading-loose max-sm:leading-normal">
                     {category.desc.split(" ").map((line, index) => (
                       <span key={index} className="border-b border-b-pencil/10">
                         {line + " "}

@@ -47,7 +47,7 @@ const Slider = () => {
         )}{" "}
       </div>
       <div
-        className={`relative flex items-center max-sm:py-4 py-8 gap-16 md:gap-20 border-t-4 border-t-background/20 backdrop-blur-3xl bg-background/[5%] hover:bg-background/[7%] ${
+        className={`relative flex items-center max-sm:py-4 py-8 gap-16 md:gap-28 border-t-4 border-t-background/20 backdrop-blur-3xl bg-background/[5%] hover:bg-background/[7%] ${
           paused && "bg-background/[7%]"
         } transition-all group`}
       >
@@ -68,7 +68,7 @@ const Slider = () => {
                     animate={{ opacity: 1, x: 0, scale: 1 }}
                     exit={{ opacity: 0, x: -50, scale: 0.8 }}
                     transition={{ duration: 0.2, ease: "easeOut" }}
-                    className="bg-pencil text-emerald-300 h-full aspect-square grid place-items-center rounded-full"
+                    className="bg-pencil text-emerald-400 h-full aspect-square grid place-items-center rounded-full"
                   >
                     {React.createElement(icons[iconIndex], {
                       className: "size-8",
