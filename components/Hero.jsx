@@ -3,7 +3,13 @@
 import React, { useEffect, useState } from "react";
 import Slider from "./Slider";
 import { motion } from "framer-motion";
-import { Hexagon } from "lucide-react";
+import {
+  Circle,
+  CircleDashed,
+  CircleDotDashed,
+  Hexagon,
+  Squircle,
+} from "lucide-react";
 import Image from "next/image";
 
 export default function Hero() {
@@ -17,7 +23,7 @@ export default function Hero() {
 
   useEffect(() => {
     const handleResize = () => {
-      setScale(window.innerWidth < 640 ? 0.8 : 1);
+      setScale(window.innerWidth < 640 ? 0.8 : 1.2);
     };
 
     window.addEventListener("resize", handleResize);
@@ -82,7 +88,7 @@ export default function Hero() {
           </p>
         </div>
         {/* categories-fan */}
-        <motion.div
+        {/* <motion.div
           className="lg:ml-20 text-sm flex items-center justify-center max-sm:absolute top-[36%] max-sm:brightness-75 right-0 -translate-x-1/2 -translate-y-1/2 -z-10 transition-all cursor-default md:mt-9"
           initial="hidden"
           animate={"visible"}
@@ -116,7 +122,55 @@ export default function Hero() {
               <span className="max-sm:rotate-180">UI Interface</span>
             </span>
           </div>
-        </motion.div>
+        </motion.div> */}
+        {/* swatch */}
+        <div className="mt-16 -mr-40 max-sm:hidden">
+          <motion.div
+            className="lg:ml-20 text-sm flex items-center justify-center max-sm:absolute top-[36%] max-sm:brightness-75 right-0 -translate-x-1/2 -translate-y-1/2 -z-10 transition-all cursor-default md:mt-9"
+            // initial="hidden"
+            // animate={"visible"}
+            // variants={fanVariants}
+            // transition={{ duration: 0.5 }}
+            style={{ scale }}
+          >
+            <div
+              className="relative flex flex-nowrap items-center justify-center gap-2 text-nowrap transition-all ease-in-out duration-300"
+              style={{ transform: `rotate(${rotation * 0.1}deg)` }}
+            >
+              <div className="h-8 w-8 absolute -top-[15px] -left-[1px] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-pencil-darker z-10">
+                <Circle
+                  size={10}
+                  strokeWidth={2}
+                  className="fill-pencil-darker"
+                />
+              </div>
+              <motion.span
+                className="absolute bottom-[50px] -right-[63px] px-5 py-1.5 text-xs font-medium max-sm:py-1.5 text-pencil bg-amber-200 pr-12 w-32 flex justify-center shadow-xl shadow-yellow-500/15 rounded rounded-r-2xl border-[1px] border-pencil/80"
+                initial={{ rotate: "0deg", scale: 0 }}
+                animate={{ rotate: "90deg", scale: "100%" }}
+                transition={{ duration: 1 }}
+              >
+                <span className="max-sm:rotate-180">Branding</span>
+              </motion.span>
+              <motion.span
+                initial={{ rotate: "0deg", scale: 0 }}
+                animate={{ rotate: "45deg", scale: "100%" }}
+                transition={{ duration: 1 }}
+                className="absolute bottom-9 -right-[28px] rotate-[45deg] px-5 py-1.5 text-xs font-medium max-sm:py-1.5 text-pencil bg-pink-200 pr-12 w-32 flex justify-center shadow-xl shadow-pink-500/15 rounded rounded-r-2xl border-[1px] border-pencil/80"
+              >
+                Interfaces
+              </motion.span>
+              <motion.span
+                initial={{ rotate: "0deg" }}
+                animate={{ rotate: "0deg" }}
+                transition={{ duration: 1 }}
+                className="absolute bottom-0 -right-[14px] rotate-0 px-5 py-1.5 text-xs font-medium max-sm:py-1.5 text-pencil bg-violet-200 pr-12 w-32 flex justify-center shadow-xl shadow-violet-500/15 rounded rounded-r-2xl border-[1px] border-pencil/80"
+              >
+                Experiences
+              </motion.span>
+            </div>
+          </motion.div>
+        </div>
       </div>
 
       <div className="w-full absolute bottom-0">

@@ -85,8 +85,7 @@ const ContactPage = () => {
                 Drop a Message.
               </h1>
               <p className="text-pencil/80">
-                Drop me a message and I&apos;ll get back to you as soon as
-                possible!
+                Drop me a message and I&apos;ll get back to you ASAP!
               </p>
             </div>
 
