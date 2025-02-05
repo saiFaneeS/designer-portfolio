@@ -145,18 +145,18 @@ export default function Hero() {
                 />
               </div>
               <motion.span
-                className="absolute bottom-[50px] -right-[63px] px-5 py-1.5 text-xs font-medium max-sm:py-1.5 text-pencil bg-amber-200 pr-12 w-32 flex justify-center shadow-xl shadow-yellow-500/15 rounded rounded-r-2xl border-[1px] border-pencil/80"
+                className="absolute bottom-[50px] -right-[63px] px-5 py-1.5 text-xs font-medium max-sm:py-1.5 text-pencil bg-amber-200 pr-12 w-32 flex justify-center shadow-xl shadow-amber-500/15 rounded rounded-r-2xl border-[1px] border-pencil/80"
                 initial={{ rotate: "0deg", scale: 0 }}
                 animate={{ rotate: "90deg", scale: "100%" }}
                 transition={{ duration: 1 }}
               >
-                <span className="max-sm:rotate-180">Branding</span>
+                <span className="max-sm:rotate-180">Experiences</span>
               </motion.span>
               <motion.span
                 initial={{ rotate: "0deg", scale: 0 }}
                 animate={{ rotate: "45deg", scale: "100%" }}
                 transition={{ duration: 1 }}
-                className="absolute bottom-9 -right-[28px] rotate-[45deg] px-5 py-1.5 text-xs font-medium max-sm:py-1.5 text-pencil bg-pink-200 pr-12 w-32 flex justify-center shadow-xl shadow-pink-500/15 rounded rounded-r-2xl border-[1px] border-pencil/80"
+                className="absolute bottom-9 -right-[28px] rotate-[45deg] px-5 py-1.5 text-xs font-medium max-sm:py-1.5 text-pencil bg-blue-200 pr-12 w-32 flex justify-center shadow-xl shadow-blue-500/15 rounded rounded-r-2xl border-[1px] border-pencil/80"
               >
                 Interfaces
               </motion.span>
@@ -164,9 +164,9 @@ export default function Hero() {
                 initial={{ rotate: "0deg" }}
                 animate={{ rotate: "0deg" }}
                 transition={{ duration: 1 }}
-                className="absolute bottom-0 -right-[14px] rotate-0 px-5 py-1.5 text-xs font-medium max-sm:py-1.5 text-pencil bg-violet-200 pr-12 w-32 flex justify-center shadow-xl shadow-violet-500/15 rounded rounded-r-2xl border-[1px] border-pencil/80"
+                className="absolute bottom-0 -right-[14px] rotate-0 px-5 py-1.5 text-xs font-medium max-sm:py-1.5 text-pencil bg-green-200 pr-12 w-32 flex justify-center shadow-xl shadow-green-500/15 rounded rounded-r-2xl border-[1px] border-pencil/80"
               >
-                Experiences
+                Branding
               </motion.span>
             </div>
           </motion.div>
