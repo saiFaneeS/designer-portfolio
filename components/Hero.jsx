@@ -12,12 +12,12 @@ export default function Hero() {
 
   const handleScroll = () => {
     const scrollY = window?.scrollY;
-    setRotation(scrollY * 1);
+    setRotation(scrollY * 0.5);
   };
 
   useEffect(() => {
     const handleResize = () => {
-      setScale(window.innerWidth < 640 ? 1.1 : 1);
+      setScale(window.innerWidth < 640 ? 0.8 : 1);
     };
 
     window.addEventListener("resize", handleResize);
@@ -83,7 +83,7 @@ export default function Hero() {
         </div>
         {/* categories-fan */}
         <motion.div
-          className="lg:ml-20 text-sm flex items-center justify-center max-sm:absolute top-[36%] max-sm:brightness-75 right-0 -translate-x-1/2 -translate-y-1/2 -z-10 transition-all cursor-default"
+          className="lg:ml-20 text-sm flex items-center justify-center max-sm:absolute top-[36%] max-sm:brightness-75 right-0 -translate-x-1/2 -translate-y-1/2 -z-10 transition-all cursor-default md:mt-9"
           initial="hidden"
           animate={"visible"}
           variants={fanVariants}
@@ -98,22 +98,22 @@ export default function Hero() {
               <Hexagon size={30} strokeWidth={1.8} />
             </div>
             <span className="absolute left-[22px] rotate-0 px-3 py-1 text-xs font-medium max-sm:py-1.5 text-pencil bg-green-200/75 border-l-4 border-l-green-500/80 w-28 flex justify-center shadow-xl shadow-green-500/15 rounded">
-              <span className="max-sm:rotate-180">Thumbnails </span>
+              <span className="max-sm:rotate-180">User Experience</span>
             </span>
             <span className="absolute bottom-[55px] -left-[17px] -rotate-[60deg] px-3 py-1 text-xs font-medium max-sm:py-1.5 text-pencil bg-amber-200/75 border-l-4 border-l-amber-500/80 w-28 flex justify-center shadow-xl shadow-yellow-500/15 rounded">
-              <span className="max-sm:rotate-180">Brand Design </span>
+              <span className="max-sm:rotate-180">Brand Design</span>
             </span>
-            <span className="absolute -right-[17px] bottom-[55px] rotate-[60deg] px-3 py-1 text-xs font-medium max-sm:py-1.5 text-pencil bg-red-200/75 border-r-4 border-r-red-500/80 w-28 flex justify-center shadow-xl shadow-red-500/15 rounded ">
+            <span className="absolute -right-[17px] bottom-[55px] rotate-[60deg] px-3 py-1 text-xs font-medium max-sm:py-1.5 text-pencil bg-red-200/75 border-r-4 border-r-red-500/80 w-28 flex justify-center shadow-xl shadow-red-500/15 rounded">
               Book Covers
             </span>
-            <span className="absolute right-[22px] rotate-0 px-3 py-1 text-xs font-medium max-sm:py-1.5 text-pencil bg-pink-200/75 border-r-4 border-r-pink-500/80 w-28 flex justify-center shadow-xl shadow-red-500/15 rounded ">
+            <span className="absolute right-[22px] rotate-0 px-3 py-1 text-xs font-medium max-sm:py-1.5 text-pencil bg-pink-200/75 border-r-4 border-r-pink-500/80 w-28 flex justify-center shadow-xl shadow-red-500/15 rounded">
               Illustration
             </span>
-            <span className="absolute -right-[17px] top-14 -rotate-[60deg] px-3 py-1 text-xs font-medium max-sm:py-1.5 text-pencil bg-violet-200/75 border-r-4 border-r-violet-500/80 w-28 flex justify-center shadow-xl shadow-violet-500/15 rounded ">
-              2D Animations
+            <span className="absolute -right-[17px] top-14 -rotate-[60deg] px-3 py-1 text-xs font-medium max-sm:py-1.5 text-pencil bg-violet-200/75 border-r-4 border-r-violet-500/80 w-28 flex justify-center shadow-xl shadow-violet-500/15 rounded">
+              2D Art
             </span>
             <span className="absolute -left-[17px] top-14 rotate-[60deg] px-3 py-1 text-xs font-medium max-sm:py-1.5 text-pencil bg-sky-200/75 border-l-4 border-l-sky-500/80 w-28 flex justify-center shadow-xl shadow-pink-500/15 rounded">
-              <span className="max-sm:rotate-180">UI Design </span>
+              <span className="max-sm:rotate-180">UI Interface</span>
             </span>
           </div>
         </motion.div>

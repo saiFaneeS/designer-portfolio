@@ -33,7 +33,7 @@ const Slider = () => {
 
   return (
     <div className="relative w-full">
-      <div className="absolute -top-12 z-20 w-full flex justify-center items-center">
+      <div className="absolute -top-12 z-20 w-full flex justify-center items-center max-sm:hidden">
         {paused ? (
           <Play
             onClick={() => setPaused(!paused)}
@@ -47,7 +47,7 @@ const Slider = () => {
         )}{" "}
       </div>
       <div
-        className={`relative flex items-center max-sm:py-4 py-8 gap-16 md:gap-28 border-t-4 border-t-background/20 backdrop-blur-3xl bg-background/[5%] hover:bg-background/[7%] ${
+        className={`relative flex items-center max-sm:py-2 py-3 shadow-xl gap-16 md:gap-28 border-4 border-background/20 backdrop-blur-3xl bg-background/[5%] hover:bg-background/[7%] w-11/12 mx-auto overflow-clip rounded-md mb-4 max-sm:hidden ${
           paused && "bg-background/[7%]"
         } transition-all group`}
       >
@@ -113,6 +113,10 @@ const Slider = () => {
             </div>
           );
         })}
+      </div>
+
+      <div className="sm:hidden flex items-center justify-center mb-6">
+        <TrustIndicators />
       </div>
     </div>
   );

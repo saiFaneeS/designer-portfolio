@@ -66,7 +66,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="contact-section overflow-hidden md:px-[5%] bg-background relative border-t border-t-pencil/15">
+    <div className="overflow-hidden md:px-[5%] bg-background relative border-t border-t-pencil/15">
       <div className="h-full w-full absolute top-0 left-0 opacity-20 contrast-150 brightness-95">
         <Image
           src={"/paper.avif"}
@@ -80,7 +80,7 @@ const ContactPage = () => {
         <div className="grid grid-cols-2 max-md:grid-cols-1">
           <div className="flex flex-col items-start justify-center">
             <div className="mb-10 max-md:mb-8 max-md:px-[5%]">
-              <h1 className="flex items-center gap-1 text-2xl font-medium mb-2 text-pencil font-yellow-tail">
+              <h1 className="contact-section flex items-center gap-1 text-2xl font-medium mb-2 text-pencil font-yellow-tail">
                 <Asterisk size={30} strokeWidth={1.9} />
                 Drop a Message.
               </h1>
