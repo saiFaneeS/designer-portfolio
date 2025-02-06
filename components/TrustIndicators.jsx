@@ -36,7 +36,7 @@ export const TrustIndicators = () => {
   }, []);
 
   return (
-    <div className="relative flex items-center max-sm:items-start justify-center gap-2 w-80 sm:w-92  bg-background/10 max-sm:rounded-md max-sm:backdrop-blur-3xl max-sm:shadow-2xl max-sm:border-background/10 max-sm:border-2 p-3 px-4 rounded-md overflow-hidden">
+    <div className="relative flex items-center max-sm:items-start justify-center gap-2 w-full max-sm:mx-4 sm:w-96  bg-background/10 max-sm:rounded-md max-sm:backdrop-blur-3xl max-sm:shadow-2xl max-sm:border-background/10 max-sm:border-2 p-3 px-4 rounded-md overflow-hidden">
       {/* <div className="flex items-center gap-1">
         {[...Array(5)].map((_, i) => (
           <Star key={i} size={14} className="fill-yellow-500 text-yellow-500" />

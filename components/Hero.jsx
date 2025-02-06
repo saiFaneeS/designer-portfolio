@@ -4,11 +4,15 @@ import React, { useEffect, useState } from "react";
 import Slider from "./Slider";
 import { motion } from "framer-motion";
 import {
+  AppWindow,
+  AppWindowMac,
   Circle,
   CircleDashed,
   CircleDotDashed,
   Hexagon,
+  Paintbrush,
   Squircle,
+  View,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -23,7 +27,7 @@ export default function Hero() {
 
   useEffect(() => {
     const handleResize = () => {
-      setScale(window.innerWidth < 640 ? 0.8 : 1.2);
+      setScale(window.innerWidth < 640 ? 0.8 : 1.4);
     };
 
     window.addEventListener("resize", handleResize);
@@ -43,7 +47,7 @@ export default function Hero() {
 
   return (
     <div
-      className={`h-screen max-sm:h-[90vh] overflow-y-hidden relative top-0 overflow-x-hidden bg-pencil-darker text-background transition-all flex flex-col justify-between items-center gap-5 max-sm:gap-4 w-full lg:overflow-hidden`}
+      className={`h-screen max-sm:h-[85vh] overflow-y-hidden relative top-0 overflow-x-hidden bg-pencil-darker text-background transition-all flex flex-col justify-between items-center gap-5 max-sm:gap-4 w-full lg:overflow-hidden`}
     >
       <div className="h-full w-full fixed -z-0 top-0 left-0 opacity-10 brightness-50 contrast-200 rotate-180">
         <Image
@@ -56,8 +60,8 @@ export default function Hero() {
       <div className="fixed px-[5%] grid grid-cols-2 max-sm:grid-cols-1 top-0 lg:text-5xl text-4xl w-full font-medium leading-none pb-24 h-full items-center justify-center transition-all">
         <div className="max-sm:order-1 mt-8">
           <>
-            <motion.h1
-              className={`font-yellow-tail leading-none drop-shadow-xl pl-1 lg:text-3xl text-2xl font-medium flex justify-start max-sm:justify-cente items-center text-left`}
+            <motion.h3
+              className={`font-yellow-tail text-emerald-400 leading-none drop-shadow-xl pl-1 text-xl font-medium flex justify-start max-sm:justify-cente items-center text-left`}
               initial="hidden"
               animate="visible"
               variants={{
@@ -66,12 +70,12 @@ export default function Hero() {
               }}
               transition={{ duration: 0.5 }}
             >
-              All In One
-            </motion.h1>
+              hello, I'm Saif.
+            </motion.h3>
           </>
-          <div>
+          <div className="text-4xl">
             <motion.h1
-              className="pt-2 pb-4 uppercase font-semibold text-4xl max-lg:text-3xl drop-shadow-lg lg:text-nowrap leading-none text-emerald-400"
+              className="pt-2 pb-4  font-semibold drop-shadow-lg lg:text-nowrap leading-none text-background/95"
               initial="hidden"
               animate="visible"
               variants={{
@@ -80,11 +84,11 @@ export default function Hero() {
               }}
               transition={{ duration: 0.4, delay: 0.1 }}
             >
-              Visual Storyteller
+              VISUAL DESIGNER
             </motion.h1>
           </div>
           <p className="text-base text-background/90 text-cente sm:text-start max-w-xl leading-normal font-normal">
-            I&apos;m Saif, a designer and developer passionate about creativity.
+            I&apos;m a designer and developer passionate about creativity.
           </p>
         </div>
         {/* categories-fan */}
@@ -124,13 +128,9 @@ export default function Hero() {
           </div>
         </motion.div> */}
         {/* swatch */}
-        <div className="mt-16 -mr-40 max-sm:hidden">
+        <div className="mt-40 -mr-40 max-sm:hidden">
           <motion.div
             className="lg:ml-20 text-sm flex items-center justify-center max-sm:absolute top-[36%] max-sm:brightness-75 right-0 -translate-x-1/2 -translate-y-1/2 -z-10 transition-all cursor-default md:mt-9"
-            // initial="hidden"
-            // animate={"visible"}
-            // variants={fanVariants}
-            // transition={{ duration: 0.5 }}
             style={{ scale }}
           >
             <div
@@ -144,28 +144,59 @@ export default function Hero() {
                   className="fill-pencil-darker"
                 />
               </div>
-              <motion.span
+              {/* <motion.span
                 className="absolute bottom-[50px] -right-[63px] px-5 py-1.5 text-xs font-medium max-sm:py-1.5 text-pencil bg-amber-200 pr-12 w-32 flex justify-center shadow-xl shadow-amber-500/15 rounded rounded-r-2xl border-[1px] border-pencil/80"
-                initial={{ rotate: "0deg", scale: 0 }}
-                animate={{ rotate: "90deg", scale: "100%" }}
-                transition={{ duration: 1 }}
+                initial={{ rotate: "0deg", right: "-8px", bottom: "0px" }}
+                animate={{ rotate: "90deg", right: "-63px", bottom: "50px" }}
+                transition={{ duration: 0.8 }}
               >
                 <span className="max-sm:rotate-180">Experiences</span>
+              </motion.span> */}
+              <motion.span
+                className="items-center gap-1 absolute bottom-9 -right-[60px] rotate-[45deg] px-5 py-1.5 text-xs font-medium max-sm:py-1.5 text-pencil bg-yellow-200 pr-12 w-32 flex justify-center shadow-lg shadow-yellow-500/10 rounded rounded-r-2xl border-[1px] border-pencil/80"
+                initial={{
+                  rotate: "45deg",
+                  right: "-28px",
+                  bottom: "36px",
+                  opacity: 0,
+                }}
+                animate={{
+                  rotate: "90deg",
+                  right: "-63px",
+                  bottom: "50px",
+                  opacity: "100%",
+                }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+              >
+                <View className="shrink-0" size={10} />
+                Experiences
               </motion.span>
               <motion.span
-                initial={{ rotate: "0deg", scale: 0 }}
-                animate={{ rotate: "45deg", scale: "100%" }}
-                transition={{ duration: 1 }}
-                className="absolute bottom-9 -right-[28px] rotate-[45deg] px-5 py-1.5 text-xs font-medium max-sm:py-1.5 text-pencil bg-blue-200 pr-12 w-32 flex justify-center shadow-xl shadow-blue-500/15 rounded rounded-r-2xl border-[1px] border-pencil/80"
+                className="items-center gap-1 absolute bottom-9 -right-[28px] rotate-[45deg] px-5 py-1.5 text-xs font-medium max-sm:py-1.5 text-pencil bg-blue-200 pr-12 w-32 flex justify-center shadow-lg shadow-blue-500/10 rounded rounded-r-2xl border-[1px] border-pencil/80"
+                initial={{
+                  rotate: "0deg",
+                  right: "-10px",
+                  bottom: "0px",
+                  opacity: 0,
+                }}
+                animate={{
+                  rotate: "45deg",
+                  right: "-28px",
+                  bottom: "36px",
+                  opacity: "100%",
+                }}
+                transition={{ duration: 0.8 }}
               >
+                <AppWindowMac className="shrink-0" size={10} />
                 Interfaces
               </motion.span>
               <motion.span
+                className="items-center gap-1 absolute bottom-0 -right-[14px] rotate-0 px-5 py-1.5 text-xs font-medium max-sm:py-1.5 text-pencil bg-green-200 pr-12 w-32 flex justify-center shadow-lg shadow-green-500/10 rounded rounded-r-2xl border-[1px] border-pencil/80"
                 initial={{ rotate: "0deg" }}
                 animate={{ rotate: "0deg" }}
-                transition={{ duration: 1 }}
-                className="absolute bottom-0 -right-[14px] rotate-0 px-5 py-1.5 text-xs font-medium max-sm:py-1.5 text-pencil bg-green-200 pr-12 w-32 flex justify-center shadow-xl shadow-green-500/15 rounded rounded-r-2xl border-[1px] border-pencil/80"
+                transition={{ duration: 0.8 }}
               >
+                <Paintbrush className="shrink-0" size={10} />
                 Branding
               </motion.span>
             </div>

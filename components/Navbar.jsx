@@ -80,7 +80,7 @@ const Navbar = () => {
             Message Me
           </ScrollLink>
           <Link
-            href={"https://www.instagram.com/saifizance"}
+            href={"https://www.instagram.com/safizance"}
             target="_blank"
             className="bg-pencil/95 text-background-brighter/95 flex items-center gap-2 px-2.5 pr-3 py-2 rounded-xl hover:bg-pencil/80 hover:text-background/90 transition-all"
           >

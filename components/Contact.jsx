@@ -102,7 +102,7 @@ const ContactPage = () => {
               transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
             >
               <Link
-                href={"https://www.instagram.com/saifizance/"}
+                href={"https://www.instagram.com/safizance/"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center max-sm:w-full rounded group hover:translate-x-2 transition-all"
@@ -275,7 +275,7 @@ const ContactPage = () => {
           transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
         >
           <Link
-            href={"https://www.instagram.com/saifizance/"}
+            href={"https://www.instagram.com/safizance/"}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center max-sm:w-full rounded group hover:translate-x-2 transition-all"
