@@ -58,7 +58,7 @@ export default function Hero() {
         />
       </div>
       <div className="fixed px-[5%] grid grid-cols-2 max-sm:grid-cols-1 top-0 lg:text-5xl text-4xl w-full font-medium leading-none pb-24 h-full items-center justify-center transition-all">
-        <div className="max-sm:order-1 mt-8">
+        <div className="max-sm:order-1 mt-8 max-sm:mt-0">
           <>
             <motion.h3
               className={`font-yellow-tail text-emerald-400 leading-none drop-shadow-xl pl-1 text-xl font-medium flex justify-start max-sm:justify-cente items-center text-left`}
@@ -153,7 +153,7 @@ export default function Hero() {
                 <span className="max-sm:rotate-180">Experiences</span>
               </motion.span> */}
               <motion.span
-                className="items-center gap-1 absolute bottom-9 -right-[60px] rotate-[45deg] px-5 py-1.5 text-xs font-medium max-sm:py-1.5 text-pencil bg-yellow-200 pr-12 w-32 flex justify-center shadow-lg shadow-yellow-500/10 rounded rounded-r-2xl border-[1px] border-pencil/80"
+                className="items-center gap-1.5 absolute bottom-9 -right-[60px] rotate-[45deg] pl-6 pr-14 py-1.5 text-xs font-medium max-sm:py-1.5 text-pencil bg-yellow-200 w-32 flex justify-center shadow-lg shadow-yellow-500/10 rounded rounded-r-2xl border-[1px] border-pencil/80"
                 initial={{
                   rotate: "45deg",
                   right: "-28px",
@@ -172,7 +172,7 @@ export default function Hero() {
                 Experiences
               </motion.span>
               <motion.span
-                className="items-center gap-1 absolute bottom-9 -right-[28px] rotate-[45deg] px-5 py-1.5 text-xs font-medium max-sm:py-1.5 text-pencil bg-blue-200 pr-12 w-32 flex justify-center shadow-lg shadow-blue-500/10 rounded rounded-r-2xl border-[1px] border-pencil/80"
+                className="items-center gap-1.5 absolute bottom-9 -right-[28px] rotate-[45deg] pl-6 pr-14 py-1.5 text-xs font-medium max-sm:py-1.5 text-pencil bg-blue-200 w-32 flex justify-center shadow-lg shadow-blue-500/10 rounded rounded-r-2xl border-[1px] border-pencil/80"
                 initial={{
                   rotate: "0deg",
                   right: "-10px",
@@ -191,7 +191,7 @@ export default function Hero() {
                 Interfaces
               </motion.span>
               <motion.span
-                className="items-center gap-1 absolute bottom-0 -right-[14px] rotate-0 px-5 py-1.5 text-xs font-medium max-sm:py-1.5 text-pencil bg-green-200 pr-12 w-32 flex justify-center shadow-lg shadow-green-500/10 rounded rounded-r-2xl border-[1px] border-pencil/80"
+                className="items-center gap-1.5 absolute bottom-0 -right-[14px] rotate-0 pl-6 pr-14 py-1.5 text-xs font-medium max-sm:py-1.5 text-pencil bg-green-200 w-32 flex justify-center shadow-lg shadow-green-500/10 rounded rounded-r-2xl border-[1px] border-pencil/80"
                 initial={{ rotate: "0deg" }}
                 animate={{ rotate: "0deg" }}
                 transition={{ duration: 0.8 }}

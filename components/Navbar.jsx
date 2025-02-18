@@ -55,7 +55,7 @@ const Navbar = () => {
           className="text-lg font-medium flex gap-3 items-center shrink-0 font-yellow-tail"
         >
           {/* <Image
-            src={"/pfp.png"}
+            src={"/pfp2.jpg"}
             height={500}
             width={500}
             className="w-8 aspect-square object-cover rounded-full"

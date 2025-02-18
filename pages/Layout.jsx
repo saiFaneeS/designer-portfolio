@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
     <div className="relative bg-main text-pencil">
       <Head>
         <title>Saif Anees</title>
-        <link rel="icon" type="image/x-icon" href="/pfp.png" />
+        <link rel="icon" type="image/x-icon" href="/pfp2.jpg" />
       </Head>
       <Navbar />
       <div>{children}</div>
