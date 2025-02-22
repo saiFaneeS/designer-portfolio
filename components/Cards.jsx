@@ -87,6 +87,7 @@ const DraggableCard = ({
         src={work.image}
         height={500}
         width={500}
+        alt=""
         className="h-full w-full object-cover -z-10"
       />
       <h3 className="relative z-10">{work.client}</h3>

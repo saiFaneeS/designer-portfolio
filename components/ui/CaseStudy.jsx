@@ -390,7 +390,7 @@ const CaseStudy = () => {
           animate={{ opacity: 1 }}
           className="flex items-center gap-2 text-sm mb-8"
         >
-          <a
+          <Link
             href="/"
             onClick={handleAllWorksClick}
             className="flex items-center gap-2 text-pencil/80 hover:text-pencil transition-colors group"
@@ -400,7 +400,7 @@ const CaseStudy = () => {
               className="group-hover:-translate-x-1 transition-transform"
             />
             All Works
-          </a>
+          </Link>
           <ChevronRight size={14} className="text-pencil/80" />
           <span className="text-emerald-600">{project.client.name}</span>
         </motion.nav>
@@ -516,13 +516,13 @@ const CaseStudy = () => {
 
         {/* Return Home Button */}
         <motion.div {...fadeIn} className="flex justify-center mt-16">
-          <a
+          <Link
             href="/"
             onClick={handleAllWorksClick}
             className="bg-amber-500/60 font-yellow-tail text-pencil flex gap-2 items-center font-medium text-lg transition-all hover:bg-amber-500/50 -rotate-2 px-6 py-1"
           >
             <ArrowUpLeft size={18} /> Return Home
-          </a>
+          </Link>
         </motion.div>
       </div>
     </div>
