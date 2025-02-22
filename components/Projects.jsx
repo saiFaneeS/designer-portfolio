@@ -86,7 +86,6 @@ const Projects = () => {
         { label: "Conversion", value: "+25%" },
       ],
     },
-
     // Glass Alibi v2
     {
       type: "Book Cover",
@@ -115,7 +114,6 @@ const Projects = () => {
         { label: "User Base", value: "2.1K" },
       ],
     },
-
     // Noblesoft
     {
       type: "Website Design",
@@ -152,7 +150,7 @@ const Projects = () => {
       client: "Lead Management CRM",
       time: "1.5 Month",
       desc: "Developed a secure and customizable CRM for teams to track leads, manage tasks, and optimize their sales pipeline.",
-      slug: "lead-management-crm",
+      slug: "custom-crm-solution",
       stats: [
         { label: "Lead Conversion", value: "+50%" },
         { label: "Team Efficiency", value: "+40%" },

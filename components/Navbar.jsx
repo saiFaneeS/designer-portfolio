@@ -2,11 +2,13 @@ import { Instagram } from "lucide-react";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { Link as ScrollLink, scroller } from "react-scroll";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
   const [lastScrollPosition, setLastScrollPosition] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
   const heroSectionHeight = 420;
+  const router = useRouter();
 
   const handleScroll = () => {
     const currentScrollPosition = window.pageYOffset;
@@ -33,13 +35,36 @@ const Navbar = () => {
   }, [lastScrollPosition]);
 
   const scrollToSection = (sectionId) => {
-    scroller.scrollTo(sectionId, {
-      duration: 800,
-      delay: 0,
-      smooth: "easeInOutQuart",
-      offset: -50,
-    });
+    if (router.pathname !== "/") {
+      router.push(`/?scrollTo=${sectionId}`).then(() => {
+        scroller.scrollTo(sectionId, {
+          duration: 800,
+          delay: 0,
+          smooth: "easeInOutQuart",
+          offset: -50,
+        });
+      });
+    } else {
+      scroller.scrollTo(sectionId, {
+        duration: 800,
+        delay: 0,
+        smooth: "easeInOutQuart",
+        offset: -50,
+      });
+    }
   };
+
+  useEffect(() => {
+    const { scrollTo } = router.query;
+    if (scrollTo) {
+      scroller.scrollTo(scrollTo, {
+        duration: 800,
+        delay: 0,
+        smooth: "easeInOutQuart",
+        offset: -50,
+      });
+    }
+  }, [router.query]);
 
   return (
     <nav
@@ -54,12 +79,6 @@ const Navbar = () => {
           href={"/"}
           className="text-lg font-medium flex gap-3 items-center shrink-0 font-yellow-tail"
         >
-          {/* <Image
-            src={"/pfp2.jpg"}
-            height={500}
-            width={500}
-            className="w-8 aspect-square object-cover rounded-full"
-          /> */}
           Saif Anees
         </Link>
         <ul className="flex gap-8 max-sm:gap-4 items-center text-sm font-medium tracking-wide font-clash">
