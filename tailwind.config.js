@@ -45,7 +45,7 @@ module.exports = {
         foreground: "hsl(var(--foreground))",
         pencil: {
           DEFAULT: "#282019",
-          darker: "#110c09",
+          darker: "#080604",
         },
         primary: {
           DEFAULT: "#282019",
