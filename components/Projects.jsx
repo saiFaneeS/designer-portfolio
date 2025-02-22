@@ -16,19 +16,7 @@ const Projects = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   const categories = [
-    {
-      type: "Branding",
-      color: "red",
-      image: "/new/idan.jpg",
-      client: "Igal S. BJJ Logo",
-      time: "1 Week",
-      desc: "Personal brand logo for a young BJJ athlete, capturing their identity & spirit.",
-      slug: "igal-s-branding",
-      stats: [
-        { label: "Brand Recognition", value: "+40%" },
-        { label: "Social Engagement", value: "+35%" },
-      ],
-    },
+    // Gearish
     {
       type: "Branding",
       color: "purple",
@@ -42,32 +30,7 @@ const Projects = () => {
         { label: "Social Engagement", value: "+35%" },
       ],
     },
-    {
-      type: "Website Design",
-      color: "blue",
-      image: "/new/ms_re.jpg",
-      client: "MS Real Estate LLC",
-      time: "1 Month",
-      desc: "Redesigned a cleaner UI and migrated from WordPress to a full-stack solution for better UX and performance.",
-      slug: "ms-real-estate",
-      stats: [
-        { label: "Load Time", value: "-50%" },
-        { label: "Conversion", value: "+25%" },
-      ],
-    },
-    {
-      type: "Website Design",
-      color: "green",
-      image: "/new/ohghad.jpg",
-      client: "Ohghad Fundraiser Site",
-      time: "1 Month",
-      desc: "Designed and developed a secure fundraising platform to support humanitarian efforts in Ghana.",
-      slug: "ohghad-platform",
-      stats: [
-        { label: "Donations", value: "+75%" },
-        { label: "User Base", value: "2.1K" },
-      ],
-    },
+    // MS Luxury Motors
     {
       type: "Website Design",
       color: "blue",
@@ -81,45 +44,7 @@ const Projects = () => {
         { label: "Revenue", value: "+45%" },
       ],
     },
-    {
-      type: "Website Design",
-      color: "green",
-      image: "/new/crm.jpg",
-      client: "Lead Management CRM",
-      time: "1.5 Month",
-      desc: "Developed a secure and customizable CRM for teams to track leads, manage tasks, and optimize their sales pipeline.",
-      slug: "lead-management-crm",
-      stats: [
-        { label: "Lead Conversion", value: "+50%" },
-        { label: "Team Efficiency", value: "+40%" },
-      ],
-    },
-    {
-      type: "Website Design",
-      color: "purple",
-      image: "/new/noblesoft.jpg",
-      client: "Noblesoft Agency Landing Page",
-      time: "3 Weeks",
-      desc: "Designed and developed a modern agency landing page that effectively showcases services and client success stories.",
-      slug: "noblesoft-landing-page",
-      stats: [
-        { label: "Engagement Rate", value: "+55%" },
-        { label: "Lead Generation", value: "+30%" },
-      ],
-    },
-    {
-      type: "Book Cover",
-      color: "cyan",
-      image: "/new/glass_alibi.jpg",
-      client: "The Glass Alibi Cover Design",
-      time: "2 Weeks",
-      desc: "Designed a suspenseful book cover featuring noir-inspired elements, reflecting the mystery and intrigue of the story.",
-      slug: "glass-alibi-cover",
-      stats: [
-        { label: "Reader Interest", value: "+45%" },
-        { label: "Sales Boost", value: "+30%" },
-      ],
-    },
+    // Silent Echoes
     {
       type: "Book Cover",
       color: "red",
@@ -133,6 +58,36 @@ const Projects = () => {
         { label: "Sales Boost", value: "+35%" },
       ],
     },
+    // Idan
+    {
+      type: "Logo Design",
+      color: "red",
+      image: "/new/idan.jpg",
+      client: "Igal S. BJJ Logo",
+      time: "1 Week",
+      desc: "Personal brand logo for a young BJJ athlete, capturing their identity & spirit.",
+      slug: "igal-s-branding",
+      stats: [
+        { label: "Brand Recognition", value: "+40%" },
+        { label: "Social Engagement", value: "+35%" },
+      ],
+    },
+    // MS Real Estate
+    {
+      type: "Website Design",
+      color: "blue",
+      image: "/new/ms_re.jpg",
+      client: "MS Real Estate LLC",
+      time: "1 Month",
+      desc: "Redesigned a cleaner UI and migrated from WordPress to a full-stack solution for better UX and performance.",
+      slug: "ms-real-estate",
+      stats: [
+        { label: "Load Time", value: "-50%" },
+        { label: "Conversion", value: "+25%" },
+      ],
+    },
+
+    // Glass Alibi v2
     {
       type: "Book Cover",
       color: "amber",
@@ -144,6 +99,63 @@ const Projects = () => {
       stats: [
         { label: "Reader Interest", value: "+40%" },
         { label: "Sales Boost", value: "+25%" },
+      ],
+    },
+    // Ohghad
+    {
+      type: "Website Design",
+      color: "green",
+      image: "/new/ohghad.jpg",
+      client: "Ohghad Fundraiser Site",
+      time: "1 Month",
+      desc: "Designed and developed a secure fundraising platform to support humanitarian efforts in Ghana.",
+      slug: "ohghad-platform",
+      stats: [
+        { label: "Donations", value: "+75%" },
+        { label: "User Base", value: "2.1K" },
+      ],
+    },
+
+    // Noblesoft
+    {
+      type: "Website Design",
+      color: "purple",
+      image: "/new/noblesoft.jpg",
+      client: "Noblesoft Agency Landing Page",
+      time: "3 Weeks",
+      desc: "Designed and developed a modern agency landing page that effectively showcases services and client success stories.",
+      slug: "noblesoft-landing-page",
+      stats: [
+        { label: "Engagement Rate", value: "+55%" },
+        { label: "Lead Generation", value: "+30%" },
+      ],
+    },
+    // Glass Alibi
+    {
+      type: "Book Cover",
+      color: "cyan",
+      image: "/new/glass_alibi.jpg",
+      client: "The Glass Alibi Cover Design",
+      time: "2 Weeks",
+      desc: "Designed a suspenseful book cover featuring noir-inspired elements, reflecting the mystery and intrigue of the story.",
+      slug: "glass-alibi-cover",
+      stats: [
+        { label: "Reader Interest", value: "+45%" },
+        { label: "Sales Boost", value: "+30%" },
+      ],
+    },
+    // CRM
+    {
+      type: "Website Design",
+      color: "green",
+      image: "/new/crm.jpg",
+      client: "Lead Management CRM",
+      time: "1.5 Month",
+      desc: "Developed a secure and customizable CRM for teams to track leads, manage tasks, and optimize their sales pipeline.",
+      slug: "lead-management-crm",
+      stats: [
+        { label: "Lead Conversion", value: "+50%" },
+        { label: "Team Efficiency", value: "+40%" },
       ],
     },
   ];
@@ -217,7 +229,10 @@ const Projects = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.3, delay: index * 0.1 }}
           >
-            <Link href={`/case-study/${category.slug}`} className="group rounded-lg">
+            <Link
+              href={`/case-study/${category.slug}`}
+              className="group rounded-lg"
+            >
               <div className="group relative bg-background-brighter/80 p-4 border border-pencil/15 shadow-sm hover:shadow-lg rounded-lg hover:border-pencil/20 transition-all">
                 <div
                   className={`absolute -top-7 pb-8 -z-10 left-5 text-background-brighter ${
