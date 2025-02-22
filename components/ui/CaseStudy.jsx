@@ -6,10 +6,8 @@ import {
   ArrowUpLeft,
   Asterisk,
   ChevronRight,
-  ExternalLink,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import ContactUs from "@/components/Contact";
 import { useRouter } from "next/router";
 import { ImageCarousel } from "../ImageCarousel";
 import { useNavbar } from "@/context/Navbar";
@@ -27,245 +25,146 @@ const CaseStudy = () => {
   const { isActive, pageChanged, setPageChanged } = useNavbar();
 
   const projects = [
-    // Ohghad
     {
-      projectName: "Ohghad - Fundraiser Web Design & Development",
-      projectCover: "/ohghad/cover.png",
+      projectName: "Igal S. BJJ Branding",
+      projectCover: "/new/idan.jpg",
       client: {
-        name: "Ohghad.org",
-        location: "Ghana",
+        name: "Igal S. BJJ",
+        location: "-",
       },
-      businessType: "Non-profit",
-      platform: {
-        frontend: ["WordPress"],
-        backend: [],
-      },
+      businessType: "Branding",
       year: 2024,
       description:
-        "Designed and developed a new website for Ohghad.org, a non-profit organization based in Ghana.",
+        "Personal brand logo for a young BJJ athlete, capturing their identity & spirit.",
       features: [
-        "User-friendly donation interface",
-        "Event management system",
-        "Volunteer sign-up and management",
-        "Content management system (CMS)",
-        "Blog for updates and news",
-        "Social media integration",
+        "Brand Recognition: +40%",
+        "Social Engagement: +35%",
       ],
-      technologies: {
-        frontend: ["WordPress", "Elementor", "CSS"],
-        backend: ["WordPress"],
-      },
-      nextSteps: [
-        "Implement a newsletter sign-up",
-        "Add an online store for merchandise",
-      ],
-      slug: "ohghad-non-profit",
+      slug: "igal-s-branding",
       objectives: [
-        "Enhance user engagement and streamline operations",
-        "Modernize the look and functionality to align with current trends",
+        "Capture the athlete's identity and spirit",
+        "Create a recognizable brand logo",
       ],
       challenges: [
-        "Creating a modern and functional website for a non-profit with limited resources",
-        "Ensuring user-friendly donation and volunteer sign-up processes",
-        "Integrating various features like event management and social media while maintaining simplicity",
+        "Creating a logo that captures the essence of the athlete",
+        "Ensuring the logo is versatile for various uses",
       ],
       solutions: [
-        "Developed a website using WordPress to meet the client's requirements for design, functionality, and ease of management.",
-        "Leveraged Elementor for easy customization and a responsive design.",
+        "Developed a logo that reflects the athlete's identity",
+        "Ensured the logo is versatile for different applications",
       ],
-      projectImages: ["/ohghad/cover.png"],
-      projectTitle: "Ohghad Fundraiser",
+      projectImages: ["/new/idan.jpg"],
+      projectTitle: "Igal S. BJJ Branding",
     },
-    // MS Real Estate
+    {
+      projectName: "Gearish Ecom. Logo",
+      projectCover: "/new/gearish.jpg",
+      client: {
+        name: "Gearish Ecom.",
+        location: "-",
+      },
+      businessType: "Branding",
+      year: 2024,
+      description:
+        "Logo design for GearishPk, an e-commerce brand, reflecting their modern and tech-driven identity.",
+      features: [
+        "Brand Recognition: +40%",
+        "Social Engagement: +35%",
+      ],
+      slug: "gearish-branding",
+      objectives: [
+        "Reflect the modern and tech-driven identity of the brand",
+        "Create a logo that stands out in the e-commerce space",
+      ],
+      challenges: [
+        "Designing a logo that captures the brand's modern identity",
+        "Ensuring the logo is memorable and recognizable",
+      ],
+      solutions: [
+        "Developed a modern and tech-driven logo",
+        "Ensured the logo is distinctive and memorable",
+      ],
+      projectImages: ["/new/gearish.jpg"],
+      projectTitle: "Gearish Ecom. Logo",
+    },
     {
       projectName: "MS Real Estate Website Redesign",
-      projectCover: "/msre/cover.png",
+      projectCover: "/new/ms_re.jpg",
       client: {
-        name: "MS Real Estate Company",
+        name: "MS Real Estate LLC",
         location: "UAE",
       },
-      originalPlatform: "WordPress",
-      redesignPlatform: "React with Next.js",
-      designTool: "Figma",
-      developmentTools: ["Tailwind CSS", "Sanity CMS"],
-      year: 2023,
+      businessType: "Website Design",
+      year: 2024,
       description:
-        "Redesigned the MS Real Estate website to modernize its look and user experience. The aim was to create a visually appealing website that sets it apart from competitors.",
+        "Redesigned a cleaner UI and migrated from WordPress to a full-stack solution for better UX and performance.",
       features: [
-        "Minimalist design with modern aesthetics",
-        "Integration with Property Finder XML for property listings",
-        "Search filter functionality for easy property discovery",
-        "Property comparison feature",
-        "Direct WhatsApp contact for agents",
-        "Agent profile cards",
-        "Retention modal for user engagement",
-        "Responsive design for all devices",
-        "CMS-managed blogs for agents",
+        "Load Time: -50%",
+        "Conversion: +25%",
       ],
       slug: "ms-real-estate",
-      projectImages: [
-        "/msre/1.jpg",
-        "/msre/2.jpg",
-        "/msre/3.jpg",
-        "/msre/4.jpg",
-        "/msre/5.jpg",
-        "/msre/6.jpg",
-      ],
-      projectTitle: "MS Real Estate Redesign",
       objectives: [
         "Enhance visual appeal and usability",
-        "Integrate Property finder listings of the company agents",
-        "Modernize the look and functionality",
+        "Improve website performance and user experience",
       ],
       challenges: [
         "Overhauling an outdated design to meet contemporary aesthetics and functionality",
         "Ensuring seamless integration with existing property listing systems",
-        "Balancing modern design with functional improvements for user engagement",
       ],
       solutions: [
         "Complete redesign with a focus on modern aesthetics and improved usability",
-        "Integrated Property Finder XML for property listings and added advanced search filters",
+        "Integrated advanced search filters and property listings",
       ],
+      projectImages: ["/new/ms_re.jpg"],
+      projectTitle: "MS Real Estate Website Redesign",
     },
-    // Idan
     {
-      projectName: "Idan Shmulevich Branding",
-      projectCover: "/idan/cover.jpeg",
+      projectName: "Ohghad Fundraiser Site",
+      projectCover: "/new/ohghad.jpg",
       client: {
-        name: "Idan Shmulevich",
-        location: "-",
+        name: "Ohghad Fundraiser Site",
+        location: "Ghana",
       },
-      businessType: "Martial Artist",
-      year: 2023,
-      description:
-        "Provided complete branding for Idan Shmulevich, a young Ji Jitsu martial artist, including multiple logo concepts and finalizing one for various products.",
-      features: [
-        "Multiple logo concepts",
-        "Finalized logo design",
-        "Branding for various products",
-      ],
-      toolsUsed: ["Photoshop", "Figma"],
-      slug: "idan-shmulevich-branding",
-      projectImages: ["/idan/1.jpeg", "/idan/cover.jpeg"],
-      projectTitle: "Idan Shmulevich Branding",
-      objectives: [
-        "Establish a unique and recognizable brand identity",
-        "Create versatile branding materials",
-      ],
-      challenges: [
-        "Developing a distinctive brand identity for a niche market (martial arts)",
-        "Designing versatile branding materials that work across various media",
-        "Capturing the essence of the client’s personal brand in the logo and other materials",
-      ],
-      solutions: [
-        "Developed multiple logo concepts and finalized one that captured the essence of the client's brand",
-        "Created branding materials tailored for various products",
-      ],
-    },
-    // Alfalah
-    {
-      projectName: "Facebook Ads for Alfalah Int Traders",
-      projectCover: "/alfalah/cover.jpeg",
-      client: {
-        name: "Alfalah Int Traders",
-        location: "Pakistan",
-      },
-      businessType: "Trading Company",
+      businessType: "Website Design",
       year: 2024,
       description:
-        "Created social media ad designs for Alfalah Int Traders to enhance their online presence and marketing efforts.",
+        "Designed and developed a secure fundraising platform to support humanitarian efforts in Ghana.",
       features: [
-        "Engaging and visually appealing ad designs",
-        "Consistency with brand identity",
-        "Targeted for social media platforms",
+        "Donations: +75%",
+        "User Base: 2.1K",
       ],
-      toolsUsed: ["Photoshop", "Figma"],
-      slug: "alfalah-int-traders",
-      projectImages: ["/alfalah/cover.jpeg"],
-      projectTitle: "Facebook Ads for Alfalah Int Traders",
-      objectives: ["Enhance online presence", "Improve marketing efforts"],
-      challenges: [
-        "Increasing online engagement and presence through visually appealing ads",
-        "Aligning ad designs with the brand's identity",
-        "Ensuring targeted reach on social media platforms",
-      ],
-      solutions: [
-        "Designed a series of engaging social media ads that align with the brand's identity",
-        "Maintained consistency in design to reflect the brand's values and message",
-      ],
-    },
-    // IGT
-    {
-      projectName: "Social Media Designs for IGT",
-      projectCover: "/igt/cover.jpeg",
-      client: {
-        name: "Interlink Global Traders",
-        location: "Malaysia",
-      },
-      businessType: "Trading Company",
-      year: 2024,
-      description:
-        "Developed comprehensive branding materials for Interlink Global Traders, including logo design, cover design, and Facebook ad designs.",
-      features: [
-        "Logo design",
-        "Cover design",
-        "Facebook ad designs",
-        "Consistency with brand identity",
-      ],
-      toolsUsed: ["Photoshop", "Figma"],
-      slug: "interlink-global-traders",
-      projectImages: ["/igt/cover.jpeg"],
-      projectTitle: "Social Media Designs for IGT",
+      slug: "ohghad-platform",
       objectives: [
-        "Establish a strong brand identity",
-        "Create engaging social media content",
+        "Support humanitarian efforts through a secure platform",
+        "Increase user engagement and donations",
       ],
       challenges: [
-        "Creating cohesive branding materials that represent the company's identity",
-        "Ensuring engagement through social media content",
-        "Maintaining consistency in brand representation across different formats",
+        "Creating a secure and user-friendly platform",
+        "Ensuring the platform supports various fundraising activities",
       ],
       solutions: [
-        "Developed a consistent and visually appealing brand identity through various design elements",
-        "Designed engaging social media content that aligns with the company’s brand",
+        "Developed a secure and user-friendly fundraising platform",
+        "Integrated features to support various fundraising activities",
       ],
+      projectImages: ["/new/ohghad.jpg"],
+      projectTitle: "Ohghad Fundraiser Site",
     },
-    // MS Luxury Motors
     {
-      projectName: "Modern Standards Luxury Motors Website",
-      projectCover: "/mslm/cover.jpg",
+      projectName: "MS Luxury Motors Website",
+      projectCover: "/new/ms_lm.jpg",
       client: {
-        name: "Modern Standards Luxury Motors",
+        name: "MS Luxury Motors LLC",
         location: "UAE",
       },
-      businessType: "Limousine Booking Service",
-      platform: {
-        frontend: ["React", "Next.js"],
-        backend: ["Firebase", "Firestore"],
-      },
-      year: 2023,
+      businessType: "Website Design",
+      year: 2024,
       description:
-        "Designed and developed a luxury limousine booking service site for Modern Standards Luxury Motors based. The aim was to provide a modern and seamless booking experience for users.",
+        "Designed a sleek and intuitive limousine booking platform for a premium travel experience in Dubai.",
       features: [
-        "User-friendly booking interface",
-        "Messaging system for customer inquiries",
-        "Content management system (CMS)",
-        "Request management functionality",
-        "WhatsApp redirection for quick communication",
-        "Fleet management system in CMS",
+        "Bookings: +60%",
+        "Revenue: +45%",
       ],
-      technologies: {
-        frontend: ["React", "Next.js", "Material-UI", "CSS Modules"],
-        backend: ["Firebase", "Firestore"],
-      },
-      slug: "ms-luxury-motors",
-      projectImages: [
-        "/mslm/1.jpg",
-        "/mslm/2.jpg",
-        "/mslm/3.jpg",
-        "/mslm/4.jpg",
-      ],
-      projectTitle: "Modern Standards Luxury Motors Website",
+      slug: "mslm-booking",
       objectives: [
         "Provide a seamless booking experience",
         "Establish an online presence",
@@ -273,12 +172,13 @@ const CaseStudy = () => {
       challenges: [
         "Creating a modern and functional website for a luxury service",
         "Ensuring ease of use for booking and customer inquiries",
-        "Integrating a comprehensive management system for the fleet",
       ],
       solutions: [
         "Developed a website using the latest technologies to meet the client's requirements for design, functionality, and ease of management",
         "Implemented a user-friendly booking interface and messaging system",
       ],
+      projectImages: ["/new/ms_lm.jpg"],
+      projectTitle: "MS Luxury Motors Website",
     },
   ];
 
@@ -301,7 +201,7 @@ const CaseStudy = () => {
   return (
     <>
       <div
-        className={`min-h-screen bg-gradient-to-b from-dark-900 to-dark-800 max-md:gap-8 px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 py-24 max-sm:py-8 ${
+        className={`min-h-screen bg-gradient-to-b from-dark-900 to-dark-800 max-md:gap-8 px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 max-sm:py-8 ${
           isActive ? "slide-out-top" : "slide-in-bottom"
         } ${pageChanged ? "hidden" : ""}`}
       >
@@ -313,8 +213,8 @@ const CaseStudy = () => {
         >
           <nav className="flex items-center gap-2 text-sm mb-6">
             <Link
-              href="/works"
-              className="flex items-center gap-2 text-neutral-600 hover:text-white-100 transition-colors group"
+              href="/"
+              className="flex items-center gap-2 text-pencil hover:text-white-100 transition-colors group"
             >
               <ArrowLeft
                 size={16}
@@ -331,7 +231,7 @@ const CaseStudy = () => {
               {project.platform?.frontend?.map((tech, i) => (
                 <span
                   key={i}
-                  className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/10 rounded-full"
+                  className="px-3 py-1 text-xs font-medium text-pencil-darker bg-pencil/10 rounded-full"
                 >
                   {tech}
                 </span>
@@ -339,7 +239,7 @@ const CaseStudy = () => {
               {project.platform?.backend?.map((tech, i) => (
                 <span
                   key={i}
-                  className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/10 rounded-full"
+                  className="px-3 py-1 text-xs font-medium text-pencil-darker bg-pencil/10 rounded-full"
                 >
                   {tech}
                 </span>
@@ -350,7 +250,7 @@ const CaseStudy = () => {
               {project.projectTitle}
             </h1>
 
-            <p className="text-base text-neutral-800 leading-relaxed mb-6">
+            <p className="text-base text-pencil leading-relaxed mb-6">
               {project.description}
             </p>
           </motion.div>
@@ -376,7 +276,6 @@ const CaseStudy = () => {
             <div>
               {/* Objectives */}
               <motion.section {...fadeIn} className="mb-12">
-                {/* <span className="text-main-900 font-mono">01</span> */}
                 <div>
                   <h2 className="text-lg font-semibold mt-2 mb-4">
                     Objectives
@@ -384,8 +283,8 @@ const CaseStudy = () => {
                   <ul className="space-y-4">
                     {project.objectives?.map((objective, i) => (
                       <li key={i} className="flex items-start gap-3">
-                        <span className="w-1.5 h-0.5 rounded-full bg-neutral-800 mt-2.5 shrink-0" />
-                        <span className="text-neutral-800">{objective}</span>
+                        <span className="w-1.5 h-0.5 rounded-full bg-pencil mt-2.5 shrink-0" />
+                        <span className="text-pencil">{objective}</span>
                       </li>
                     ))}
                   </ul>
@@ -394,7 +293,6 @@ const CaseStudy = () => {
               {/* Challenges */}
               <motion.section {...fadeIn} className="mb-12">
                 <div>
-                  {/* <span className="text-main-900 font-mono">02</span> */}
                   <h2 className="text-lg font-semibold mt-2 mb-4">
                     Challenges
                   </h2>
@@ -402,9 +300,9 @@ const CaseStudy = () => {
                     {project.challenges?.map((challenge, i) => (
                       <li
                         key={i}
-                        className="flex items-start gap-3 text-neutral-800"
+                        className="flex items-start gap-3 text-pencil"
                       >
-                        <span className="w-1.5 h-0.5 rounded-full bg-neutral-800 mt-2.5 shrink-0" />
+                        <span className="w-1.5 h-0.5 rounded-full bg-pencil mt-2.5 shrink-0" />
                         <span>{challenge}</span>
                       </li>
                     ))}
@@ -414,15 +312,14 @@ const CaseStudy = () => {
               {/* Solutions */}
               <motion.section {...fadeIn} className="mb-12">
                 <div>
-                  {/* <span className="text-main-900 font-mono">03</span> */}
                   <h2 className="text-lg font-semibold mt-2 mb-4">Solutions</h2>
                   <ul className="space-y-4">
                     {project.solutions?.map((solution, i) => (
                       <li
                         key={i}
-                        className="flex items-start gap-3 text-neutral-800"
+                        className="flex items-start gap-3 text-pencil"
                       >
-                        <span className="w-1.5 h-0.5 rounded-full bg-neutral-800 mt-2.5 shrink-0" />
+                        <span className="w-1.5 h-0.5 rounded-full bg-pencil mt-2.5 shrink-0" />
                         <span>{solution}</span>
                       </li>
                     ))}
@@ -448,14 +345,14 @@ const CaseStudy = () => {
                 {project.features.map((feature, i) => (
                   <div
                     key={i}
-                    className="flex items-center gap-2 p-3 px-4 bg-emerald-800/10 rounded-sm border border-emerald-800/50 text-sm"
+                    className="flex items-center gap-2 p-3 px-4 bg-emerald-600/10 rounded-sm border border-emerald-600/10 text-sm"
                   >
                     <Asterisk
                       strokeWidth={1.5}
                       size={20}
                       className="text-emerald-800"
                     />
-                    <span className="text-neutral-900 font-medium">
+                    <span className="text-emerald-800 font-medium">
                       {feature}
                     </span>
                   </div>
@@ -467,10 +364,10 @@ const CaseStudy = () => {
           {/* CTA */}
           <motion.div {...fadeIn} className="flex justify-center">
             <Link
-              href={"/works"}
-              className="bg-amber-500/70 text-neutral-950 flex gap-2 items-center font-medium border border-amber-500/0  hover:border-amber-500/70 hover:bg-transparent hover:text-amber-500 transition-all pr-4 pl-3 py-2"
+              href={"/"}
+              className="bg-amber-500/60 text-pencil flex gap-2 font-yellow-tail items-center font-medium text-lg transition-all hover:bg-amber-500/50 -rotate-2 px-4 py-1"
             >
-              <ArrowUpLeft size={18} /> Return
+              <ArrowUpLeft size={18} /> Return Home
             </Link>
           </motion.div>
         </div>

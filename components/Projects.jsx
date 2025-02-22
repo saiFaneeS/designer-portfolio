@@ -20,7 +20,7 @@ const Projects = () => {
       type: "Branding",
       color: "red",
       image: "/new/idan.jpg",
-      client: "Igal S. BJJ",
+      client: "Igal S. BJJ Logo",
       time: "1 Week",
       desc: "Personal brand logo for a young BJJ athlete, capturing their identity & spirit.",
       slug: "igal-s-branding",
@@ -33,7 +33,7 @@ const Projects = () => {
       type: "Branding",
       color: "purple",
       image: "/new/gearish.jpg",
-      client: "Gearish Ecom. Logo",
+      client: "Gearish Ecommerce Logo",
       time: "1 Week",
       desc: "Logo design for GearishPk, an e-commerce brand, reflecting their modern and tech-driven identity.",
       slug: "gearish-branding",
@@ -217,13 +217,10 @@ const Projects = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.3, delay: index * 0.1 }}
           >
-            <div
-              //  href={`/works/${category.slug}`}
-              className="group rounded-lg"
-            >
+            <Link href={`/case-study/${category.slug}`} className="group rounded-lg">
               <div className="group relative bg-background-brighter/80 p-4 border border-pencil/15 shadow-sm hover:shadow-lg rounded-lg hover:border-pencil/20 transition-all">
                 <div
-                  className={`absolute -top-7 pb-8 -z-10 left-4 text-background-brighter ${
+                  className={`absolute -top-7 pb-8 -z-10 left-5 text-background-brighter ${
                     colorClasses[category.color]
                   } px-3 py-1 text-sm font-medium`}
                 >
@@ -240,7 +237,7 @@ const Projects = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <div className="flex justify-between items-start">
+                  <div className="flex justify-between items-center">
                     <h3 className="text-base line-clamp-1 font-semibold">
                       {category.client || category.type}
                     </h3>
@@ -269,13 +266,13 @@ const Projects = () => {
                     ))}
                   </div> */}
 
-                  {/* <div className="flex items-center justify-end pt-2 text-pencil/60 group-hover:text-pencil transition-colors">
+                  <div className="flex items-center justify-end pt-2 text-pencil/60 group-hover:text-pencil transition-colors">
                     <span className="text-sm">View Case Study</span>
                     <ArrowRight className="h-4 w-4 ml-1" />
-                  </div> */}
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
           </motion.div>
         ))}
       </div>
@@ -288,7 +285,7 @@ const Projects = () => {
           viewport={{ once: true }}
         >
           <button
-            className="font-yellow-tail flex items-center gap-2 hover:bg-emerald-500/20 px-4 py-1 text-lg transition-colors"
+            className="font-yellow-tail flex items-center gap-2 -rotate-2 bg-emerald-500/60 hover:bg-emerald-500/40 px-4 py-1 text-lg transition-all"
             onClick={handleShowMore}
           >
             {visibleCount < categories.length ? (
