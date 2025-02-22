@@ -454,7 +454,7 @@ const CaseStudy = () => {
             {project.projectImages?.length > 1 ? (
               <ImageCarousel images={project.projectImages} />
             ) : (
-              <img
+              <Image
                 src={project.projectCover}
                 alt={project.projectTitle}
                 className="w-full h-full aspect-video object-cover"

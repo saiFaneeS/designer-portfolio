@@ -66,6 +66,7 @@ export const TrustIndicators = () => {
                 src={testimonials[currentIndex]?.logo}
                 height={100}
                 width={100}
+                alt=""
                 className="h-5 w-5 object-contain rounded-full "
               />
             )}
@@ -74,6 +75,7 @@ export const TrustIndicators = () => {
                 src={testimonials[currentIndex]?.logo}
                 height={100}
                 width={100}
+                alt=""
                 className="h-5 w-5 object-cover rounded-full"
               />
             )}
