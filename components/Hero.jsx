@@ -70,7 +70,7 @@ export default function Hero() {
               }}
               transition={{ duration: 0.5 }}
             >
-              hello, I&apos;m Saif.
+              hello, I&apos;m Sayf.
             </motion.h3>
           </>
           <div className="text-4xl">

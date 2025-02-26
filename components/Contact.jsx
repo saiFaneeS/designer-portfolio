@@ -147,7 +147,7 @@ const ContactPage = () => {
                 </p>
               </Link>
               <Link
-                href={"mailto:info@saifanees11@gmail.com"}
+                href={"mailto:saifanees11@gmail.com"}
                 rel="noopener noreferrer"
                 className="flex items-center max-sm:w-full rounded group hover:translate-x-2 transition-all"
               >
@@ -320,7 +320,7 @@ const ContactPage = () => {
             </p>
           </Link>
           <Link
-            href={"mailto:info@saifanees11@gmail.com"}
+            href={"mailto:saifanees11@gmail.com"}
             rel="noopener noreferrer"
             className="flex items-center max-sm:w-full rounded group hover:translate-x-2 transition-all"
           >

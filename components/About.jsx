@@ -46,7 +46,7 @@ const About = () => {
         <div className="h-[2px] shrink-0 w-full bg-current mb-6"></div>
 
         <p className="text-base text-gray-700 leading-relaxed mb-6">
-          Hey, I&apos;m Saif. I&apos;m a full-stack engineer with a primary
+          Hey, I&apos;m Sayf. I&apos;m a full-stack engineer with a primary
           focus on building Websites & Apps. I have experience in working with
           small to medium-sized businesses with consistent positive client
           satisfaction. When I&apos;m not building, I&apos;m learning new stuff.
@@ -64,7 +64,11 @@ const About = () => {
                     key={toolIndex}
                     className="flex items-center gap-3  transition-all duration-300 group"
                   >
-                    <div className={`relative w-6 h-6 flex-shrink-0 ${tool.name === "Javascript" && "bg-neutral-800"}`}>
+                    <div
+                      className={`relative w-6 h-6 flex-shrink-0 ${
+                        tool.name === "Javascript" && "bg-neutral-800"
+                      }`}
+                    >
                       <Image
                         src={tool.icon}
                         alt={tool.name}

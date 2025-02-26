@@ -402,7 +402,7 @@ const CaseStudy = () => {
             All Works
           </Link>
           <ChevronRight size={14} className="text-pencil/80" />
-          <span className="text-emerald-600">{project.client.name}</span>
+          <span className="text-cyan-600">{project.client.name}</span>
         </motion.nav>
 
         {/* Hero Section */}
@@ -424,7 +424,7 @@ const CaseStudy = () => {
                 ].map((tech, i) => (
                   <span
                     key={i}
-                    className="px-3 py-1 text-xs font-medium text-emerald-200 bg-emerald-900/30 rounded-full"
+                    className="px-3 py-1 text-xs font-medium text-cyan-200 bg-cyan-900/30 rounded-full"
                   >
                     {tech}
                   </span>
@@ -441,7 +441,7 @@ const CaseStudy = () => {
               <ul className="space-y-4">
                 {project.objectives?.map((objective, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2 shrink-0" />
                     <span className="">{objective}</span>
                   </li>
                 ))}
@@ -471,7 +471,7 @@ const CaseStudy = () => {
             <ul className="space-y-4">
               {project.challenges?.map((challenge, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2 shrink-0" />
                   <span className="">{challenge}</span>
                 </li>
               ))}
@@ -484,7 +484,7 @@ const CaseStudy = () => {
             <ul className="space-y-4">
               {project.solutions?.map((solution, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2 shrink-0" />
                   <span className="">{solution}</span>
                 </li>
               ))}
@@ -500,10 +500,10 @@ const CaseStudy = () => {
                   {project.features.map((feature, i) => (
                     <div
                       key={i}
-                      className="flex items-center gap-2 p-3 px-4 bg-emerald-600/10 rounded-sm border border-emerald-600/20 text-sm"
+                      className="flex items-center gap-2 p-3 px-4 bg-cyan-600/10 rounded-sm border border-cyan-600/20 text-sm"
                     >
-                      <Asterisk size={20} className="text-emerald-700" />
-                      <span className="text-emerald-700 font-medium">
+                      <Asterisk size={20} className="text-cyan-700" />
+                      <span className="text-cyan-700 font-medium">
                         {feature}
                       </span>
                     </div>

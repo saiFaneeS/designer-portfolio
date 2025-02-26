@@ -79,7 +79,7 @@ const Navbar = () => {
           href={"/"}
           className="text-lg font-medium flex gap-3 items-center shrink-0 font-yellow-tail"
         >
-          Saif Anees
+          Sayf Anees
         </Link>
         <ul className="flex gap-8 max-sm:gap-4 items-center text-sm font-medium tracking-wide font-clash">
           <ScrollLink

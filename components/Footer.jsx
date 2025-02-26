@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="flex justify-center items-center gap-6">
         {/* <div className="h-[1px] w-full bg-background/60"></div> */}
         <p className="text-base tracking-wide font-medium font-yellow-tail text-nowrap">
-          Saif Anees
+          Sayf Anees
         </p>
         {/* <div className="h-[1px] w-full bg-background/60"></div> */}
         {/* <ul className="flex gap-4 items-center">
