@@ -7,19 +7,19 @@ const testimonials = [
   {
     text: "“This was a great experience working with true talent that can read between the lines and be creative as well as listen to incorporate required details.”",
     author: "Tami Ross",
-    logo: "/ohghad.png",
+    logo: "/logos/ohghad.png",
     cover: "/projects/ohghad.jpeg",
   },
   {
     text: "“Completed the work within the agreed upon time, showing professionalism and reliability in meeting deadlines. He was receptive to feedback and collaborated effectively to refine the designs according to my preferences.”",
     author: "Igal S.",
-    logo: "/idan.png",
+    logo: "/logos/idan.png",
     cover: "/idan-cover.jpeg",
   },
   {
     text: "“It looks amazing. reminds me the quality of goodreads...”",
     author: "Violet Clough",
-    logo: "/flower-lotus.png",
+    logo: "/logos/vc.png",
     cover: "/vc.png",
   },
 ];

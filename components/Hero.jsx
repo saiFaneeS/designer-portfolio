@@ -7,11 +7,7 @@ import {
   AppWindow,
   AppWindowMac,
   Circle,
-  CircleDashed,
-  CircleDotDashed,
-  Hexagon,
   Paintbrush,
-  Squircle,
   View,
 } from "lucide-react";
 import Image from "next/image";
@@ -70,7 +66,7 @@ export default function Hero() {
               }}
               transition={{ duration: 0.5 }}
             >
-              hello, I&apos;m Sayf.
+              hello, I&apos;m Sayf,
             </motion.h3>
           </>
           <div className="text-4xl">
@@ -144,14 +140,7 @@ export default function Hero() {
                   className="fill-pencil-darker"
                 />
               </div>
-              {/* <motion.span
-                className="absolute bottom-[50px] -right-[63px] px-5 py-1.5 text-xs font-medium max-sm:py-1.5 text-pencil bg-amber-200 pr-12 w-32 flex justify-center shadow-xl shadow-amber-500/15 rounded rounded-r-2xl border-[1px] border-pencil/80"
-                initial={{ rotate: "0deg", right: "-8px", bottom: "0px" }}
-                animate={{ rotate: "90deg", right: "-63px", bottom: "50px" }}
-                transition={{ duration: 0.8 }}
-              >
-                <span className="max-sm:rotate-180">Experiences</span>
-              </motion.span> */}
+
               <motion.span
                 className="items-center gap-1.5 absolute bottom-9 -right-[60px] rotate-[45deg] pl-6 pr-14 py-1.5 text-xs font-medium max-sm:py-1.5 text-pencil bg-yellow-200 w-32 flex justify-center shadow-lg shadow-yellow-500/10 rounded rounded-r-2xl border-[1px] border-pencil/80"
                 initial={{
