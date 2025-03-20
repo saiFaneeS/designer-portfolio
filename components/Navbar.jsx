@@ -98,13 +98,13 @@ const Navbar = () => {
           >
             Message Me
           </ScrollLink>
-          <Link
+          {/* <Link
             href={"https://www.instagram.com/sayfogram"}
             target="_blank"
             className="bg-pencil text-background-brighter/95 flex items-center gap-2 px-2.5 pr-3 py-2 rounded-sm hover:bg-pencil/80 hover:text-background/90 transition-all"
           >
             <Instagram size={20} /> Instagram
-          </Link>
+          </Link> */}
         </ul>
       </div>
     </nav>
