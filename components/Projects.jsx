@@ -37,7 +37,7 @@ const Projects = () => {
       image: "/new/ms_lm.jpg",
       client: "MS Luxury Motors LLC",
       time: "1.5 Month",
-      desc: "Designed a sleek and intuitive limousine booking platform for a premium travel experience in Dubai.",
+    desc: "Designed a sleek and intuitive limousine booking platform for a premium travel experience in Dubai.",
       slug: "mslm-booking",
       stats: [
         { label: "Bookings", value: "+60%" },
