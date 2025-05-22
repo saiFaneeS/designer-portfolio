@@ -6,6 +6,7 @@ import {
   ArrowUpFromDot,
   PackageCheck,
   ArrowRight,
+  ChevronDown,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
@@ -14,11 +15,12 @@ import Link from "next/link";
 const Projects = () => {
   const [visibleCount, setVisibleCount] = useState(3);
   const [isMobile, setIsMobile] = useState(false);
+  const [selectedFilter, setSelectedFilter] = useState("All Works");
 
   const categories = [
     // Gearish
     {
-      type: "Branding",
+      type: "Logo Design",
       color: "purple",
       image: "/new/gearish.jpg",
       client: "Gearish Ecommerce Logo",
@@ -37,7 +39,7 @@ const Projects = () => {
       image: "/new/ms_lm.jpg",
       client: "MS Luxury Motors LLC",
       time: "1.5 Month",
-    desc: "Designed a sleek and intuitive limousine booking platform for a premium travel experience in Dubai.",
+      desc: "Designed a sleek and intuitive limousine booking platform for a premium travel experience in Dubai.",
       slug: "mslm-booking",
       stats: [
         { label: "Bookings", value: "+60%" },
@@ -188,6 +190,15 @@ const Projects = () => {
     }
   };
 
+  const uniqueCategories = [
+    "All Works",
+    ...new Set(categories.map((item) => item.type)),
+  ];
+
+  const filteredCategories = categories.filter((category) =>
+    selectedFilter === "All Works" ? true : category.type === selectedFilter
+  );
+
   return (
     <div
       id="works"
@@ -208,18 +219,44 @@ const Projects = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
+        className="flex items-center justify-between gap-4 max-sm:flex-col"
       >
-        <h2 className="flex items-center gap-2 max-lg:gap-2 text-2xl font-medium mb-2 font-yellow-tail relative z-10">
-          <PackageCheck className="size-8 max-md:size-6" strokeWidth={1.8} />
-          Commission Works
-        </h2>
-        <p className="text-pencil/80 mb-8">
-          Here are some of my recent commissions and side projects.
-        </p>
+        <div>
+          <h2 className="flex items-center gap-2 max-lg:gap-2 text-2xl font-medium mb-2 font-yellow-tail relative z-10">
+            <PackageCheck className="size-8 max-md:size-6" strokeWidth={1.8} />
+            Case Studies
+          </h2>
+          <p className="text-pencil/80 mb-8">
+            Here are some of my recent commissions and side projects.
+          </p>
+        </div>
+
+        {/* Filter Dropdown */}
+        <div className="relative group">
+          <button className="flex items-center gap-2 bg-background-brighter/80 border border-pencil/15 px-4 py-2 rounded-lg hover:border-pencil/30 transition-colors">
+            <span className="text-sm font-medium">{selectedFilter}</span>
+            <ChevronDown className="size-4 text-pencil/60 group-hover:text-pencil transition-colors" />
+          </button>
+          <div className="absolute right-0 mt-2 py-2 w-48 bg-background-brighter border border-pencil/15 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-20">
+            {uniqueCategories.map((category, index) => (
+              <button
+                key={index}
+                onClick={() => setSelectedFilter(category)}
+                className={`w-full text-left px-4 py-2 text-sm hover:bg-pencil/5 transition-colors ${
+                  selectedFilter === category
+                    ? "text-emerald-700"
+                    : "text-pencil/90"
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        </div>
       </motion.div>
 
       <div className="grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-x-8 max-md:gap-x-8 gap-y-16 max-sm:gap-y-12 mt-14">
-        {categories.slice(0, visibleCount).map((category, index) => (
+        {filteredCategories.slice(0, visibleCount).map((category, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
@@ -290,7 +327,7 @@ const Projects = () => {
         ))}
       </div>
 
-      {categories.length > 3 && (
+      {filteredCategories.length > 3 && (
         <motion.div
           className="flex items-center justify-center mt-16 relative"
           initial={{ opacity: 0 }}
