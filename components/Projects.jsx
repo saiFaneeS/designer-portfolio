@@ -117,19 +117,19 @@ const Projects = () => {
       ],
     },
     // Noblesoft
-    {
-      type: "Website Design",
-      color: "purple",
-      image: "/new/noblesoft.jpg",
-      client: "Noblesoft Agency Landing Page",
-      time: "3 Weeks",
-      desc: "Designed and developed a modern agency landing page that effectively showcases services and client success stories.",
-      slug: "noblesoft-landing-page",
-      stats: [
-        { label: "Engagement Rate", value: "+55%" },
-        { label: "Lead Generation", value: "+30%" },
-      ],
-    },
+    // {
+    //   type: "Website Design",
+    //   color: "purple",
+    //   image: "/new/noblesoft.jpg",
+    //   client: "Noblesoft Agency Landing Page",
+    //   time: "3 Weeks",
+    //   desc: "Designed and developed a modern agency landing page that effectively showcases services and client success stories.",
+    //   slug: "noblesoft-landing-page",
+    //   stats: [
+    //     { label: "Engagement Rate", value: "+55%" },
+    //     { label: "Lead Generation", value: "+30%" },
+    //   ],
+    // },
     // Glass Alibi
     {
       type: "Book Cover",
