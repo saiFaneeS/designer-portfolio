@@ -89,6 +89,211 @@ const CaseStudy = () => {
     },
     {
       color: "red",
+      projectName: "HHC Hiring Post – Supplier Head",
+      client: {
+        name: "HHC",
+        location: "Pakistan",
+      },
+      businessType: "Social Media Hiring Post",
+      year: 2025,
+      description:
+        "Designed a professional hiring campaign for HHC to recruit a Head of Supplier Department, highlighting key responsibilities and workplace culture.",
+      features: ["Professional Branding", "Job Clarity & Engagement"],
+      slug: "hhc-hiring-supplier-head",
+      objectives: [
+        "Attract qualified candidates for the Supplier Department Head role",
+        "Visually communicate HHC's professionalism and company culture",
+      ],
+      challenges: [
+        "Presenting job details concisely while keeping visuals engaging",
+        "Maintaining HHC’s corporate visual identity",
+      ],
+      solutions: [
+        "Created a clean and clear layout with job highlights",
+        "Designed visual assets that resonate with mid to senior-level professionals",
+      ],
+      projectCover: "/hhc-works/hiring/hp-2.png",
+      projectImages: [
+        "/hhc-works/hiring/hp-2.png",
+        "/hhc-works/hiring/hp-3.png",
+        "/hhc-works/hiring/hp-4.png",
+        "/hhc-works/hiring/hp-5.png",
+        "/hhc-works/hiring/hp-6.png",
+      ],
+
+      projectTitle: "HHC Supplier Dept. Hiring Campaign",
+    },
+    {
+      color: "green",
+      projectName: "Visionary Leader Transformation Carousel",
+      client: {
+        name: "HHC Academy",
+        location: "Pakistan",
+      },
+      businessType: "Carousel Design",
+      year: 2025,
+      description:
+        "Multi-platform carousel post showcasing HHC Academy's unique approach to transforming students into visionary leaders.",
+      features: ["High Engagement Format", "Cross-Platform Ready"],
+      slug: "hhc-visionary-carousel",
+      objectives: [
+        "Communicate the academy’s leadership-building curriculum",
+        "Educate and inspire potential students and parents",
+      ],
+      challenges: [
+        "Conveying a complex transformation process in six slides",
+        "Maintaining visual and narrative consistency across formats",
+      ],
+      solutions: [
+        "Designed a clean, step-by-step visual flow",
+        "Used consistent colors and iconography to reinforce the theme",
+      ],
+      projectCover: "/hhc-works/not-a-course/Slide.png",
+      projectImages: [
+        "/hhc-works/not-a-course/Slide.png",
+        "/hhc-works/not-a-course/Slide-1.png",
+        "/hhc-works/not-a-course/Slide-2.png",
+        "/hhc-works/not-a-course/Slide-3.png",
+        "/hhc-works/not-a-course/Slide-4.png",
+        "/hhc-works/not-a-course/Slide-5.png",
+      ],
+
+      projectTitle: "Visionary Leader Transformation Carousel",
+    },
+    {
+      color: "amber",
+      projectName: "Students Join from All Over Pakistan",
+      client: {
+        name: "HHC Academy",
+        location: "Pakistan",
+      },
+      businessType: "Social Media Post",
+      year: 2025,
+      description:
+        "Social media post highlighting that students from across Pakistan choose HHC Academy to pursue their education.",
+      features: ["National Reach Messaging", "Multiple Design Iterations"],
+      slug: "hhc-nationwide-enrollment",
+      objectives: [
+        "Showcase nationwide trust and enrollment",
+        "Visually represent geographic diversity",
+      ],
+      challenges: [
+        "Designing an inclusive and appealing visual",
+        "Presenting diverse student representation authentically",
+      ],
+      solutions: [
+        "Created variations using maps and student icons",
+        "Highlighted nationwide trust in HHC’s academic quality",
+      ],
+      projectCover: "/hhc-works/pakistan-posts/Pakistan post 1.png",
+      projectImages: [
+        "/hhc-works/pakistan-posts/Pakistan post 1.png",
+        "/hhc-works/pakistan-posts/Pakistan post 2.png",
+        "/hhc-works/pakistan-posts/Pakistan post 3.png",
+      ],
+
+      projectTitle: "HHC Nationwide Student Post",
+    },
+    {
+      color: "cyan",
+      projectName: "Funnel Building & Leadership Roadmap",
+      client: {
+        name: "HHC",
+        location: "Pakistan",
+      },
+      businessType: "Educational Design Post",
+      year: 2025,
+      description:
+        "Designed visually rich posts explaining how funnel building works and HHC's step-by-step roadmap to becoming a visionary leader.",
+      features: ["Educational Content", "Infographic Style"],
+      slug: "hhc-funnel-roadmap",
+      objectives: [
+        "Educate audience on marketing funnel strategies",
+        "Show HHC’s structured leadership path",
+      ],
+      challenges: [
+        "Explaining complex ideas in a digestible visual format",
+        "Ensuring the design aligns with both topics’ intent",
+      ],
+      solutions: [
+        "Used diagrammatic visuals and color cues to simplify concepts",
+        "Created a dual-topic post with thematic consistency",
+      ],
+      projectCover: "/hhc-works/How Funnel Building Works.png",
+      projectImages: [
+        "/hhc-works/How Funnel Building Works.png",
+        "/hhc-works/Roadmap to Visionary Leader.png",
+      ],
+
+      projectTitle: "Funnel & Visionary Leader Post",
+    },
+    {
+      color: "gray",
+      projectName: "HHC Hubs Closing Announcement",
+      client: {
+        name: "HHC",
+        location: "Pakistan",
+      },
+      businessType: "Operations Update Design",
+      year: 2025,
+      description:
+        "Designed an announcement post to inform suppliers and dropshippers about temporary hub closures during public holidays.",
+      features: ["Clarity in Communication", "Crisp Layout"],
+      slug: "hhc-hubs-closure",
+      objectives: [
+        "Communicate closure dates clearly and promptly",
+        "Reinforce HHC’s professional tone even in operational updates",
+      ],
+      challenges: [
+        "Balancing urgency with professionalism",
+        "Ensuring key dates are visually prioritized",
+      ],
+      solutions: [
+        "Used prominent typography and visual hierarchy for clarity",
+        "Maintained brand colors while ensuring message visibility",
+      ],
+      projectCover: "/hhc-works/Hubs Closing Announcement.png",
+      projectImages: ["/hhc-works/Hubs Closing Announcement.png"],
+      projectTitle: "HHC Hubs Closing Announcement",
+    },
+    {
+      color: "blue",
+      projectName: "HHC Kids Academy Banners",
+      projectCover: "/hhc-works/banners/FB_BANNER_1.png",
+      client: {
+        name: "HHC Academy",
+        location: "Pakistan",
+      },
+      businessType: "Social Media Design",
+      year: 2025,
+      description:
+        "Designed vibrant and playful banners for HHC's children's wing and created multi-platform social assets tailored for Facebook, LinkedIn, and YouTube.",
+      features: ["Brand-Aligned Visuals", "Platform-Optimized Content"],
+      slug: "hhc-kids-banners",
+      objectives: [
+        "Create engaging visuals for HHC's children's academy",
+        "Ensure consistency across all social platforms",
+      ],
+      challenges: [
+        "Balancing playful aesthetics with brand guidelines",
+        "Designing for multiple platforms with varying dimensions",
+      ],
+      solutions: [
+        "Used colorful, friendly design elements to appeal to parents and children",
+        "Optimized banners for Facebook, YouTube, and LinkedIn layouts",
+      ],
+      projectImages: [
+        "/hhc-works/banners/FB_BANNER_1.png",
+        "/hhc-works/banners/FB_BANNER_2.png",
+        "/hhc-works/banners/FB_BANNER_3.png",
+        "/hhc-works/banners/FB_BANNER_5.png",
+        "/hhc-works/banners/FB_BANNER_6.png",
+        "/hhc-works/banners/FB_BANNER_7.png",
+      ],
+      projectTitle: "HHC Kids Academy Banner Design",
+    },
+    {
+      color: "red",
       projectName: "Silent Echoes Book Cover",
       projectCover: "/new/silent_echoes.jpg",
       client: {
