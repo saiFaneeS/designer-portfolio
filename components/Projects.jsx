@@ -61,19 +61,19 @@ const Projects = () => {
       ],
     },
     // Hiring Post
-    {
-      type: "Social Media Design",
-      color: "blue",
-      image: "/hhc-works/hiring/hp-2.png",
-      client: "Hiring Post Deisgn for HHC",
-      time: "3 Days",
-      desc: "A hiring announcement post for the Head of Supplier Department, tailored for HHC's professional brand tone.",
-      slug: "hhc-hiring-supplier-head",
-      stats: [
-        { label: "Reach", value: "+5K" },
-        { label: "Applications", value: "+300" },
-      ],
-    },
+    // {
+    //   type: "Social Media Design",
+    //   color: "blue",
+    //   image: "/hhc-works/hiring/hp-2.png",
+    //   client: "Hiring Post Deisgn for HHC",
+    //   time: "3 Days",
+    //   desc: "A hiring announcement post for the Head of Supplier Department, tailored for HHC's professional brand tone.",
+    //   slug: "hhc-hiring-supplier-head",
+    //   stats: [
+    //     { label: "Reach", value: "+5K" },
+    //     { label: "Applications", value: "+300" },
+    //   ],
+    // },
     // Idan
     {
       type: "Logo Design",
@@ -117,33 +117,33 @@ const Projects = () => {
       ],
     },
     // Banner Design
-    {
-      type: "Banner Design",
-      color: "blue",
-      image: "/hhc-works/banners/FB_BANNER_1.png",
-      client: "HHC Academy Banners",
-      time: "1 Week",
-      desc: "A series of playful and engaging banners for HHC's Children Company across platforms like YouTube, Facebook, and LinkedIn.",
-      slug: "hhc-kids-banners",
-      stats: [
-        { label: "Brand Engagement", value: "+35%" },
-        { label: "Visual Consistency", value: "100%" },
-      ],
-    },
+    // {
+    //   type: "Banner Design",
+    //   color: "blue",
+    //   image: "/hhc-works/banners/FB_BANNER_1.png",
+    //   client: "HHC Academy Banners",
+    //   time: "1 Week",
+    //   desc: "A series of playful and engaging banners for HHC's Children Company across platforms like YouTube, Facebook, and LinkedIn.",
+    //   slug: "hhc-kids-banners",
+    //   stats: [
+    //     { label: "Brand Engagement", value: "+35%" },
+    //     { label: "Visual Consistency", value: "100%" },
+    //   ],
+    // },
     // Students Across Pak
-    {
-      type: "Social Media Design",
-      color: "blue",
-      image: "/hhc-works/pakistan-posts/Pakistan post 1.png",
-      client: "Academy Marketing Post Design",
-      time: "2 Days",
-      desc: "A social media post celebrating that students join HHC Academy from all across Pakistan, highlighting diversity.",
-      slug: "hhc-pakistan-students",
-      stats: [
-        { label: "Shares", value: "+80%" },
-        { label: "Reach", value: "7K+" },
-      ],
-    },
+    // {
+    //   type: "Social Media Design",
+    //   color: "blue",
+    //   image: "/hhc-works/pakistan-posts/Pakistan post 1.png",
+    //   client: "Academy Marketing Post Design",
+    //   time: "2 Days",
+    //   desc: "A social media post celebrating that students join HHC Academy from all across Pakistan, highlighting diversity.",
+    //   slug: "hhc-pakistan-students",
+    //   stats: [
+    //     { label: "Shares", value: "+80%" },
+    //     { label: "Reach", value: "7K+" },
+    //   ],
+    // },
     // Ohghad
     {
       type: "Website Design",
@@ -187,19 +187,19 @@ const Projects = () => {
       ],
     },
     // Academy Carousel
-    {
-      type: "Social Media Design",
-      color: "blue",
-      image: "/hhc-works/not-a-course/Slide.png",
-      client: "Conversion Focused Carousel",
-      time: "1 Day",
-      desc: "A 6-slide carousel post designed for multi-platform use to explain how HHC transforms students into visionary leaders.",
-      slug: "hhc-visionary-leaders",
-      stats: [
-        { label: "Engagement Rate", value: "+60%" },
-        { label: "Shares", value: "+120%" },
-      ],
-    },
+    // {
+    //   type: "Social Media Design",
+    //   color: "blue",
+    //   image: "/hhc-works/not-a-course/Slide.png",
+    //   client: "Conversion Focused Carousel",
+    //   time: "1 Day",
+    //   desc: "A 6-slide carousel post designed for multi-platform use to explain how HHC transforms students into visionary leaders.",
+    //   slug: "hhc-visionary-leaders",
+    //   stats: [
+    //     { label: "Engagement Rate", value: "+60%" },
+    //     { label: "Shares", value: "+120%" },
+    //   ],
+    // },
     // CRM
     {
       type: "Website Design",
@@ -214,33 +214,33 @@ const Projects = () => {
         { label: "Team Efficiency", value: "+40%" },
       ],
     }, // Funnel Building
-    {
-      type: "Social Media Design",
-      color: "blue",
-      image: "/hhc-works/How Funnel Building Works.png",
-      client: "Funnel Diagram Post Design",
-      time: "3 Days",
-      desc: "An informative post breaking down funnel-building strategy and the roadmap to becoming a visionary leader.",
-      slug: "funnel-to-leader",
-      stats: [
-        { label: "Saves", value: "+200" },
-        { label: "Reach", value: "9.2K" },
-      ],
-    },
+    // {
+    //   type: "Social Media Design",
+    //   color: "blue",
+    //   image: "/hhc-works/How Funnel Building Works.png",
+    //   client: "Funnel Diagram Post Design",
+    //   time: "3 Days",
+    //   desc: "An informative post breaking down funnel-building strategy and the roadmap to becoming a visionary leader.",
+    //   slug: "funnel-to-leader",
+    //   stats: [
+    //     { label: "Saves", value: "+200" },
+    //     { label: "Reach", value: "9.2K" },
+    //   ],
+    // },
     // Hubs Closing Announcement
-    {
-      type: "Social Media Design",
-      color: "blue",
-      image: "/hhc-works/Hubs Closing Announcement.png",
-      client: "Announcement Post for HHC",
-      time: "1 Day",
-      desc: "A public holiday notice informing all suppliers and dropshippers about temporary closure of hubs.",
-      slug: "hhc-hubs-closed",
-      stats: [
-        { label: "Awareness", value: "100%" },
-        { label: "Delivery Queries Reduced", value: "-40%" },
-      ],
-    },
+    // { 
+    //   type: "Social Media Design",
+    //   color: "blue",
+    //   image: "/hhc-works/Hubs Closing Announcement.png",
+    //   client: "Announcement Post for HHC",
+    //   time: "1 Day",
+    //   desc: "A public holiday notice informing all suppliers and dropshippers about temporary closure of hubs.",
+    //   slug: "hhc-hubs-closed",
+    //   stats: [
+    //     { label: "Awareness", value: "100%" },
+    //     { label: "Delivery Queries Reduced", value: "-40%" },
+    //   ],
+    // },
   ];
 
   const colorClasses = {
